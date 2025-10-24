@@ -3,92 +3,135 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Strategic Guide — UBIO/VIRDI UK: Feasibility & Regulatory Assessment (Blog Edition)</title>
-<meta name="description" content="A confidential strategic guide on introducing UBIO/VIRDI biometric devices to the UK market, derived from the uploaded Word document.">
+<title>Strategic Guide — UBIO/VIRDI UK: Feasibility & Regulatory Assessment</title>
+<meta name="description" content="Confidential strategic guide for introducing UBIO/VIRDI biometric devices to the UK market.">
 <style>
   :root{
-    --bg:#f7fafc; --surface:#ffffff; --ink:#0f172a; --muted:#475569;
-    --accent:#0ea5a4; --accent-2:#0891b2; --border:#e2e8f0;
-    --note:#fff7ed; --note-ink:#92400e; --shadow:0 8px 24px rgba(2,132,199,.08);
+    --bg:#f8fbfc; --surface:#ffffff; --ink:#0f172a; --muted:#475569;
+    --accent:#0f766e; --accent-2:#06b6d4; --border:#e2e8f0;
+    --note:#fff7ed; --note-ink:#92400e; --shadow: 0 10px 30px rgba(6,182,212,.10);
     --radius:14px; --container:1100px;
   }
   *{box-sizing:border-box} html,body{height:100%}
-  body{margin:0;background:
-    radial-gradient(900px 480px at 15% -10%, rgba(14,165,164,.10), transparent 60%),
-    radial-gradient(700px 420px at 120% -20%, rgba(8,145,178,.08), transparent 55%),
-    var(--bg);
-    color:var(--ink);font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  body{
+    margin:0;
+    background:
+      radial-gradient(900px 480px at 12% -10%, rgba(6,182,212,.08), transparent 60%),
+      radial-gradient(700px 420px at 110% -18%, rgba(15,118,110,.07), transparent 55%),
+      var(--bg);
+    color:var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     line-height:1.7;
   }
-  header.hero{position:relative;padding:48px 20px 28px;border-bottom:1px solid var(--border);
-    background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.86));backdrop-filter: blur(6px);}
   .container{max-width:var(--container); margin:0 auto;}
-  .badge{display:inline-block;padding:6px 12px;border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
-    color:#065f5b;background:linear-gradient(135deg, #99f6e4, #67e8f9);box-shadow:var(--shadow);font-weight:700;}
-  h1{margin:.5rem 0 .25rem;font-size:clamp(28px,3.4vw,40px);} .subtitle{color:var(--muted)}
-  .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);margin-top:6px}
-  .toc{position:sticky; top:12px; align-self:flex-start; background:var(--surface); border:1px solid var(--border);
-    border-radius:var(--radius); padding:14px; box-shadow:var(--shadow);}
-  .toc h3{margin:.25rem 0 .35rem; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
-  .toc a{display:block; padding:6px 0; color:var(--accent-2); text-decoration:none}
-  .toc a:hover{text-decoration:underline}
+  header.hero{
+    position:sticky; top:0; z-index:10;
+    padding:44px 20px 26px;
+    background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.86));
+    backdrop-filter: blur(6px);
+    border-bottom:1px solid var(--border);
+  }
+  .badge{
+    display:inline-block; padding:6px 12px; border-radius:999px;
+    font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    color:#064e3b;
+    background:linear-gradient(135deg, #99f6e4, #67e8f9);
+    box-shadow:var(--shadow); font-weight:700;
+  }
+  h1{margin:.6rem 0 .25rem; font-size:clamp(28px, 3.4vw, 40px);}
+  .subtitle{color:var(--muted)}
+  .meta{display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); margin-top:6px}
+
   main{display:grid; grid-template-columns: 260px 1fr; gap:18px; padding:20px;}
-  @media (max-width: 960px){ main{grid-template-columns: 1fr;} .toc{position:relative; top:0;} }
-  article{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:24px;}
+  @media (max-width: 980px){ main{grid-template-columns: 1fr;} .toc{position:relative; top:0;}}
+  .toc{
+    position:sticky; top:12px; align-self:flex-start;
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); padding:14px; box-shadow:var(--shadow);
+  }
+  .toc h3{
+    margin:.25rem 0 .35rem; font-size:13px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--muted)
+  }
+  .toc a{
+    display:block; padding:6px 0; textDecoration:none;
+    color:var(--accent-2);
+  }
+  .toc a:hover{ text-decoration:underline }
+
+  article{
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); box-shadow:var(--shadow); padding:26px;
+  }
   article section{margin:28px 0}
-  h2{margin:0 0 10px; font-size:clamp(22px, 2.4vw, 28px)}
+  h2{margin:0 0 12px; font-size:clamp(22px, 2.4vw, 28px)}
   h3{margin:16px 0 8px; color:var(--accent); font-size:18px}
-  p{margin:.6rem 0} ul,ol{margin:.6rem 0 .6rem 1.25rem}
-  .note{background:var(--note); color:var(--note-ink); border:1px solid #fde68a; border-radius:12px; padding:12px 14px; margin:12px 0;}
-  details{margin-top:8px; border:1px solid var(--border); border-radius:12px; background:#fafcff;}
-  details summary{list-style:none; cursor:pointer; padding:10px 14px; font-weight:700; color:#0f172a;}
-  details[open] summary{border-bottom:1px solid var(--border)} details .content{padding:12px 14px}
-  table{border-collapse:collapse;width:100%;margin:.6rem 0;border:1px solid var(--border);border-radius:10px;overflow:hidden}
-  th,td{padding:10px;border-bottom:1px solid var(--border);text-align:left} th{background:#f1f5f9}
-  footer{color:var(--muted); border-top:1px solid var(--border); margin-top:24px; padding:24px 20px 56px; background:#fff;}
-  .btn{display:inline-block;padding:8px 12px;border-radius:10px;border:1px solid var(--border); background:#fff; color:#0f172a; text-decoration:none;}
+  p{margin:.6rem 0}
+  ul,ol{margin:.6rem 0 .6rem 1.25rem}
+  .callout{
+    border-left:4px solid var(--accent);
+    background:linear-gradient(180deg, #f0fdff, #f9feff);
+    border:1px dashed var(--border);
+    border-radius:12px; padding:12px 14px; margin:12px 0;
+  }
+  .note{
+    background:var(--note); color:var(--note-ink);
+    border:1px solid #fde68a; border-radius:12px;
+    padding:12px 14px; margin:12px 0;
+  }
+  .grid-2{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px}
+  table{border-collapse:collapse; width:100%; margin:.6rem 0; border:1px solid var(--border); border-radius:10px; overflow:hidden}
+  th,td{padding:10px; border-bottom:1px solid var(--border); text-align:left}
+  th{background:#f1f5f9}
+
+  footer{
+    color:var(--muted); border-top:1px solid var(--border);
+    margin-top:24px; padding:24px 20px 56px; background:#fff;
+  }
+  .btn{
+    display:inline-block; padding:8px 12px; border-radius:10px;
+    border:1px solid var(--border); background:#fff; color:var(--ink); text-decoration:none;
+  }
   .btn:hover{border-color:var(--accent)}
 </style>
 </head>
 <body>
-<header class="hero">
-  <div class="container">
-    <span class="badge">Confidential · Internal Use Only</span>
-    <h1>Strategic Guide — UBIO/VIRDI UK Feasibility & Regulatory Assessment</h1>
-    <div class="subtitle">Blog Edition (Auto-generated from Word document)</div>
-    <div class="meta">
-      <span>Format: Blog</span> •
-      <span>Derived from: .docx upload</span>
+  <header class="hero">
+    <div class="container">
+      <span class="badge">Confidential · Internal Use Only</span>
+      <h1>Strategic Guide — UBIO/VIRDI UK Feasibility & Regulatory Assessment</h1>
+      <div class="subtitle">EXNECT Business Solution — Prepared by Safdar I Rizvi</div>
+      <div class="meta">
+        <span>Format: Blog</span> •
+        <span>Scope: Business Models · Importation · Compliance · GDPR · Licensing · Market · Financials</span>
+      </div>
+      <div class="note" style="margin-top:12px;">
+        <strong>Confidentiality —</strong> This personal and confidential strategic guide is prepared exclusively for internal reference. It is not intended for public distribution or reliance. No assurance of accuracy or completeness is claimed.
+      </div>
     </div>
-    <div class="note" style="margin-top:12px;">
-      <strong>Confidentiality —</strong> This personal and confidential strategic guide is prepared exclusively for internal reference. It is not intended for public distribution or reliance. No assurance of accuracy or completeness is claimed.
+  </header>
+  <main class="container">
+    <aside class="toc">
+      <h3>Contents</h3>
+      <!-- The table of contents is auto-built from your document headings -->
+      <!-- If you need to tweak anchor names, edit the id="" on each section below -->
+      <!-- START TOC -->
+      %TOC%
+      <!-- END TOC -->
+    </aside>
+    <article>
+      <!-- START SECTIONS -->
+      %SECTIONS%
+      <!-- END SECTIONS -->
+    </article>
+  </main>
+  <footer>
+    <div class="container">
+      <div>© 2025 EXNECT Business Solution — Strategic Guide prepared by Safdar I Rizvi. All rights reserved. Internal use only.</div>
+      <div style="margin-top:6px;">
+        <a class="btn" href="#">Back to top</a>
+      </div>
     </div>
-  </div>
-</header>
-<main class="container">
-  <aside class="toc">
-    <h3>Contents</h3>
-    <!-- Auto-generated table of contents from headings (level 1–2) -->
-    <!-- The following links were built from the .docx structure -->
-    <!-- If a heading doesn't appear, it likely wasn't styled as Heading 1/2 in Word -->
-    <!-- TOC START -->
-    <!-- (Rendered by script) -->
-    <!-- TOC END -->
-  </aside>
-  <article>
-    <!-- Sections auto-generated; each has an expandable <details> -->
-    <!-- SECTIONS START -->
-    <!-- (Rendered by script) -->
-    <!-- SECTIONS END -->
-  </article>
-</main>
-<footer>
-  <div class="container">
-    <div>© 2025 EXNECT Business Solution — Strategic Guide prepared by Safdar I Rizvi. All rights reserved. Internal use only.</div>
-    <div style="margin-top:6px;">
-      <a class="btn" href="#">Back to top</a>
-    </div>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>
