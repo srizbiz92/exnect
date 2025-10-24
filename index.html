@@ -4,116 +4,49 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Strategic Guide — UBIO/VIRDI UK: Feasibility & Regulatory Assessment (Blog Edition)</title>
-<meta name="description" content="A confidential strategic guide on introducing UBIO/VIRDI biometric devices to the UK market, covering business models, importation, product compliance, data protection, licensing, market, and financial feasibility.">
+<meta name="description" content="A confidential strategic guide on introducing UBIO/VIRDI biometric devices to the UK market, derived from the uploaded Word document.">
 <style>
   :root{
-    --bg:#f7fafc;        /* light background */
-    --surface:#ffffff;
-    --ink:#0f172a;       /* slate-900 */
-    --muted:#475569;     /* slate-600 */
-    --accent:#0ea5a4;    /* teal-500 */
-    --accent-2:#0891b2;  /* cyan-600 */
-    --border:#e2e8f0;    /* slate-200 */
-    --note:#fff7ed;      /* warm note bg */
-    --note-ink:#92400e;  /* amber-900 */
-    --shadow: 0 8px 24px rgba(2,132,199,.08);
-    --radius:14px;
-    --container: 1100px;
+    --bg:#f7fafc; --surface:#ffffff; --ink:#0f172a; --muted:#475569;
+    --accent:#0ea5a4; --accent-2:#0891b2; --border:#e2e8f0;
+    --note:#fff7ed; --note-ink:#92400e; --shadow:0 8px 24px rgba(2,132,199,.08);
+    --radius:14px; --container:1100px;
   }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    background:
-      radial-gradient(900px 480px at 15% -10%, rgba(14,165,164,.10), transparent 60%),
-      radial-gradient(700px 420px at 120% -20%, rgba(8,145,178,.08), transparent 55%),
-      var(--bg);
-    color:var(--ink);
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  *{box-sizing:border-box} html,body{height:100%}
+  body{margin:0;background:
+    radial-gradient(900px 480px at 15% -10%, rgba(14,165,164,.10), transparent 60%),
+    radial-gradient(700px 420px at 120% -20%, rgba(8,145,178,.08), transparent 55%),
+    var(--bg);
+    color:var(--ink);font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
     line-height:1.7;
   }
-  header.hero{
-    position:relative;
-    padding:48px 20px 28px;
-    border-bottom:1px solid var(--border);
-    background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.86));
-    backdrop-filter: blur(6px);
-  }
+  header.hero{position:relative;padding:48px 20px 28px;border-bottom:1px solid var(--border);
+    background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.86));backdrop-filter: blur(6px);}
   .container{max-width:var(--container); margin:0 auto;}
-  .badge{
-    display:inline-block;
-    padding:6px 12px;
-    border-radius:999px;
-    font-size:12px; letter-spacing:.08em; text-transform:uppercase;
-    color:#065f5b;
-    background:linear-gradient(135deg, #99f6e4, #67e8f9);
-    box-shadow:var(--shadow);
-    font-weight:700;
-  }
-  h1{margin:.5rem 0 .25rem; font-size:clamp(28px, 3.4vw, 40px);}
-  .subtitle{color:var(--muted)}
-  .meta{display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); margin-top:6px}
-  .toc{
-    position:sticky; top:12px;
-    align-self:flex-start;
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:14px;
-    box-shadow:var(--shadow);
-  }
+  .badge{display:inline-block;padding:6px 12px;border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:#065f5b;background:linear-gradient(135deg, #99f6e4, #67e8f9);box-shadow:var(--shadow);font-weight:700;}
+  h1{margin:.5rem 0 .25rem;font-size:clamp(28px,3.4vw,40px);} .subtitle{color:var(--muted)}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);margin-top:6px}
+  .toc{position:sticky; top:12px; align-self:flex-start; background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); padding:14px; box-shadow:var(--shadow);}
   .toc h3{margin:.25rem 0 .35rem; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
   .toc a{display:block; padding:6px 0; color:var(--accent-2); text-decoration:none}
   .toc a:hover{text-decoration:underline}
-  main{
-    display:grid;
-    grid-template-columns: 260px 1fr;
-    gap:18px;
-    padding:20px;
-  }
+  main{display:grid; grid-template-columns: 260px 1fr; gap:18px; padding:20px;}
   @media (max-width: 960px){ main{grid-template-columns: 1fr;} .toc{position:relative; top:0;} }
-  article{
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    padding:24px;
-  }
+  article{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:24px;}
   article section{margin:28px 0}
   h2{margin:0 0 10px; font-size:clamp(22px, 2.4vw, 28px)}
   h3{margin:16px 0 8px; color:var(--accent); font-size:18px}
-  p{margin:.6rem 0}
-  ul,ol{margin:.6rem 0 .6rem 1.25rem}
-  .note{
-    background:var(--note); color:var(--note-ink);
-    border:1px solid #fde68a; border-radius:12px;
-    padding:12px 14px; margin:12px 0;
-  }
-  .callout{
-    border-left:4px solid var(--accent);
-    background:#ecfeff; border:1px dashed var(--border);
-    border-radius:12px; padding:12px 14px; margin:10px 0;
-  }
-  details{
-    margin-top:8px; border:1px solid var(--border); border-radius:12px; background:#fafcff;
-  }
-  details summary{
-    list-style:none; cursor:pointer; padding:10px 14px; font-weight:700; color:#0f172a;
-  }
-  details[open] summary{border-bottom:1px solid var(--border)}
-  details .content{padding:12px 14px}
-  .grid-2{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px}
-  table{border-collapse:collapse; width:100%; margin:.6rem 0; border:1px solid var(--border); border-radius:10px; overflow:hidden}
-  th,td{padding:10px; border-bottom:1px solid var(--border); text-align:left}
-  th{background:#f1f5f9}
-  footer{
-    color:var(--muted); border-top:1px solid var(--border);
-    margin-top:24px; padding:24px 20px 56px; background:#fff;
-  }
-  .btn{
-    display:inline-block; padding:8px 12px; border-radius:10px;
-    border:1px solid var(--border); background:#fff; color:var(--ink); text-decoration:none;
-  }
+  p{margin:.6rem 0} ul,ol{margin:.6rem 0 .6rem 1.25rem}
+  .note{background:var(--note); color:var(--note-ink); border:1px solid #fde68a; border-radius:12px; padding:12px 14px; margin:12px 0;}
+  details{margin-top:8px; border:1px solid var(--border); border-radius:12px; background:#fafcff;}
+  details summary{list-style:none; cursor:pointer; padding:10px 14px; font-weight:700; color:#0f172a;}
+  details[open] summary{border-bottom:1px solid var(--border)} details .content{padding:12px 14px}
+  table{border-collapse:collapse;width:100%;margin:.6rem 0;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+  th,td{padding:10px;border-bottom:1px solid var(--border);text-align:left} th{background:#f1f5f9}
+  footer{color:var(--muted); border-top:1px solid var(--border); margin-top:24px; padding:24px 20px 56px; background:#fff;}
+  .btn{display:inline-block;padding:8px 12px;border-radius:10px;border:1px solid var(--border); background:#fff; color:#0f172a; text-decoration:none;}
   .btn:hover{border-color:var(--accent)}
 </style>
 </head>
@@ -122,363 +55,38 @@
   <div class="container">
     <span class="badge">Confidential · Internal Use Only</span>
     <h1>Strategic Guide — UBIO/VIRDI UK Feasibility & Regulatory Assessment</h1>
-    <div class="subtitle">EXNECT Business Solution — Prepared by Safdar I Rizvi</div>
+    <div class="subtitle">Blog Edition (Auto-generated from Word document)</div>
     <div class="meta">
-      <span>Format: Blog Edition</span> •
-      <span>Scope: Business Models · Importation · Compliance · GDPR · Licensing · Market · Financials</span>
+      <span>Format: Blog</span> •
+      <span>Derived from: .docx upload</span>
     </div>
     <div class="note" style="margin-top:12px;">
-      <strong>Confidentiality Notice —</strong> This personal and confidential strategic guide is prepared exclusively for internal reference. It is not intended for public distribution or reliance. No assurance of accuracy or completeness is claimed.
+      <strong>Confidentiality —</strong> This personal and confidential strategic guide is prepared exclusively for internal reference. It is not intended for public distribution or reliance. No assurance of accuracy or completeness is claimed.
     </div>
   </div>
 </header>
-
 <main class="container">
-  <!-- TOC -->
   <aside class="toc">
     <h3>Contents</h3>
-    <a href="#exec">Executive Summary</a>
-    <a href="#a">A. Business Setup & Model Options</a>
-    <a href="#b">B. Importation & Customs</a>
-    <a href="#c">C. Product Compliance</a>
-    <a href="#d">D. Data & Consumer Protection</a>
-    <a href="#e">E. Licensing & Certification</a>
-    <a href="#f">F. Market & Competition</a>
-    <a href="#g">G. Feasibility & Financials</a>
-    <a href="#h">H. Partnership & MoU</a>
-    <a href="#appendix">Appendices</a>
-    <a href="#refs">References</a>
-    <a href="#annex">Confidential Annexure</a>
+    <!-- Auto-generated table of contents from headings (level 1–2) -->
+    <!-- The following links were built from the .docx structure -->
+    <!-- If a heading doesn't appear, it likely wasn't styled as Heading 1/2 in Word -->
+    <!-- TOC START -->
+    <!-- (Rendered by script) -->
+    <!-- TOC END -->
   </aside>
-
-  <!-- BLOG BODY -->
   <article>
-    <!-- Executive Summary -->
-    <section id="exec">
-      <h2>Executive Summary</h2>
-      <p>
-        This strategic guide provides a comprehensive analysis for introducing UBIO/VIRDI biometric devices into the UK market, spanning
-        business models, importation, product regulation, data protection, licensing, and competitive dynamics. A key enabler is the UK
-        government’s <em>indefinite recognition of the CE mark</em> for most goods, simplifying market entry. The principal hurdles are regulatory:
-        processing <strong>biometric (special category) data</strong> lawfully under UK GDPR and ensuring certified, competent installation teams.
-      </p>
-      <div class="callout"><strong>Key Finding:</strong> Market entry is highly feasible; compliance and governance (GDPR + installer competence) are the main challenges.</div>
-      <ul>
-        <li><strong>Option B — Parallel Importer/Reseller:</strong> Lower capex, faster to market, thinner margins; full importer duties.</li>
-        <li><strong>Option C — Value-Added Reseller / System Integrator:</strong> Higher capex and expertise; stronger margins, defensibility, and client relationships.</li>
-      </ul>
-      <p><strong>Critical success factors:</strong> robust GDPR framework, installer certifications (e.g., 18th Edition, NSI/SSAIB), and a clear MoU with the Dubai-based distributor for warranty, SDK/RMA, and liability.</p>
-
-      <details><summary>Read the full Executive Summary</summary>
-        <div class="content">
-          <p>The research addresses business models, importation, product regulations, data protection, licensing, and market competition, combining author-defined scope with current UK guidance and market data.</p>
-          <p>Option C, though investment-heavy, offers superior profitability and market defensibility via integration services and lifecycle support. The chosen model shapes operational, financial, and legal structures.</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- A. Business Setup -->
-    <section id="a">
-      <h2>A. Business Setup & Model Options</h2>
-      <p>The choice between a reseller and a system integrator model is foundational and affects capital, skill sets, margins, and liabilities.</p>
-
-      <h3>1) Comparative Analysis — Reseller vs. System Integrator</h3>
-      <div class="grid-2">
-        <div>
-          <h4>Option B — Parallel Importer / Reseller</h4>
-          <ul>
-            <li>Lower start-up costs; faster time-to-market; volume-driven margins.</li>
-            <li>Acts as legal <em>importer</em>; responsible for CE/UKCA, RoHS, WEEE, importer labeling.</li>
-            <li>Manage warranty & returns; potential brand/channel conflicts.</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Option C — Value-Added Reseller / System Integrator</h4>
-          <ul>
-            <li>Higher capex and operational complexity; certified technical staff needed.</li>
-            <li>Project-driven revenue with service margins; stronger client stickiness.</li>
-            <li>Greater service liability; robust contracts and insurance required.</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>2) Investment, Costs, and Human Capital</h3>
-      <ul>
-        <li><strong>Option B:</strong> Inventory, e-commerce, marketing, admin — moderate capital; sales/logistics skills.</li>
-        <li><strong>Option C:</strong> Adds tools, training/certifications, vehicles, PI insurance; electrical/networking/GDPR expertise.</li>
-      </ul>
-
-      <h3>3) Break-Even Concepts</h3>
-      <ul>
-        <li><strong>Reseller (Units):</strong> <em>BEP = Fixed Costs / (Price − Variable Cost per Unit)</em></li>
-        <li><strong>Integrator (Projects):</strong> <em>BEP = Fixed Costs / (Avg. Project Revenue − Avg. Project Var Cost)</em></li>
-      </ul>
-
-      <h3>4) MoU — Roles & Rights with Dubai Office</h3>
-      <ul>
-        <li>Warranty & RMA process and turnaround times.</li>
-        <li>SDK licence and support SLA (critical for integrations).</li>
-        <li>Territory, pricing/margins, branding usage, liability split.</li>
-      </ul>
-
-      <details><summary>Read full Section A</summary>
-        <div class="content">
-          <p><strong>Parallel Importer best practices:</strong> own warranty logistics; ensure importer labeling/DoC; invest in customer trust; maintain cost advantage via efficient logistics and lean operations.</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- B. Importation & Customs -->
-    <section id="b">
-      <h2>B. Importation & Customs</h2>
-      <h3>1) Step-by-Step Process</h3>
-      <ol>
-        <li>Obtain GB EORI.</li>
-        <li>Classify goods (likely Ch. 85; confirm HS per model, e.g., 8543.70.90).</li>
-        <li>Prepare docs: invoice, packing list, CoO (if applicable), AWB/BoL.</li>
-        <li>Agree Incoterms (e.g., FCA/DDP) and file customs declarations.</li>
-        <li>Pay duties (often 0% for some codes) and import VAT (reclaimable).</li>
-      </ol>
-
-      <h3>2) Associated Costs</h3>
-      <ul>
-        <li>Customs duty (per tariff), import VAT (20%), freight & insurance, clearance fees.</li>
-      </ul>
-
-      <h3>3) Record-Keeping</h3>
-      <ul>
-        <li>Keep customs paperwork, C79 VAT certificates.</li>
-        <li>Maintain UK DoC & technical file for 10 years post placement on market.</li>
-      </ul>
-
-      <details><summary>Read full Section B</summary>
-        <div class="content">
-          <p>Couriers/freight forwarders can handle declarations; choose terms that fit cash-flow and risk appetite.</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- C. Product Compliance -->
-    <section id="c">
-      <h2>C. Product Compliance & Regulatory Requirements</h2>
-      <div class="callout"><strong>Update:</strong> GB recognizes the CE mark indefinitely for most goods, easing entry for CE-marked devices.</div>
-
-      <div class="grid-2">
-        <div>
-          <h3>Key Regulations</h3>
-          <ul>
-            <li>Product Safety & Metrology (CE/UKCA)</li>
-            <li>Radio Equipment Regulations</li>
-            <li>RoHS</li>
-            <li>WEEE (producer obligations)</li>
-            <li>Labelling & importer identification</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Fast-Track Steps</h3>
-          <ol>
-            <li>Leverage manufacturer CE technical docs.</li>
-            <li>Issue UK DoC referencing relevant standards.</li>
-            <li>Apply importer details per labelling easements.</li>
-          </ol>
-        </div>
-      </div>
-
-      <h3>Non-Compliance Penalties</h3>
-      <p>OPSS enforcement: compliance/withdrawal notices, fines, and potential criminal liability for severe breaches.</p>
-
-      <details><summary>Read full Section C</summary>
-        <div class="content">
-          <p>UKCA transition optional; existing CE basis + UK DoC typically sufficient under current policy for these devices.</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- D. Data & Consumer Protection -->
-    <section id="d">
-      <h2>D. Data Protection & Consumer Protection</h2>
-      <p>Biometric data used for unique identification is <strong>special category data</strong>. Processing requires an Article 6 lawful basis <em>and</em> an Article 9 condition, a DPIA, and privacy-by-design.</p>
-      <ul>
-        <li>Workplace attendance is high-risk; provide genuine alternatives (consent often invalid due to imbalance).</li>
-        <li>Supply a “GDPR Compliance Pack”: DPIA, privacy notices, signage, opt-out guidance, DPAs.</li>
-        <li>Consumer Rights Act applies to goods, services, and digital content/firmware.</li>
-      </ul>
-      <details><summary>Read full Section D (incl. Serco case)</summary>
-        <div class="content">
-          <p><strong>Serco Leisure (ICO, Feb 2024):</strong> ICO ordered cessation of FRT/fingerprint attendance monitoring — not necessary/proportionate; consent not freely given; lacked valid legal basis. Lesson: ensure necessity, proportionality, and non-detrimental opt-outs.</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- E. Licensing & Certification -->
-    <section id="e">
-      <h2>E. Licensing & Certification</h2>
-      <div class="grid-2">
-        <div>
-          <h3>Option B — Essentials</h3>
-          <ul>
-            <li>EORI (Importer), ICO registration.</li>
-            <li>WEEE producer registration; confirm RoHS.</li>
-            <li>Public/Product Liability; Employers’ Liability (if staff).</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Option C — Additional</h3>
-          <ul>
-            <li>City & Guilds 2382-22 (18th Edition), NSI/SSAIB accreditations.</li>
-            <li>CSCS (site access), H&S training.</li>
-            <li>Professional Indemnity; Contract Works insurance.</li>
-          </ul>
-        </div>
-      </div>
-      <p><em>SIA licences</em> not generally required for installation work itself.</p>
-
-      <details><summary>Read full Section E</summary>
-        <div class="content">
-          <p>Insurance levels should reflect model risk profile; PI is key for Option C where advisory/installation liabilities exist.</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- F. Market & Competition -->
-    <section id="f">
-      <h2>F. Market & Competition</h2>
-      <ul>
-        <li><strong>Competitors:</strong> Suprema, ZKTeco, HID, IDEMIA; plus UK integrators.</li>
-        <li><strong>Indicative pricing:</strong> T&A devices ~£200–£500; premium readers ~£400–£1,200+; installed per-door costs from ~£500–£800+ (complexity dependent).</li>
-        <li><strong>Channels:</strong> two-tier distribution; direct-to-integrator; e-commerce; emerging BaaS.</li>
-      </ul>
-      <h3>Differentiation</h3>
-      <ul>
-        <li>Lead with a GDPR Compliance Pack and advisory.</li>
-        <li>Service speed, quality, and local support.</li>
-        <li>Emphasize accuracy & liveness detection; sell complete solutions.</li>
-      </ul>
-
-      <details><summary>Read full Section F</summary>
-        <div class="content">
-          <p>Positioning: avoid price-only competition; target mid-market with value-rich solution bundles (hardware + install + compliance support).</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- G. Feasibility & Financials -->
-    <section id="g">
-      <h2>G. Feasibility & Financial Modelling</h2>
-      <div class="grid-2">
-        <div>
-          <h3>Start-up (Illustrative)</h3>
-          <ul>
-            <li>Option B: ~£16k–£41k</li>
-            <li>Option C: ~£40k–£80k+</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Monthly Opex (Illustrative)</h3>
-          <ul>
-            <li>Option B: ~£4.2k–£9k</li>
-            <li>Option C: ~£8.8k–£19.3k</li>
-          </ul>
-        </div>
-      </div>
-      <h3>Margins</h3>
-      <ul>
-        <li>Hardware resale ~15–30% (competitive sensitivity).</li>
-        <li>Integration services often 50–70%+ gross margin.</li>
-      </ul>
-      <h3>Sensitivity</h3>
-      <ul>
-        <li>Sales volume ±10%, COGS ±10%, GBP↔USD/AED FX swings.</li>
-        <li>Delay to first major project (Option C) — ensure runway.</li>
-      </ul>
-
-      <details><summary>Read full Section G</summary>
-        <div class="content">
-          <p>Include cash-flow planning and hedging consideration for FX; model maintenance revenue for resilience.</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- H. Partnership & MoU -->
-    <section id="h">
-      <h2>H. Partnership & MoU with Dubai Office</h2>
-      <p>A robust Distribution Agreement or MoU should define scope/territory, term/termination, obligations, RMA, SDK licence/SLA, liability & indemnities, branding, confidentiality, and governing law.</p>
-
-      <details><summary>Read full Section H (Key Clauses)</summary>
-        <div class="content">
-          <ol>
-            <li>Parties, scope, territory (UK), exclusivity terms.</li>
-            <li>Term & termination conditions.</li>
-            <li>Supplier obligations (CE-compliant stock, technical docs, pricing, fulfilment).</li>
-            <li>Distributor obligations (UK importer compliance, first-line support; trained installers for Option C).</li>
-            <li>Warranty & RMA (periods, shipping, turnaround).</li>
-            <li>SDK licence; technical support SLA with response/escallation.</li>
-            <li>Liability & indemnification split (manufacture vs installation).</li>
-            <li>Branding & marketing usage rights.</li>
-            <li>Confidentiality of commercial information.</li>
-            <li>Governing law and dispute resolution.</li>
-          </ol>
-        </div>
-      </details>
-    </section>
-
-    <!-- Appendices -->
-    <section id="appendix">
-      <h2>Appendices (Overview)</h2>
-      <ul>
-        <li>Appendix 1: Business Model Comparison Template</li>
-        <li>Appendix 2: Cost Analysis Template</li>
-        <li>Appendix 3: Regulatory Compliance Checklist</li>
-        <li>Appendix 4: GDPR DPIA Template (Client)</li>
-        <li>Appendix 5: Vendor Evaluation Matrix (Dubai Office)</li>
-        <li>Appendix 6: Customer Service SLA (Option C)</li>
-        <li>Appendix 7: Sample Declarations (Origin & Manufacturer DoC)</li>
-        <li>Appendix 8: Sample Memorandum of Understanding (MoU)</li>
-      </ul>
-
-      <details><summary>Open full Appendices</summary>
-        <div class="content">
-          <p>Include templates/tables as needed; for very large tables, consider linking downloadable files.</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- References -->
-    <section id="refs">
-      <h2>References</h2>
-      <p>Primary sources include UK government product safety/marking guidance, ICO guidance on special category data and DPIAs, Consumer Rights Act 2015, Radio Equipment, RoHS, WEEE, and market sources cited in the report.</p>
-
-      <details><summary>Show full bibliography</summary>
-        <div class="content">
-          <ul>
-            <li>CE Marking recognition (DBT/GOV.UK), Product Safety & Metrology Regulations</li>
-            <li>ICO: Special Category Data & DPIAs; ICO v. Serco Leisure (2024)</li>
-            <li>Consumer Rights Act 2015; Radio Equipment Regs; RoHS; WEEE; EMC; Electrical Equipment (Safety) Regs</li>
-            <li>Market and pricing references as listed in the report</li>
-          </ul>
-        </div>
-      </details>
-    </section>
-
-    <!-- Annex -->
-    <section id="annex">
-      <h2>Confidential Annexure — UK Potential Customer & Partner Database</h2>
-      <p><strong>Notice:</strong> Internal strategic planning only. The annex enumerates potential partners, integrators, and vendors across UK regions to support Option C targeting and ramp-up.</p>
-
-      <details><summary>Reveal Annex summary</summary>
-        <div class="content">
-          <p>Regional integrator short-list (London, Midlands, North West, Yorkshire, Scotland, Wales, South West, South East) with contact routes and accreditation tags (e.g., NSI/SSAIB/Paxton). Consider maintaining the full annex in a secure CRM, linking only summaries publicly.</p>
-        </div>
-      </details>
-    </section>
+    <!-- Sections auto-generated; each has an expandable <details> -->
+    <!-- SECTIONS START -->
+    <!-- (Rendered by script) -->
+    <!-- SECTIONS END -->
   </article>
 </main>
-
 <footer>
   <div class="container">
     <div>© 2025 EXNECT Business Solution — Strategic Guide prepared by Safdar I Rizvi. All rights reserved. Internal use only.</div>
     <div style="margin-top:6px;">
-      <a class="btn" href="#exec">Back to top</a>
+      <a class="btn" href="#">Back to top</a>
     </div>
   </div>
 </footer>
