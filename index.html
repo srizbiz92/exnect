@@ -1,790 +1,601 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Strategic Guide — UBIO/VIRDI UK: Feasibility & Regulatory Assessment</title>
-<meta name="description" content="Full report as a single HTML page with sections, subsections, and tables.">
-<style>
-  :root{
-    --bg:#f8fbfc; --surface:#ffffff; --ink:#0f172a; --muted:#475569;
-    --accent:#0f766e; --accent-2:#06b6d4; --border:#e2e8f0;
-    --note:#fff7ed; --note-ink:#92400e; --shadow: 0 10px 30px rgba(6,182,212,.10);
-    --radius:14px; --container:1200px;
-  }
-  *{box-sizing:border-box} html,body{height:100%}
-  body{
-    margin:0;
-    background:
-      radial-gradient(1000px 540px at 12% -10%, rgba(6,182,212,.08), transparent 60%),
-      radial-gradient(800px 480px at 110% -18%, rgba(15,118,110,.07), transparent 55%),
-      var(--bg);
-    color:var(--ink);
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    line-height:1.75;
-  }
-  header.hero{
-    position:sticky; top:0; z-index:10;
-    padding:40px 20px 20px;
-    background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.86));
-    backdrop-filter: blur(6px);
-    border-bottom:1px solid var(--border);
-  }
-  .container{max-width:var(--container); margin:0 auto;}
-  .badge{
-    display:inline-block; padding:6px 12px; border-radius:999px;
-    font-size:12px; letter-spacing:.08em; text-transform:uppercase;
-    color:#064e3b; background:linear-gradient(135deg, #99f6e4, #67e8f9); box-shadow:var(--shadow); font-weight:700;
-  }
-  h1{margin:.6rem 0 .25rem; font-size:clamp(28px, 3.4vw, 40px);}
-  .subtitle{color:var(--muted)}
-  .meta{display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); margin-top:6px}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exnect Business Solution (UK) — Service Catalogue</title>
+  <meta name="description" content="Digital & Business Growth Partner for UK small businesses and startups. Websites, E‑commerce, SEO, SMM, Google Ads, ERP, IT Support, and Business Consultancy with transparent pricing." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.exnect.co.uk/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="Exnect Business Solution (UK) — Digital & Business Growth Partner" />
+  <meta property="og:description" content="Websites, E‑commerce, SEO, SMM, Google Ads, ERP, IT Support, and Consultancy — transparent, small‑business friendly pricing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.exnect.co.uk/" />
+  <meta property="og:image" content="https://www.exnect.co.uk/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Exnect Business Solution (UK) — Digital & Business Growth Partner" />
+  <meta name="twitter:description" content="Transparent, affordable websites & digital marketing for UK SMEs." />
+  <meta name="twitter:image" content="https://www.exnect.co.uk/og-image.jpg" />
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Exnect Business Solution (UK)",
+    "url":"https://www.exnect.co.uk/",
+    "logo":"https://www.exnect.co.uk/logo.png",
+    "sameAs":["https://www.facebook.com/","https://www.instagram.com/","https://www.linkedin.com/"]
+  }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* New warm palette */
+      --primary: #e1a140;   /* Gold */
+      --primary-600:#914110;/* Burnt Orange */
+      --primary-400:#efcfa0;/* Sand Dollar */
+      --accent:#532200;     /* Puce */
+      --bg:#fffaf3;         /* warm light background */
+      --panel:#ffffff;      /* card bg */
+      --ink:#2b1a0a;        /* deep warm text */
+      --muted:#6b4c2c;      /* subtle text */
+      --ring:#e1a14099;     /* focus ring */
+      --success:#16a34a; --warning:#d97706; --error:#e11d48;
+      --radius:16px;
+      --shadow: 0 6px 18px rgba(146, 65, 16, 0.10);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      color:var(--ink);
+      background:
+        radial-gradient(900px 600px at 80% -10%, rgba(225,161,64,.15), transparent 55%),
+        radial-gradient(700px 480px at 10% 0%, rgba(239,207,160,.18), transparent 50%),
+        var(--bg);
+      line-height:1.6;
+    }
+    a{color:var(--primary-600);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1180px;margin:0 auto;padding:0 20px}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.1rem;border-radius:999px;background:linear-gradient(90deg,var(--primary),var(--primary-600));color:#fff;font-weight:700;border:1px solid rgba(145,65,16,.15);box-shadow:0 10px 24px rgba(145,65,16,.18);transition:.2s}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(145,65,16,.28)}
+    .btn.secondary{background:#fff;color:var(--primary-600);border-color:#ecd9bf}
 
-  main{display:grid; grid-template-columns: 300px 1fr; gap:20px; padding:20px;}
-  @media (max-width: 1024px){ main{grid-template-columns: 1fr;} .toc{position:relative; top:0;} }
-  .toc{ position:sticky; top:12px; align-self:flex-start; background:var(--surface); border:1px solid var(--border);
-        border-radius:var(--radius); padding:14px; box-shadow:var(--shadow);}
-  .toc h3{ margin:.25rem 0 .35rem; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
-  .toc a{ display:block; padding:6px 0; color:var(--accent-2); text-decoration:none}
-  .toc a:hover{ text-decoration:underline}
-  .toc a.l2{ padding-left:12px} .toc a.l3{ padding-left:24px}
+    header.nav{
+      position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(8px);
+      background:rgba(255,255,255,.85);
+      border-bottom:1px solid #efdcc2;
+    }
+    header .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .brand .logo{width:40px;height:40px;border-radius:12px;background:conic-gradient(from 200deg, var(--primary), var(--primary-600));box-shadow:0 6px 18px rgba(145,65,16,.25)}
+    .brand h1{font-size:1.1rem;margin:0;font-weight:800;letter-spacing:.4px;color:#482408}
+    .nav-links{display:flex;gap:6px;flex-wrap:wrap}
+    .nav-links a{padding:.5rem .8rem;border-radius:999px;color:#4a3217}
+    .nav-links a:hover{background:#fff3e1}
 
-  article{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:26px;}
-  article section{ margin:30px 0}
-  h2{ margin:0 0 12px; font-size:clamp(22px, 2.4vw, 28px) }
-  h3{ margin:16px 0 8px; color:var(--accent); font-size:20px }
-  h4{ margin:12px 0 6px; color:#0b4f66; font-size:18px }
+    .hero{padding:88px 0 48px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .hero h2{font-size:2.6rem;line-height:1.1;margin:.2rem 0 1rem;font-weight:800;color:#3e2208}
+    .kicker{display:inline-flex;gap:.5rem;align-items:center;font-weight:700;color:#6b3b10}
+    .kicker .dot{width:8px;height:8px;background:var(--accent);border-radius:999px;box-shadow:0 0 0 4px rgba(83,34,0,.15)}
+    .hero p{color:#5a4938;max-width:60ch}
+    .badges{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+    .badge{background:#fff;border:1px solid #efdcc2;padding:.5rem .75rem;border-radius:999px;color:#5a4938;font-weight:600;box-shadow:var(--shadow)}
 
-  p{ margin:.55rem 0 }
-  ul.clean{ list-style:none; margin:.4rem 0 .8rem 0; padding:0 }
-  ul.clean li{ display:flex; align-items:flex-start; gap:8px; margin:.25rem 0 }
-  ul.clean .dash{ margin-top:.55rem; width:8px; height:2px; background:#94a3b8; flex:0 0 8px; border-radius:1px }
-  ul.clean .li-txt{ display:block }
+    .segment{padding:56px 0}
+    .section-title{font-size:1.8rem;margin:0 0 10px;font-weight:800;color:#482408}
+    .sub{color:var(--muted);margin-top:-6px}
 
-  .tbl-wrap{ border:1px solid var(--border); border-radius:12px; overflow:auto; box-shadow:var(--shadow); }
-  table.tbl{ border-collapse:separate; border-spacing:0; width:100%}
-  table.tbl th, table.tbl td{ padding:12px 12px; border-bottom:1px solid var(--border); text-align:left; vertical-align:top; background:#fff }
-  table.tbl th{ background:#f1f5f9; position:sticky; top:0; z-index:1 }
-  table.tbl tr:nth-child(even) td{ background:#fafcff }
+    /* Tabs */
+    .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+    .tab{padding:.6rem .9rem;border-radius:999px;background:#fff;border:1px solid #efdcc2;color:#4a3217;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
+    .tab[aria-selected="true"]{background:linear-gradient(90deg,#fff7ea,#ffefd6);border-color:#e8cc9e}
 
-  footer{ color:var(--muted); border-top:1px solid var(--border); margin-top:24px; padding:24px 20px 56px; background:#fff;}
-  .btn{ display:inline-block; padding:8px 12px; border-radius:10px; border:1px solid var(--border); background:#fff; color:var(--ink); text-decoration:none; }
-  .btn:hover{ border-color:var(--accent) }
+    /* Cards / Pricing */
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media (max-width:960px){.hero-grid{grid-template-columns:1fr}.grid.cols-3,.grid.cols-4{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.grid.cols-3,.grid.cols-4{grid-template-columns:1fr}}
 
-/* ===== Print-Optimized A4 Styles ===== */
-@page {
-  size: A4;
-  margin: 20mm 15mm;
-}
-@media print {
-  /* Ensure accurate color rendering if any color remains */
-  body {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-    background: #ffffff !important;
-    color: #000000;
-    font-size: 11pt;
-    line-height: 1.5;
-  }
+    .card{background:var(--panel);border:1px solid #efdcc2;border-radius:var(--radius);padding:20px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .card .chip{position:absolute;top:14px;right:14px;font-size:.75rem;background:#fff5e4;border:1px solid #efcf9a;padding:.25rem .5rem;border-radius:999px;color:#6b3b10}
+    .price{font-size:2rem;font-weight:800;margin:.2rem 0;color:#482408}
+    .muted{color:var(--muted)}
+    .features{margin:10px 0 14px;padding:0;list-style:none}
+    .features li{display:flex;gap:.5rem;align-items:flex-start;margin:.45rem 0}
+    .features li svg{flex:0 0 18px;margin-top:4px}
 
-  /* Simplify header for print */
-  header.hero {
-    position: static !important;
-    background: #ffffff !important;
-    border-bottom: 1px solid #000 !important;
-    box-shadow: none !important;
-    padding: 8mm 0 5mm !important;
-  }
+    /* Accordion */
+    .accordion{border:1px solid #efdcc2;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .accordion summary{cursor:pointer;list-style:none;padding:16px 18px;background:#fff8ec;font-weight:700;display:flex;align-items:center;justify-content:space-between;color:#482408}
+    .accordion summary::-webkit-details-marker{display:none}
+    .accordion .acc-body{padding:14px 18px;background:#fff}
 
-  /* Show the subtitle and meta in tighter spacing */
-  .subtitle, .meta { color: #000 !important; }
+    .notice{padding:12px 14px;border:1px dashed #e7c790;border-radius:12px;background:#fff7e8;color:#4a3217}
 
-  /* Table of contents: keep at front, remove sticky & box styles */
-  .toc {
-    position: static !important;
-    border: 0.5pt solid #000 !important;
-    box-shadow: none !important;
-    background: #fff !important;
-    break-after: page;
-  }
-  .toc h3 { color: #000 !important; }
-  .toc a { color: #000 !important; text-decoration: none !important; }
+    footer{padding:40px 0;color:#6a533e;border-top:1px solid #efdcc2;background:linear-gradient(180deg,#ffffff, #fff5e4)}
+    .footer-grid{display:grid;gap:18px;grid-template-columns:2fr 1fr 1fr}
+    @media (max-width:860px){.footer-grid{grid-template-columns:1fr}}
+    .tiny{font-size:.85rem;color:#7b634c}
 
-  /* Article and sections */
-  article {
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-  }
-
-  /* Avoid breaking important blocks across pages */
-  section.sec, .tbl-wrap, table.tbl, h2, h3, h4 {
-    break-inside: avoid-page;
-    page-break-inside: avoid;
-  }
-  h2, h3, h4 { page-break-after: avoid; }
-
-  /* Tables: solid borders, no zebra, readable size */
-  .tbl-wrap { border: 0.5pt solid #000 !important; }
-  table.tbl {
-    border-collapse: collapse !important;
-    width: 100% !important;
-  }
-  table.tbl th, table.tbl td {
-    border: 0.5pt solid #000 !important;
-    background: #fff !important;
-    color: #000 !important;
-    padding: 6pt 6pt !important;
-  }
-  table.tbl th {
-    font-weight: 700 !important;
-  }
-
-  /* Lists: remove decorative dashes, left-align cleanly */
-  ul.clean { list-style: none !important; margin-left: 0 !important; padding-left: 0 !important; }
-  ul.clean .dash { display: none !important; }
-  ul.clean .li-txt { display: block !important; margin-left: 0 !important; }
-
-  /* Remove background gradients and shadows everywhere */
-  * {
-    background-image: none !important;
-    box-shadow: none !important;
-  }
-
-  /* Links: show URL after link text for clarity in print */
-  a[href^="http"]::after {
-    content: " (" attr(href) ")";
-    font-size: 9pt;
-  }
-
-  /* Footer: simple and unobtrusive on last page(s) */
-  footer {
-    border-top: 0.5pt solid #000 !important;
-    background: #fff !important;
-    color: #000 !important;
-    padding-top: 6mm !important;
-  }
-
-  /* Control widows and orphans for paragraphs */
-  p { orphans: 3; widows: 3; }
-
-  /* Remove the sticky layout grid spacing for print */
-  main.container {
-    display: block !important;
-    padding: 0 !important;
-  }
-}
-
-</style>
+    /* Focus outlines */
+    :focus{outline:2px solid var(--ring);outline-offset:2px}
+  </style>
+  <style>
+    /* Cookie banner */
+    #cookie-banner{position:fixed;left:20px;right:20px;bottom:20px;z-index:60;display:none;background:#fff;border:1px solid #ece8f8;border-radius:14px;box-shadow:0 12px 30px rgba(28,15,71,.12);padding:14px 16px}
+    #cookie-banner p{margin:0 0 10px;color:#3a2a6b}
+    #cookie-banner .actions{display:flex;gap:10px;flex-wrap:wrap}
+    #cookie-accept{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:999px;background:linear-gradient(90deg,var(--primary),var(--primary-400));color:#fff;font-weight:700;border:1px solid rgba(99,102,241,.15)}
+    #cookie-manage{background:#fff;border:1px solid #e7e3f5;border-radius:999px;padding:.7rem 1rem;color:#3a2a6b;font-weight:700}
+  </style>
+  <script>
+    // Consent & GA loader (GA4)
+    const GA_ID = 'G-XXXXXXX'; // TODO: replace with your real GA4 ID
+    function loadGA(){
+      if(!GA_ID||GA_ID==='G-XXXXXXX') return; // prevent empty id
+      if(window.__gaLoaded) return; window.__gaLoaded=true;
+      const s1=document.createElement('script');
+      s1.async=true; s1.src=`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      const s2=document.createElement('script');
+      s2.innerHTML = "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '"+GA_ID+"');";
+      document.head.appendChild(s1); document.head.appendChild(s2);
+    }
+    function showCookieBanner(){const b=document.getElementById('cookie-banner'); if(b) b.style.display='block'}
+    function hideCookieBanner(){const b=document.getElementById('cookie-banner'); if(b) b.style.display='none'}
+    function initConsent(){
+      const consent = localStorage.getItem('exnect_consent');
+      if(consent==='granted'){ loadGA(); }
+      else { showCookieBanner(); }
+      window.manageCookies = () => { showCookieBanner(); };
+    }
+    document.addEventListener('DOMContentLoaded', initConsent);
+  </script>
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <span class="badge">Confidential · Internal Use Only</span>
-      <h1>Strategic Guide — UBIO/VIRDI UK Feasibility & Regulatory Assessment</h1>
-      <div class="subtitle">EXNECT Business Solution — Prepared by Safdar I Rizvi</div>
-      <div class="meta">
-        <span>Single-page HTML</span> •
-        <span>Sections · Subsections · Tables</span>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img class="logo" src="/logo.svg" alt="Exnect Business Solution (UK) logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo',ariaHidden:'true'}))">
+        <h1>Exnect Business Solution (UK)</h1>
       </div>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#bundles">Bundles</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
-  <main class="container">
-    <aside class="toc">
-      <h3>Contents</h3>
-      <a class="l1" href="#executive-summary">Executive Summary</a><a class="l1" href="#business-setup-model-options">Business Setup &amp; Model Options</a><a class="l2" href="#comparative-analysis-reseller-vs-system-integrator">&nbsp;&nbsp;Comparative Analysis: Reseller vs. System Integrator</a><a class="l2" href="#investment-costs-and-human-capital">&nbsp;&nbsp;Investment, Costs, and Human Capital</a><a class="l2" href="#break-even-point-analysis">&nbsp;&nbsp;Break-Even Point Analysis</a><a class="l2" href="#key-mou-roles-and-rights-with-dubai-office">&nbsp;&nbsp;Key MoU Roles and Rights with Dubai Office</a><a class="l1" href="#untitled">Untitled</a><a class="l1" href="#importation-customs">Importation &amp; Customs</a><a class="l2" href="#step-by-step-import-process">&nbsp;&nbsp;Step-by-Step Import Process</a><a class="l2" href="#associated-costs">&nbsp;&nbsp;Associated Costs</a><a class="l2" href="#record-keeping-obligations">&nbsp;&nbsp;Record-Keeping Obligations</a><a class="l1" href="#untitled">Untitled</a><a class="l1" href="#product-compliance-regulatory-requirements">Product Compliance &amp; Regulatory Requirements</a><a class="l2" href="#key-uk-regulatory-obligations">&nbsp;&nbsp;Key UK Regulatory Obligations</a><a class="l2" href="#ukca-marking-transition-process">&nbsp;&nbsp;UKCA Marking Transition Process</a><a class="l2" href="#obligations-and-penalties-for-non-compliance">&nbsp;&nbsp;Obligations and Penalties for Non-Compliance</a><a class="l1" href="#untitled">Untitled</a><a class="l1" href="#data-protection-consumer-protection">Data Protection &amp; Consumer Protection</a><a class="l2" href="#uk-gdpr-data-protection-act-2018-requirements">&nbsp;&nbsp;UK GDPR &amp; Data Protection Act 2018 Requirements</a><a class="l2" href="#ico-regulation-and-the-serco-leisure-case">&nbsp;&nbsp;ICO Regulation and the Serco Leisure Case</a><a class="l2" href="#consumer-rights-act-2015">&nbsp;&nbsp;Consumer Rights Act 2015</a><a class="l2" href="#documentation-for-clients">&nbsp;&nbsp;Documentation for Clients</a><a class="l1" href="#untitled">Untitled</a><a class="l1" href="#licensing-certification">Licensing &amp; Certification</a><a class="l2" href="#mandatory-optional-requirements-by-business-model">&nbsp;&nbsp;Mandatory &amp; Optional Requirements by Business Model</a><a class="l2" href="#insurance-requirements">&nbsp;&nbsp;Insurance Requirements</a><a class="l2" href="#sia-licences-and-local-permits">&nbsp;&nbsp;SIA Licences and Local Permits</a><a class="l1" href="#untitled">Untitled</a><a class="l1" href="#market-competition">Market &amp; Competition</a><a class="l2" href="#major-competitors-in-the-uk-market">&nbsp;&nbsp;Major Competitors in the UK Market</a><a class="l2" href="#pricing-and-positioning">&nbsp;&nbsp;Pricing and Positioning</a><a class="l2" href="#competitor-distribution-and-service-models">&nbsp;&nbsp;Competitor Distribution and Service Models</a><a class="l2" href="#potential-differentiation-strategy-for-ubio-virdi">&nbsp;&nbsp;Potential Differentiation Strategy for UBIO/VIRDI</a><a class="l1" href="#untitled">Untitled</a><a class="l1" href="#feasibility-financial-modelling">Feasibility &amp; Financial Modelling</a><a class="l2" href="#estimated-start-up-and-operating-costs">&nbsp;&nbsp;Estimated Start-up and Operating Costs</a><a class="l2" href="#expected-margin-evaluation">&nbsp;&nbsp;Expected Margin Evaluation</a><a class="l2" href="#critical-success-factors-and-risk-mitigation">&nbsp;&nbsp;Critical Success Factors and Risk Mitigation</a><a class="l2" href="#financial-sensitivity-scenarios">&nbsp;&nbsp;Financial Sensitivity Scenarios</a><a class="l1" href="#untitled">Untitled</a><a class="l1" href="#partnership-and-mou-with-dubai-office">Partnership and MoU with Dubai Office</a><a class="l2" href="#key-clauses-for-the-mou-distribution-agreement">&nbsp;&nbsp;Key Clauses for the MoU / Distribution Agreement</a><a class="l2" href="#additional-supporting-documentation">&nbsp;&nbsp;Additional Supporting Documentation</a><a class="l1" href="#untitled">Untitled</a><a class="l1" href="#appendix-1-business-model-comparison-template">Appendix 1: Business Model Comparison Template</a><a class="l2" href="#untitled">&nbsp;&nbsp;Untitled</a><a class="l1" href="#appendix-2-cost-analysis-template">Appendix 2: Cost Analysis Template</a><a class="l1" href="#appendix-3-regulatory-compliance-checklist">Appendix 3: Regulatory Compliance Checklist</a><a class="l2" href="#untitled">&nbsp;&nbsp;Untitled</a><a class="l1" href="#appendix-4-gdpr-data-protection-assessment-template-for-clie">Appendix 4: GDPR Data Protection Assessment Template (for Client Use)</a><a class="l2" href="#untitled">&nbsp;&nbsp;Untitled</a><a class="l1" href="#appendix-5-vendor-evaluation-matrix-dubai-office">Appendix 5: Vendor Evaluation Matrix (Dubai Office)</a><a class="l2" href="#untitled">&nbsp;&nbsp;Untitled</a><a class="l1" href="#appendix-6-customer-service-sla-template-for-option-c">Appendix 6: Customer Service SLA Template (for Option C)</a><a class="l2" href="#untitled">&nbsp;&nbsp;Untitled</a><a class="l1" href="#appendix-7-sample-declarations-from-dubai-office">Appendix 7: Sample Declarations from Dubai Office</a><a class="l2" href="#sample-declaration-of-origin">&nbsp;&nbsp;Sample Declaration of Origin</a><a class="l2" href="#untitled">&nbsp;&nbsp;Untitled</a><a class="l2" href="#sample-manufacturer-s-declaration-of-conformity-to-be-provid">&nbsp;&nbsp;Sample Manufacturer&#x27;s Declaration of Conformity (to be provided by Dubai Office)</a><a class="l2" href="#untitled">&nbsp;&nbsp;Untitled</a><a class="l1" href="#appendix-8-sample-memorandum-of-understanding-mou-template">Appendix 8: Sample Memorandum of Understanding (MoU) Template</a><a class="l2" href="#memorandum-of-understanding">&nbsp;&nbsp;Memorandum of Understanding</a><a class="l1" href="#reference">Reference</a><a class="l1" href="#confidential-annexure-uk-potential-customer-partner-database">Confidential Annexure: UK Potential Customer &amp; Partner Database</a>
-    </aside>
-    <article>
-      <section id="executive-summary" class="sec l1">
-<h2>Executive Summary</h2>
-<p>This strategic guide provides a comprehensive analysis of the feasibility and compliance requirements for introducing UBIO/VIRDI biometric devices into the United Kingdom market. The research addresses key questions regarding business models, importation, product regulations, data protection, licensing, and market competition. The findings are based on the scope defined by the author and supplemented by current UK government guidance and market data.</p>
-<p>Key Finding:</p>
-<p>The UK market entry is highly feasible, significantly aided by the UK government&#x27;s decision to  for many product categories, including those relevant to UBIO/VIRDI devices. This dramatically simplifies the product compliance pathway. The primary challenges are not technical but regulatory, specifically concerning the stringent requirements of UK GDPR for processing biometric data and the necessary certifications for installation teams.</p>
-<p>Two primary business models are evaluated:</p>
-<p>a Parallel Importer/Reseller (Option B) and a Value-Added Reseller/System Integrator (Option C).</p>
-<p>Option C, while requiring higher initial investment in technical expertise and certifications, offers greater profit margins, stronger client relationships, and a more defensible market position. The choice of model will fundamentally shape the operational, financial, and legal structure of the UK start-up.</p>
-<p>Critical success factors include establishing a robust UK GDPR compliance framework, securing necessary installer certifications, and defining a clear Memorandum of Understanding (MoU) with the Dubai-based distributor to delineate responsibilities for warranty, technical support (RMA/SDK), and liability.</p>
-</section><section id="business-setup-model-options" class="sec l1">
-<h2>Business Setup &amp; Model Options</h2>
-<p>The choice between a reseller and a system integrator model is the foundational strategic decision. It impacts everything from capital requirements and skill sets to profit margins and legal liabilities.</p>
-</section><section id="comparative-analysis-reseller-vs-system-integrator" class="sec l2">
-<h3>Comparative Analysis: Reseller vs. System Integrator</h3>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Aspect</th><th>Option B:<br/>Parallel Importer / Reseller</th><th>Option C:<br/>Value-Added Reseller (VAR) / System Integrator</th></tr>
-<tr><td>Advantages</td><td>Lower start-up costs and operational complexity. Faster time-to-market by focusing on sales and logistics. Ability to leverage price differences between the Dubai and UK markets, potentially offering competitive pricing to consumers . Simpler business model focused on volume and turnover.</td><td>Higher profit margins through value-added services (installation, integration, support). Builds stronger, long-term client relationships. Creates a defensible market niche based on expertise. Greater control over the end-to-end solution and quality .</td></tr>
-<tr><td>Disadvantages</td><td>Lower profit margins due to price-based competition. Limited control over product quality and potential for receiving stock that doesn&#x27;t meet UK standards . Full responsibility for handling warranty and after-sales support without direct manufacturer backing, which can be costly and complex. Potential for brand/channel conflict with any official UK distributors. No control over software integration, limiting the solution&#x27;s scope.</td><td>Higher initial capital investment and operational costs. Requires significant technical expertise and certified staff. Longer sales cycles for project-based work. Increased liability for installation and system performance.</td></tr>
-<tr><td>Legal Implications</td><td>Acts as the legal &quot;importer&quot; and is fully responsible for product compliance (CE/UKCA, RoHS, WEEE). Parallel importation of genuine goods is generally permissible in the UK, but the importer must ensure the goods were originally placed on a market with the intellectual property owner&#x27;s consent . Liability is typically limited to the sale of goods, but this includes full consumer rights for faulty products under the Consumer Rights Act 2015.</td><td>In addition to importer duties, carries liability for services rendered (installation, integration). Requires robust contracts with clients covering scope, service levels, and liability. Higher insurance requirements (Professional Indemnity).</td></tr>
-</table></div>
-</section><section id="deeper-dive-the-parallel-importer-model-best-practices" class="sec l4">
-<h4>Deeper Dive: The Parallel Importer Model Best Practices</h4>
-<p>This model involves sourcing genuine UBIO/VIRDI products from outside the manufacturer&#x27;s official UK distribution channels (in this case, via the Dubai office) to potentially exploit price differentials. Success in this model hinges on managing its inherent challenges effectively.</p>
-<p>Warranty and Returns Management: This is the most significant operational challenge. The UK entity must fund and manage its own warranty and returns process. While the MoU with the Dubai office should establish a clear RMA (Return Material Authorisation) process for faulty units, the primary, customer-facing responsibility lies with the UK importer. Best practice is to be transparent with customers about the support process.</p>
-<p>Product Compliance and Liability: As the legal &quot;importer,&quot; the UK business assumes all responsibilities of a manufacturer within the GB market. This includes ensuring products have a UK Declaration of Conformity, are correctly labelled with the importer&#x27;s details, and that the business is registered for WEEE. There is no reduced liability compared to an official distributor.</p>
-<p>Building Consumer Trust: Since the products are not from an &quot;official&quot; UK channel, building trust is paramount. This requires excellent customer service, transparent policies on warranty and returns, and clear communication about the product&#x27;s origin and support structure.</p>
-<p>Maintaining a Cost Advantage: The viability of this model depends on maintaining a cost advantage. This requires efficient logistics, favourable purchasing terms from the Dubai supplier, and lean operational management to keep overheads low.</p>
-</section><section id="investment-costs-and-human-capital" class="sec l2">
-<h3>Investment, Costs, and Human Capital</h3>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Requirement</th><th>Option B: Reseller</th><th>Option C: System Integrator</th></tr>
-<tr><td>Capital Investment</td><td>Moderate: Inventory, e-commerce platform, marketing, basic office setup.</td><td>High: All of Option B, plus specialized tools, training/certification fees, vehicles, higher insurance premiums.</td></tr>
-<tr><td>Operational Costs</td><td>Lower: Primarily cost of goods, shipping, marketing, and administrative salaries.</td><td>Higher: Higher salaries for technical staff, ongoing certification renewals, project-specific costs, higher liability insurance. Integration project costs can range from £5,000 to over £20,000+ .</td></tr>
-<tr><td>Human Capital</td><td>Sales, marketing, logistics, and administrative staff. Basic product knowledge is sufficient.</td><td>Sales and admin staff, plus certified electrical installers, network specialists, GDPR practitioners, and project managers. Deep technical expertise is critical.</td></tr>
-</table></div>
-</section><section id="break-even-point-analysis" class="sec l2">
-<h3>Break-Even Point Analysis</h3>
-<p>A break-even analysis determines the sales volume at which total revenues equal total costs. While precise figures require detailed financial modelling, the conceptual framework for each model differs significantly.</p>
-<p>Option B (Reseller): The break-even point is calculated based on the number of units sold. The formula is:</p>
-<p>Break-Even Point (Units) = Fixed Costs / (Sales Price Per Unit - Variable Cost Per Unit).</p>
-<p>Fixed costs are lower, but the per-unit margin is also smaller, requiring higher sales volume to cover overheads.</p>
-<p>Option C (Integrator): The calculation is more complex, based on a mix of hardware sales and service projects. It&#x27;s often calculated on a project basis:</p>
-<p>Break-Even Point = Fixed Costs / (Average Project Revenue - Average Project Variable Costs).</p>
-<p>Fixed costs are substantially higher, but the margin per project is also much larger, potentially leading to a lower number of required projects to break even, assuming projects can be secured .</p>
-</section><section id="key-mou-roles-and-rights-with-dubai-office" class="sec l2">
-<h3>Key MoU Roles and Rights with Dubai Office</h3>
-<p>The Memorandum of Understanding (MoU) or Distributor Agreement is critical. It must clearly define the relationship to prevent future disputes. Based on the chosen model, the following clauses must be tailored:</p>
-<p>Warranty &amp; RMA: Clearly define the process. Who is the first point of contact for a UK customer? What are the turnaround times for RMA support from Dubai? Option C will require more detailed support protocols than Option B.</p>
-<p>SDK Access &amp; Support: Essential for Option C. The MoU must grant the UK entity the necessary licenses and rights to use the SDK for client integration. It should also specify the level and response time of technical support (SLA) for SDK-related queries.</p>
-<p>Pricing &amp; Margins: A clear pricing structure for the UK entity, including volume discounts and price protection clauses.</p>
-<p>Territory Rights: Define the exclusivity. Is the UK entity the sole distributor for the UK, or is it a non-exclusive arrangement?</p>
-<p>Liability &amp; Indemnification: The agreement must specify which party is liable for product defects versus installation faults. Indemnification clauses should protect the UK entity from claims arising from manufacturing defects.</p>
-<p>Branding &amp; Marketing: Outline the rights and restrictions on using the UBIO/VIRDI brand name and marketing materials in the UK.</p>
-</section><section id="untitled" class="sec l1">
-<h2>Untitled</h2>
 
-</section><section id="importation-customs" class="sec l1">
-<h2>Importation &amp; Customs</h2>
-<p>Importing electronic goods from Dubai (a non-EU country) into the UK involves a defined customs process with associated costs and record-keeping obligations.</p>
-</section><section id="step-by-step-import-process" class="sec l2">
-<h3>Step-by-Step Import Process</h3>
-<p>The process for importing goods from the UAE to the UK can be summarized as follows, based on UK government guidelines:</p>
-<ul class="clean"><li><span class="dash"></span><span class="li-txt">Get an EORI Number: The UK business must obtain an Economic Operators Registration and Identification (EORI) number that starts with &#x27;GB&#x27;. This is mandatory for all businesses importing goods into Great Britain.</span></li><li><span class="dash"></span><span class="li-txt">Determine the Commodity Code: All goods must be classified using a commodity code, which determines the rate of Customs Duty and import VAT. For biometric devices, the most likely code falls under Chapter 85 of the UK Trade Tariff. Based on similar products, HS Code 8543.70.90 (&quot;Other electrical machines and apparatus, having individual functions&quot;) is a strong candidate. Research indicates that devices like fingerprint readers are often classified under this heading.</span></li><li><span class="dash"></span><span class="li-txt">Prepare Required Documentation: The shipper (Dubai office) must provide a complete set of documents, including:</span></li></ul>
-<p>Commercial Invoice: Details the transaction, value, seller, and buyer.</p>
-<p>Packing List: Details the contents, weight, and dimensions of the shipment.</p>
-<p>Certificate of Origin (CoO): May be required to benefit from preferential trade terms, although a standard UK-UAE trade agreement offering zero tariffs on these goods is not currently in place.</p>
-<p>Air Waybill (AWB) or Bill of Lading (BoL): The transport contract issued by the carrier.</p>
-<ul class="clean"><li><span class="dash"></span><span class="li-txt">Choose Incoterms: The contract should specify Incoterms (International Commercial Terms) to define who is responsible for shipping, insurance, and customs costs. For an importer, using DDP (Delivered Duty Paid) would mean the seller (Dubai office) handles all costs and risks to the final destination. However, a more common term might be FCA (Free Carrier), where the UK importer takes responsibility from the point the goods are handed to the carrier in Dubai. This must be negotiated.</span></li><li><span class="dash"></span><span class="li-txt">Customs Declaration and Clearance: A customs declaration must be submitted to HMRC. This is typically handled by a courier (like DHL, FedEx) or a freight forwarder/customs agent. The declaration uses the commodity code and value to calculate duties and VAT.</span></li><li><span class="dash"></span><span class="li-txt">Pay Duties and VAT: The calculated customs charges must be paid before the goods are released.</span></li></ul>
-</section><section id="associated-costs" class="sec l2">
-<h3>Associated Costs</h3>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Cost Component</th><th>Details and Estimated Rates</th></tr>
-<tr><td>Customs Duty</td><td>Based on the commodity code. For HS Code 8543.70.90, the UK Global Tariff for imports from the UAE is currently 0%. This should be verified using the official  at the time of import.</td></tr>
-<tr><td>Import VAT</td><td>The standard UK VAT rate of 20% applies. It is calculated on the total value of the goods, plus shipping, insurance, and any customs duty. A VAT-registered UK business can typically reclaim this VAT on their next VAT return.</td></tr>
-<tr><td>Freight &amp; Insurance</td><td>Varies significantly based on weight, volume, and mode of transport. Air freight from Dubai to the UK typically takes 3-7 days, while sea freight can take 4-6 weeks but is cheaper for bulk shipments.</td></tr>
-<tr><td>Customs Clearance / Handling Fee</td><td>Couriers and freight forwarders charge a fee for processing the customs declaration. This can range from a small fixed fee to a percentage of the shipment value.</td></tr>
-</table></div>
-</section><section id="record-keeping-obligations" class="sec l2">
-<h3>Record-Keeping Obligations</h3>
-<p>As the importer of record, the UK business has a legal obligation to maintain comprehensive records. This includes:</p>
-<p>All customs paperwork, including import declarations (e.g., C88/SAD form), commercial invoices, and transport documents.</p>
-<p>Proof of origin documentation, if applicable.</p>
-<p>Records of duty and VAT payments, including the monthly C79 certificate from HMRC which is used to reclaim import VAT.</p>
-<p>For product compliance, the UK Declaration of Conformity and the technical file must be kept for 10 years after the product is placed on the market.</p>
-</section><section id="untitled" class="sec l1">
-<h2>Untitled</h2>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="kicker"><span class="dot"></span> Digital & Business Growth Partner</div>
+        <h2>Warm, Elegant & Growth‑Ready.</h2>
+        <p>We help small businesses, shops, restaurants, and startups launch fast and grow smarter — with clear plans, fixed prices, and UK‑based accountability. No hidden fees. Ever.</p>
+        <div class="badges">
+          <div class="badge">Websites & E‑commerce</div>
+          <div class="badge">SEO • SMM • Google Ads</div>
+          <div class="badge">ERP • IT Support</div>
+          <div class="badge">Business Consultancy</div>
+        </div>
+        <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="#services">View Services</a>
+          <a class="btn secondary" href="#contact">Get a Quote</a>
+        </div>
+      </div>
+      <div>
+        <div class="card" aria-label="Key Benefits" style="min-height:260px">
+          <span class="chip">Why us</span>
+          <h3 class="section-title" style="margin-top:4px">What you get</h3>
+          <ul class="features">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="var(--primary-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Transparent fixed pricing — built for small budgets
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="var(--primary-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              UK‑based project management & accountability
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="var(--primary-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              GDPR‑compliant processes and clear T&Cs
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="var(--primary-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Full visibility on ad spend with a simple 15% fee
+            </li>
+          </ul>
+          <p class="muted tiny">Built on our internal strategic guide and UK market benchmarks. Public materials omit internal delivery locations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</section><section id="product-compliance-regulatory-requirements" class="sec l1">
-<h2>Product Compliance &amp; Regulatory Requirements</h2>
-<p>Placing electronic devices on the market in Great Britain (GB) requires adherence to a specific set of product safety and environmental regulations. The UK entity, as the importer, is legally responsible for ensuring compliance.</p>
-<p>Important Update on UKCA/CE Marking:</p>
-<p>The UK Government has announced its intention to  for most goods being placed on the GB market. This means products that meet EU requirements can continue to be sold in GB. This significantly simplifies the compliance process for the client, as existing CE-marked stock from the Dubai office can be used without needing a separate UKCA certification process by a UK Approved Body.</p>
-</section><section id="key-uk-regulatory-obligations" class="sec l2">
-<h3>Key UK Regulatory Obligations</h3>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Regulation</th><th>Relevance to UBIO/VIRDI Devices</th><th>Importer&#x27;s Obligations</th></tr>
-<tr><td>Product Safety &amp; Metrology Regulations 2019 (incorporating UKCA/CE)</td><td>Applies to most electronic products, covering general safety, electrical safety, and electromagnetic compatibility (EMC).</td><td>Ensure the product has a valid CE marking and an EU Declaration of Conformity from the manufacturer. Draw up a UK Declaration of Conformity. This can list compliance with the relevant EU legislation under the &#x27;fast-track&#x27; provision. Ensure the product is labelled with the importer&#x27;s name and address. Keep a copy of the Declaration of Conformity and ensure the technical file is available for 10 years.</td></tr>
-<tr><td>Radio Equipment Regulations 2017</td><td>Applies to any device with Wi-Fi, Bluetooth, or other radio transceivers.</td><td>Confirm the device complies with the essential requirements for radio equipment (health &amp; safety, EMC, and efficient use of radio spectrum). Compliance is typically demonstrated via conformity to designated standards (e.g., ETSI standards). This is covered under the overall CE/UKCA conformity assessment.</td></tr>
-<tr><td>RoHS (Restriction of Hazardous Substances) Regulations 2012</td><td>Restricts the use of specific hazardous materials (e.g., lead, mercury) in electrical and electronic equipment (EEE).</td><td>Verify the manufacturer&#x27;s compliance. This is part of the CE/UKCA marking process. The Declaration of Conformity should state compliance with the RoHS directive.</td></tr>
-<tr><td>WEEE (Waste Electrical and Electronic Equipment) Regulations 2013</td><td>Makes producers responsible for financing the collection and recycling of end-of-life equipment.</td><td>As the importer, the UK business is considered a &quot;producer&quot;. Must register with the environmental regulator. If placing more than 5 tonnes of EEE on the market per year, the business must join a Producer Compliance Scheme (PCS). Ensure products are marked with the &#x27;crossed-out wheeled bin&#x27; symbol.</td></tr>
-<tr><td>Labelling &amp; Importer Identification</td><td>Importers must place their name and address on the product or, if not possible, on its packaging or an accompanying document.</td><td>The UK government has extended labelling easements, allowing importer details to be on an accompanying document or adhesive label until 31 December 2027.</td></tr>
-</table></div>
-</section><section id="ukca-marking-transition-process" class="sec l2">
-<h3>UKCA Marking Transition Process</h3>
-<p>Given the indefinite recognition of the CE mark, a forced transition to UKCA marking is not required for these products. The UK entity can continue to import and sell CE-marked devices supplied by the Dubai office.</p>
-<p>Should the business choose to use the UKCA mark, the process is streamlined:</p>
-<ul class="clean"><li><span class="dash"></span><span class="li-txt">The manufacturer&#x27;s existing EU technical documentation and conformity assessment (for the CE mark) can be used as a basis.</span></li><li><span class="dash"></span><span class="li-txt">The UK importer draws up a UK Declaration of Conformity, referencing the EU standards met.</span></li><li><span class="dash"></span><span class="li-txt">The UKCA mark is affixed to the product (or label/document as per current easements).</span></li></ul>
-<p>This &quot;fast-track&quot; approach removes the need for costly re-testing or assessment by a UK-specific body, as long as the product meets the EU&#x27;s essential requirements.</p>
-</section><section id="obligations-and-penalties-for-non-compliance" class="sec l2">
-<h3>Obligations and Penalties for Non-Compliance</h3>
-<p>Failure to comply with these regulations is a criminal offence. The Office for Product Safety and Standards (OPSS) is the primary enforcement body. Penalties can be severe and may include:</p>
-<p>Compliance Notices: Orders to rectify non-compliance.</p>
-<p>Withdrawal/Recall Notices: Forcing the removal of products from the market.</p>
-<p>Fines: Can be substantial, depending on the severity of the breach.</p>
-<p>Imprisonment: In the most serious cases, company directors can face custodial sentences.</p>
-<p>Reputational Damage: A product recall or enforcement action can cause significant damage to a new start-up’s brand.</p>
-</section><section id="untitled" class="sec l1">
-<h2>Untitled</h2>
-
-</section><section id="data-protection-consumer-protection" class="sec l1">
-<h2>Data Protection &amp; Consumer Protection</h2>
-<p>This is arguably the most critical area of compliance. Biometric data is classified as &#x27;special category data&#x27; under the UK General Data Protection Regulation (UK GDPR), requiring the highest level of protection.</p>
-</section><section id="uk-gdpr-data-protection-act-2018-requirements" class="sec l2">
-<h3>UK GDPR &amp; Data Protection Act 2018 Requirements</h3>
-<p>When selling or installing devices that process biometric data (like face or fingerprint scans) for identification, the following UK GDPR principles are paramount:</p>
-<p>Special Category Data: Biometric data used to uniquely identify a person is special category data. Processing it is prohibited unless a specific condition under Article 9 of the UK GDPR is met.</p>
-<p>Lawful Basis &amp; Condition: The data controller (the end-client using the device) must identify both a lawful basis under Article 6 (e.g., legitimate interests, contract) AND a special category condition under Article 9. For workplace monitoring, the ICO has made it clear that consent is often invalid due to the power imbalance between employer and employee. The most likely condition is &quot;explicit consent&quot; for non-workplace scenarios, or &quot;substantial public interest&quot; in very specific, justified cases.</p>
-<p>Data Protection Impact Assessment (DPIA): A DPIA is mandatory before deploying a biometric recognition system. It is a process to identify and minimise data protection risks. The UK business should provide templates and guidance to its clients on how to conduct a DPIA.</p>
-<p>Data Protection by Design: Systems must be designed with privacy in mind from the outset, for example, by using encrypted templates instead of raw images and ensuring data is minimised and deleted when no longer necessary.</p>
-</section><section id="ico-regulation-and-the-serco-leisure-case" class="sec l2">
-<h3>ICO Regulation and the Serco Leisure Case</h3>
-<p>Case Study: ICO vs. Serco Leisure (Feb 2024)</p>
-<p>The ICO ordered Serco Leisure to stop using facial recognition and fingerprint scanning to monitor attendance for over 2,000 employees. The ICO ruled the processing was unlawful because:</p>
-<p>It was not necessary or proportionate when less intrusive alternatives (like ID cards) were available.</p>
-<p>Employees were not offered a clear alternative and felt they had to agree to be paid, meaning consent was not freely given.</p>
-<p>Serco failed to establish a valid lawful basis and special category condition for the processing.</p>
-<p>Lesson: The UK business must advise its clients that using biometrics for workplace attendance is high-risk and likely to be unlawful unless they can robustly justify why no less intrusive method is possible. Providing a genuine, non-detrimental opt-out is essential. ,</p>
-</section><section id="consumer-rights-act-2015" class="sec l2">
-<h3>Consumer Rights Act 2015</h3>
-<p>The Consumer Rights Act 2015 governs the sale of goods, services, and digital content to consumers. The UK business, whether as a reseller or installer, has direct obligations:</p>
-<p>Goods Quality: Hardware must be of satisfactory quality, fit for purpose, and as described. Consumers have a 30-day right to reject faulty goods for a full refund. After 30 days, they are entitled to a repair or replacement.</p>
-<p>Services (for Option C): Installations must be carried out with reasonable care and skill. If not, the consumer can demand the service is repeated or receive a price reduction.</p>
-<p>Digital Content (SDK/Firmware): The Act includes rights for digital content. If the device&#x27;s firmware or associated software is faulty, consumers have rights to repair or replacement. Crucially, if the digital content causes damage to the consumer&#x27;s other devices or data, the trader may be liable for that damage.</p>
-<p>Misrepresentation: Any information provided to the consumer before the sale (e.g., about the device&#x27;s accuracy or GDPR compliance) becomes a term of the contract. False or misleading statements can lead to claims.</p>
-</section><section id="documentation-for-clients" class="sec l2">
-<h3>Documentation for Clients</h3>
-<p>To support clients and mitigate its own risk, the UK business should develop and provide a &quot;GDPR Compliance Pack&quot;. This would be a key differentiator, especially for the System Integrator model (Option C). The pack should include:</p>
-<p>DPIA Templates: A pre-filled template guiding the client through the Data Protection Impact Assessment process for a typical time &amp; attendance or access control setup.</p>
-<p>Privacy Notice Templates: Draft notices that clients can adapt to inform their employees/users about how their biometric data will be processed.</p>
-<p>Clear Signage: Recommendations and templates for physical signs to be displayed near biometric readers, ensuring transparency.</p>
-<p>Guidance on Opt-Outs: A clear guide explaining the importance of offering a genuine, non-intrusive alternative to biometric scanning, with practical examples (e.g., PIN codes, RFID cards).</p>
-<p>Data Processing Agreement: A template agreement for the client to use if they are processing data on behalf of another entity.</p>
-</section><section id="untitled" class="sec l1">
-<h2>Untitled</h2>
-
-</section><section id="licensing-certification" class="sec l1">
-<h2>Licensing &amp; Certification</h2>
-<p>The required licenses and certifications depend heavily on the chosen business model. Option C (Integrator) has significantly more stringent requirements, reflecting the hands-on, technical nature of the work.</p>
-</section><section id="mandatory-optional-requirements-by-business-model" class="sec l2">
-<h3>Mandatory &amp; Optional Requirements by Business Model</h3>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Requirement</th><th>Option B (Reseller)</th><th>Option C (System Integrator)</th></tr>
-<tr><td>Mandatory Registrations</td><td>Importer Registration: EORI Number. ICO Registration: Required as the business will be a data controller for its own employee/customer data. WEEE Producer Registration: Register with the Environment Agency (directly if &lt;5 tonnes/year, or via a Producer Compliance Scheme if &gt;5 tonnes).</td><td>All registrations from Option B. Potentially higher tier of WEEE compliance scheme due to larger volumes.</td></tr>
-<tr><td>Required / Recommended Certifications (for Staff)</td><td>Optional but Recommended:  Basic product training from manufacturer.<br/>GDPR Foundation/Awareness training for sales staff.</td><td>Required or Highly Recommended:<br/>City &amp; Guilds 2382-22 (18th Edition Wiring Regulations): Essential for anyone installing electrical equipment in the UK to ensure compliance with BS 7671.<br/>NSI/SSAIB Accreditation:<br/>While not legally mandatory, accreditation by the National Security Inspectorate (NSI) or Security Systems and Alarms Inspection Board (SSAIB) is a de-facto industry standard.<br/>It demonstrates competence, is often required by insurers, and enables police response for alarm systems ,.<br/>CSCS Card: A Construction Skills Certification Scheme card is often required for installers to gain access to construction sites, though it is not a legal requirement.<br/>Health &amp; Safety (H&amp;S) Training: Demonstrates duty of care for employees working on-site.<br/>GDPR Practitioner Certification: For staff designing solutions and advising clients, a practitioner-level qualification is highly valuable.</td></tr>
-</table></div>
-</section><section id="insurance-requirements" class="sec l2">
-<h3>Insurance Requirements</h3>
-<p>Insurance needs also vary significantly between the two options.</p>
-<p>Public &amp; Product Liability Insurance: Mandatory for both models. This covers injury to third parties or damage to their property caused by the business or its products. Typical cover starts from £1m-£5m.</p>
-<p>Employers&#x27; Liability Insurance: A legal requirement for any business with employees, covering claims from staff for illness or injury at work.</p>
-<p>Professional Indemnity (PI) Insurance:   Crucial for Option C. This covers claims of negligence, error, or poor advice related to the services provided (e.g., a faulty installation or bad advice on GDPR compliance). It is a significant additional cost but essential for mitigating risk.</p>
-<p>Contract Works / Works in Progress Insurance: Recommended for Option C to cover the installation project itself against damage or theft before it is handed over to the client.</p>
-</section><section id="sia-licences-and-local-permits" class="sec l2">
-<h3>SIA Licences and Local Permits</h3>
-<p>SIA Licence: A Security Industry Authority (SIA) licence is generally not required for the installation of biometric access control systems. SIA licensing applies to individuals undertaking specific front-line security activities like manned guarding, door supervision, or public space CCTV monitoring for security purposes. The installation of the equipment itself does not fall under these licensable activities.</p>
-<p>Local Council Permits: No specific local council permits are typically required for the internal installation of access control systems. However, if the installation involves significant structural work or affects the exterior of a listed building, planning permissions may be necessary. For external cameras, data protection rules regarding public spaces must be strictly followed.</p>
-</section><section id="untitled" class="sec l1">
-<h2>Untitled</h2>
-
-</section><section id="market-competition" class="sec l1">
-<h2>Market &amp; Competition</h2>
-<p>The UK biometric market is mature and competitive, with several established global players. The UK market size is projected to grow significantly, with one report forecasting a CAGR of 7.03% to reach USD 0.66 billion by 2030 for access control systems alone.</p>
-</section><section id="major-competitors-in-the-uk-market" class="sec l2">
-<h3>Major Competitors in the UK Market</h3>
-<p>The market is populated by a mix of large multinational corporations and specialized technology firms. Key competitors for UBIO/VIRDI include:</p>
-<p>Suprema: A major South Korean competitor with a strong global and UK presence. They offer a wide range of fingerprint and facial recognition devices and are known for their high-performance algorithms. They have an established UK distributor network.</p>
-<p>ZKTeco: A large Chinese manufacturer offering a broad portfolio of biometric and RFID solutions, often positioned at a competitive price point. They have a significant presence in the UK through various distributors.</p>
-<p>HID Global: A US-based leader in secure identity solutions, including access control readers, cards, and biometric solutions. They are a well-established brand in the corporate and government sectors.</p>
-<p>IDEMIA: A French multinational specializing in identity and security solutions, including biometrics for government, enterprise, and financial sectors. They are a major player in large-scale projects.</p>
-<p>Other Players: The market also includes brands like Bosch, Johnson Controls, and numerous smaller system integrators who may use a variety of hardware brands.</p>
-</section><section id="pricing-and-positioning" class="sec l2">
-<h3>Pricing and Positioning</h3>
-<p>Pricing for biometric devices in the UK varies widely based on technology, brand, and features.</p>
-<p>Time &amp; Attendance Terminals: Entry-level fingerprint or basic facial recognition terminals can be found from around £200 - £500 per unit (e.g.,).</p>
-<p>Access Control Readers: More robust, IP-rated readers for access control from major brands like Suprema or HID can range from £400 to over £1,200 per reader, depending on the technology (e.g., multi-frequency card support, advanced liveness detection) ,.</p>
-<p>Installation Costs: The cost per door for a fully installed access control system typically starts from £500 - £800 and can increase significantly with biometric readers and complex integration requirements.</p>
-<p>Competitors like Suprema and HID are generally positioned as premium, high-performance brands, while ZKTeco often competes more aggressively on price.</p>
-</section><section id="competitor-distribution-and-service-models" class="sec l2">
-<h3>Competitor Distribution and Service Models</h3>
-<p>The dominant models in the UK market are:</p>
-<p>Two-Tier Distribution: Manufacturers (e.g., Suprema, HID) sell to national or specialist distributors (like ADI Global, Norbain), who then sell to a network of local system integrators and installers. This is the most common model.</p>
-<p>Direct to System Integrators: Some manufacturers work directly with a select group of certified VARs/SIs, providing them with training, support, and preferential pricing.</p>
-<p>Direct Online Sales (B2C/B2B): A growing channel, especially for simpler, standalone time &amp; attendance devices, where businesses can purchase directly from e-commerce websites.</p>
-<p>Managed Services (Biometrics-as-a-Service - BaaS): An emerging model where clients pay a recurring fee for the hardware, software, and maintenance, reducing upfront capital expenditure. This is a key trend in the market.</p>
-</section><section id="potential-differentiation-strategy-for-ubio-virdi" class="sec l2">
-<h3>Potential Differentiation Strategy for UBIO/VIRDI</h3>
-<p>To compete effectively, the UK start-up should avoid competing solely on price. A multi-faceted differentiation strategy is recommended:</p>
-<p>GDPR Compliance Package (Option C): This is a major opportunity. By becoming experts in UK data protection law and offering the &quot;GDPR Compliance Pack&quot; (DPIA templates, privacy notices, etc.), the company can position itself as the &quot;safe choice&quot; for businesses concerned about the legal risks of biometrics. This directly addresses a key customer pain point highlighted by the Serco case.</p>
-<p>Service Speed and Quality: For an integrator (Option C), offering rapid, high-quality installation and responsive local support can be a significant advantage over larger, less agile competitors or resellers with no installation capability.</p>
-<p>Focus on Accuracy and Liveness Detection: If UBIO/VIRDI devices have superior performance in terms of accuracy (low False Acceptance/Rejection Rates) or anti-spoofing (liveness detection), this should be a central marketing message, especially for high-security applications.</p>
-<p>Cost-Advantage on a &quot;Solution&quot; Basis: While not competing on hardware price alone, the company could offer a more cost-effective &quot;total solution&quot; (hardware + installation + compliance support) compared to premium brands, targeting the mid-market.</p>
-</section><section id="untitled" class="sec l1">
-<h2>Untitled</h2>
-
-</section><section id="feasibility-financial-modelling" class="sec l1">
-<h2>Feasibility &amp; Financial Modelling</h2>
-<p>This section provides high-level estimates and factors for financial modelling. Detailed projections require specific quotes for hardware, shipping, and local UK operational costs.</p>
-</section><section id="estimated-start-up-and-operating-costs" class="sec l2">
-<h3>Estimated Start-up and Operating Costs</h3>
-<p>A preliminary breakdown of costs for both options:</p>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Cost Category</th><th>Option B<br/>(Reseller) - Estimate</th><th>Option C<br/>(System Integrator) - Estimate</th></tr>
-<tr><td>Start-up Costs (One-Time)</td><td>Company Formation &amp; Legal:<br/>£1,000 - £3,000 Initial Inventory: £10,000 - £25,000<br/>E-commerce Website:<br/>£3,000 - £8,000<br/>Basic Office Setup:<br/>£2,000 - £5,000<br/>Total Estimate:<br/>£16,000 - £41,000</td><td>All of Option B costs. Installer Training &amp; Certification (per person):<br/>£1,000 - £3,000<br/>Specialist Tools &amp; Equipment:<br/>£5,000 - £10,000<br/>Vehicle Deposit/Purchase:<br/>£5,000 - £10,000<br/>NSI/SSAIB Accreditation Fees:<br/>£2,000 - £5,000<br/>Total Estimate:<br/>£40,000 - £80,000+</td></tr>
-<tr><td>Monthly Operating Costs</td><td>Salaries (Admin/Sales):<br/>£3,000 - £5,000<br/>Marketing &amp; Advertising:<br/>£500 - £2,000<br/>Office Rent &amp; Utilities:<br/>£500 - £1,500 Software/Subscriptions:<br/>£200 - £500<br/>Total Estimate:<br/>£4,200 - £9,000</td><td>Salaries (Admin, Sales, Installers):<br/>£6,000 - £12,000<br/>Marketing &amp; Advertising:<br/>£1,000 - £3,000<br/>Office/Small Warehouse Rent:<br/>£1,000 - £2,500<br/>Vehicle Running Costs:<br/>£500 - £1,000<br/>Insurance (incl. PI):<br/>£300 - £800<br/>Total Estimate:<br/>£8,800 - £19,300</td></tr>
-</table></div>
-<p>Note: Cost estimates are illustrative, based on general UK business data and web search results for specific items like training and insurance. Actual costs will vary.</p>
-</section><section id="expected-margin-evaluation" class="sec l2">
-<h3>Expected Margin Evaluation</h3>
-<p>The landed cost of a device is the sum of the unit cost from Dubai, freight, insurance, customs clearance fees, and import VAT (though VAT is reclaimable).</p>
-<p>Option B (Reseller): Gross margin per device will be the UK sale price minus the landed cost. Margins in pure hardware resale are typically thin, often in the 15-30% range, and are sensitive to competition.</p>
-<p>Option C (Integrator): Margin is calculated on a project basis. While hardware margins might be similar, the significant profit comes from labour/services. Installation and integration services can carry gross margins of 50-70% or more, significantly boosting the overall profitability of a project.</p>
-</section><section id="critical-success-factors-and-risk-mitigation" class="sec l2">
-<h3>Critical Success Factors and Risk Mitigation</h3>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Risk</th><th>Mitigation Plan</th></tr>
-<tr><td>Customs Delays</td><td>Work with a reputable freight forwarder/customs agent. Ensure all documentation is accurate and complete before shipping. Maintain a small buffer of UK stock.</td></tr>
-<tr><td>CE Certificate Expiry / Changes</td><td>Maintain open communication with the Dubai office and manufacturer. The MoU should require them to provide timely updates on certification status and ensure all supplied stock has valid conformity.</td></tr>
-<tr><td>Warranty &amp; RMA Logistics</td><td>The MoU must detail a clear, efficient RMA process with defined turnaround times. The UK entity could hold a small number of &quot;swap out&quot; units to provide immediate replacements to clients while waiting for the RMA process with Dubai.</td></tr>
-<tr><td>Data Protection (GDPR) Liability</td><td>(Critical for Option C) Invest in GDPR practitioner training. Develop the &quot;GDPR Compliance Pack&quot; for clients. Have Professional Indemnity insurance that specifically covers data protection breaches. Ensure contracts with clients clearly define data controller/processor roles.</td></tr>
-<tr><td>Intense Market Competition</td><td>Focus on the differentiation strategy (GDPR expertise, service quality) rather than price alone. Target niche markets that are underserved by larger players.</td></tr>
-</table></div>
-</section><section id="financial-sensitivity-scenarios" class="sec l2">
-<h3>Financial Sensitivity Scenarios</h3>
-<p>Financial models should include sensitivity analysis to test resilience. Key variables to test include:</p>
-<p>±10% Change in Sales Volume: Assess the impact on revenue, profit, and cash flow. Option C may be more resilient if it has recurring revenue from maintenance contracts.</p>
-<p>±10% Change in Cost of Goods: Directly impacts gross margin and break-even point. Negotiate fixed pricing with the Dubai office where possible.</p>
-<p>Currency Fluctuation (GBP vs. USD/AED): If goods are purchased in a foreign currency, exchange rate volatility is a risk. Consider currency hedging strategies if volumes become significant.</p>
-<p>Delay in Securing First Major Project (Option C): Model cash flow to ensure the business can sustain higher overheads for several months before significant project revenue is realized.</p>
-</section><section id="untitled" class="sec l1">
-<h2>Untitled</h2>
-
-</section><section id="partnership-and-mou-with-dubai-office" class="sec l1">
-<h2>Partnership and MoU with Dubai Office</h2>
-<p>A formal Distribution Agreement or a detailed Memorandum of Understanding (MoU) is essential to govern the relationship between the UK start-up and the Union Community Dubai office. This document should be legally reviewed and forms the operational and legal backbone of the partnership.</p>
-</section><section id="key-clauses-for-the-mou-distribution-agreement" class="sec l2">
-<h3>Key Clauses for the MoU / Distribution Agreement</h3>
-<p>The agreement should be comprehensive and unambiguous. The following clauses are critical:</p>
-<ul class="clean"><li><span class="dash"></span><span class="li-txt">Parties, Scope, and Territory: Clearly identify the legal entities. Define the products covered and the geographical territory (United Kingdom). Specify whether the agreement is exclusive or non-exclusive.</span></li><li><span class="dash"></span><span class="li-txt">Term and Termination: State the duration of the agreement and the conditions under which either party can terminate it (e.g., breach of contract, failure to meet sales targets).</span></li><li><span class="dash"></span><span class="li-txt">Obligations of the Supplier (Dubai Office):</span></li></ul>
-<p>Provide products that are compliant with EU standards (CE marked).</p>
-<p>Supply all necessary technical documentation and Declarations of Conformity.</p>
-<p>Adhere to agreed pricing and provide notice of any price changes.</p>
-<p>Fulfil orders within an agreed timeframe.</p>
-<ul class="clean"><li><span class="dash"></span><span class="li-txt">Obligations of the Distributor (UK Start-up):</span></li></ul>
-<p>Use best efforts to market and sell the products in the territory.</p>
-<p>Handle all UK-specific compliance (importer duties, WEEE, ICO registration).</p>
-<p>Provide pre-sales and first-line after-sales support to UK customers.</p>
-<p>(For Option C) Maintain a team of trained and certified installers.</p>
-<ul class="clean"><li><span class="dash"></span><span class="li-txt">RMA and Warranty:</span></li></ul>
-<p>Detail the warranty period for all products.</p>
-<p>Outline the step-by-step process for Return Material Authorisation (RMA). Who pays for shipping of faulty/replacement units? What is the target turnaround times?</p>
-<ul class="clean"><li><span class="dash"></span><span class="li-txt">SDK and Technical Support:</span></li></ul>
-<p>Grant the UK entity a license to use the Software Development Kit (SDK) for integration purposes (critical for Option C).</p>
-<p>Define a Service Level Agreement (SLA) for technical support from the Dubai office, including response times and escalation procedures for software bugs or integration issues.</p>
-<ul class="clean"><li><span class="dash"></span><span class="li-txt">Liability and Indemnification: The supplier (Dubai) should indemnify the UK distributor against any claims, damages, or costs arising from product defects, manufacturing faults, or intellectual property infringement. The UK distributor is responsible for liability arising from its own actions (e.g., faulty installation, negligent advice).</span></li><li><span class="dash"></span><span class="li-txt">Branding and Marketing: Specify how the UBIO/VIRDI trademarks and marketing materials can be used. Outline any cooperative marketing funds or activities.</span></li><li><span class="dash"></span><span class="li-txt">Confidentiality: Both parties agree to keep commercial information (e.g., pricing, customer lists) confidential.</span></li><li><span class="dash"></span><span class="li-txt">Governing Law and Dispute Resolution: Specify the legal jurisdiction that will govern the contract (e.g., Laws of England and Wales) and the method for resolving disputes (e.g., mediation, followed by arbitration or court action in a specified location).</span></li></ul>
-</section><section id="additional-supporting-documentation" class="sec l2">
-<h3>Additional Supporting Documentation</h3>
-<p>The main agreement should be supported by detailed annexes or separate documents, including:</p>
-<p>Technical Support SLA: A formal document detailing support hours, response times for different priority levels of technical issues, and contact points.</p>
-<p>Quality Control Standards: An agreement on the quality standards the products must meet, and the process for handling a batch of non-conforming goods.</p>
-<p>Shipment Responsibility (Incoterms): While mentioned in the main agreement, a detailed annex can clarify all responsibilities under the chosen Incoterm (e.g., FCA, DDP), leaving no room for ambiguity regarding who pays for freight, insurance, and customs clearance at each stage of the journey.</p>
-<p>Price List: An annex containing the current price list for all products, with clear terms for how and when prices can be reviewed.</p>
-</section><section id="untitled" class="sec l1">
-<h2>Untitled</h2>
-
-</section><section id="appendix-1-business-model-comparison-template" class="sec l1">
-<h2>Appendix 1: Business Model Comparison Template</h2>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Factor</th><th>Option B: Parallel Importer / Reseller</th><th>Option C: Value-Added Reseller / System Integrator</th><th>Weight (1-5)</th><th>Score (B)</th><th>Score (C)</th></tr>
-<tr><td>Profit Margin Potential</td><td>Lower margins from hardware sales.</td><td>Higher blended margins from hardware and services.</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Start-up Capital Required</td><td>Moderate (inventory, marketing).</td><td>High (training, tools, certifications, higher insurance).</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Time-to-Market</td><td>Fast (focus on sales).</td><td>Slower (requires building technical team and processes).</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Technical Expertise Needed</td><td>Low (basic product knowledge).</td><td>High (electrical, networking, GDPR, project management).</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Client Relationship Strength</td><td>Transactional.</td><td>Long-term, project-based, sticky.</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Competitive Defensibility</td><td>Low (price-based competition).</td><td>High (based on expertise and service quality).</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Legal &amp; Regulatory Burden</td><td>Importer duties, consumer rights.</td><td>Importer duties plus service liability, higher insurance needs.</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Total Weighted Score</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-</table></div>
-</section><section id="untitled" class="sec l2">
-<h3>Untitled</h3>
-
-</section><section id="appendix-2-cost-analysis-template" class="sec l1">
-<h2>Appendix 2: Cost Analysis Template</h2>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Cost Category</th><th>Description</th><th>Estimated Cost (£)</th><th>Notes</th></tr>
-<tr><td>One-Time Start-up Costs</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Company Formation</td><td>Legal fees for registering the UK limited company.</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Initial Inventory</td><td>Cost of first batch of UBIO/VIRDI devices.</td><td>&nbsp;</td><td>Dependent on MoU pricing.</td></tr>
-<tr><td>Tools &amp; Equipment</td><td>Specialist tools for installation (for Option C).</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Training &amp; Certification</td><td>Fees for 18th Edition, NSI/SSAIB, GDPR courses.</td><td>&nbsp;</td><td>Per employee.</td></tr>
-<tr><td>Website &amp; E-commerce</td><td>Development and setup costs.</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Office/Vehicle Deposit</td><td>Initial rent deposit and vehicle acquisition costs.</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Recurring Monthly Operating Costs</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Salaries</td><td>Wages for administrative, sales, and technical staff.</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Rent &amp; Utilities</td><td>Office or small warehouse space.</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Insurance Premiums</td><td>Public Liability, Employers&#x27; Liability, Professional Indemnity.</td><td>&nbsp;</td><td>PI is a key differentiator for Option C.</td></tr>
-<tr><td>Marketing &amp; Advertising</td><td>Digital marketing, trade shows, etc.</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>WEEE Compliance Scheme</td><td>Annual fee for Producer Compliance Scheme.</td><td>&nbsp;</td><td>Calculated monthly for budgeting.</td></tr>
-<tr><td>Software &amp; Subscriptions</td><td>CRM, accounting software, etc.</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Total Monthly Cost</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-</table></div>
-</section><section id="appendix-3-regulatory-compliance-checklist" class="sec l1">
-<h2>Appendix 3: Regulatory Compliance Checklist</h2>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Area</th><th>Requirement</th><th>Status (Compliant/ Pending/ N/A)</th><th>Action / Notes</th></tr>
-<tr><td>Importation</td><td>Obtain GB EORI Number.</td><td>&nbsp;</td><td>Apply on GOV.UK.</td></tr>
-<tr><td>&nbsp;</td><td>Establish Commodity Codes for all products.</td><td>&nbsp;</td><td>Verify HS Code 8543.70.90 on UK Trade Tariff.</td></tr>
-<tr><td>Product Marking</td><td>Ensure products have valid CE marking.</td><td>&nbsp;</td><td>Confirm with Dubai office.</td></tr>
-<tr><td>&nbsp;</td><td>Draw up UK Declaration of Conformity.</td><td>&nbsp;</td><td>Template required. Can reference EU standards.</td></tr>
-<tr><td>&nbsp;</td><td>Affix importer details (name, address) to product/packaging.</td><td>&nbsp;</td><td>Utilise labelling easement until Dec 2027.</td></tr>
-<tr><td>Environmental</td><td>Register as a WEEE producer.</td><td>&nbsp;</td><td>Join a Producer Compliance Scheme if &gt;5 tonnes/year.</td></tr>
-<tr><td>&nbsp;</td><td>Confirm RoHS compliance via manufacturer&#x27;s DoC.</td><td>&nbsp;</td><td>Part of CE/UKCA process.</td></tr>
-<tr><td>Data Protection</td><td>Register with the Information Commissioner&#x27;s Office (ICO).</td><td>&nbsp;</td><td>Mandatory annual fee.</td></tr>
-<tr><td>&nbsp;</td><td>Develop DPIA templates for clients.</td><td>&nbsp;</td><td>Key value-add for Option C.</td></tr>
-<tr><td>Installer Certs (Option C)</td><td>Staff certified to City &amp; Guilds 2382-22 (18th Edition).</td><td>&nbsp;</td><td>Book training courses.</td></tr>
-<tr><td>&nbsp;</td><td>Achieve NSI or SSAIB accreditation.</td><td>&nbsp;</td><td>Begin application process; can take several months.</td></tr>
-</table></div>
-</section><section id="untitled" class="sec l2">
-<h3>Untitled</h3>
-
-</section><section id="appendix-4-gdpr-data-protection-assessment-template-for-clie" class="sec l1">
-<h2>Appendix 4: GDPR Data Protection Assessment Template (for Client Use)</h2>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Data Protection Impact Assessment (DPIA) - Biometric System Screening</th><th>Data Protection Impact Assessment (DPIA) - Biometric System Screening</th></tr>
-<tr><td>Project / Process:</td><td>Implementation of [e.g., Biometric Access Control System].</td></tr>
-<tr><td>Data Controller:</td><td>[Client Company Name]</td></tr>
-<tr><td>Step 1: Identify the need for a DPIA</td><td>Does the processing involve biometric data for unique identification? (YES/NO). If YES, a DPIA is mandatory under ICO guidelines.</td></tr>
-<tr><td>Step 2: Describe the processing</td><td>Nature: Collection of [fingerprint/facial] data. Scope: For [e.g., 50 employees] at [e.g., single office location]. Purpose: To [e.g., manage building access and record time &amp; attendance].</td></tr>
-<tr><td>Step 3: Lawful Basis &amp; Special Category Condition</td><td>What is the Article 6 lawful basis? (e.g., Legitimate Interest). What is the Article 9 condition for special category data? (e.g., Explicit Consent). *Note: Consent is difficult to prove in an employment context. Justify why no less intrusive alternative is viable.</td></tr>
-<tr><td>Step 4: Assess Necessity and Proportionality</td><td>Why is a biometric system necessary over an alternative (e.g., RFID cards, PIN codes)? Document consideration of alternatives and reasons for their rejection (e.g., documented abuse of card-sharing).</td></tr>
-<tr><td>Step 5: Identify and Assess Risks</td><td>Risk 1: Lack of transparency. Mitigation: Clear privacy notices and signage.
-Risk 2: Data breach of biometric templates. Mitigation: Use of encrypted templates, secure storage, defined retention periods.
-Risk 3: Function creep (using data for other purposes). Mitigation: Strict purpose limitation in policies.
-Risk 4: Inaccuracy (False Rejection/Acceptance). Mitigation: Regular system maintenance, clear user guidance.</td></tr>
-<tr><td>Step 6: Identify Measures to Reduce Risk</td><td>Provide a genuine opt-out for users who do not consent (e.g., an RFID card or PIN). Ensure data is deleted upon employment termination. Conduct regular security audits.</td></tr>
-<tr><td>DPO Advice &amp; Sign-off</td><td>Record advice from Data Protection Officer. Management sign-off.</td></tr>
-</table></div>
-</section><section id="untitled" class="sec l2">
-<h3>Untitled</h3>
-
-</section><section id="appendix-5-vendor-evaluation-matrix-dubai-office" class="sec l1">
-<h2>Appendix 5: Vendor Evaluation Matrix (Dubai Office)</h2>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Criteria</th><th>Weight (1-5)</th><th>Score (1-5)</th><th>Weighted Score</th><th>Comments</th></tr>
-<tr><td>Product Compliance</td><td>5</td><td>&nbsp;</td><td>&nbsp;</td><td>Provides valid CE marking and full technical files.</td></tr>
-<tr><td>Pricing &amp; Margin</td><td>4</td><td>&nbsp;</td><td>&nbsp;</td><td>Offers competitive pricing and volume discounts.</td></tr>
-<tr><td>Warranty &amp; RMA Process</td><td>5</td><td>&nbsp;</td><td>&nbsp;</td><td>Clear, efficient process with defined turnaround times.</td></tr>
-<tr><td>SDK &amp; Technical Support</td><td>4</td><td>&nbsp;</td><td>&nbsp;</td><td>Provides SDK license and a robust Technical Support SLA.</td></tr>
-<tr><td>Shipping &amp; Logistics</td><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>Reliable order fulfilment and clear Incoterms.</td></tr>
-<tr><td>Brand Reputation</td><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>UBIO/VIRDI brand strength and recognition.</td></tr>
-<tr><td>Total Score</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-</table></div>
-</section><section id="untitled" class="sec l2">
-<h3>Untitled</h3>
-
-</section><section id="appendix-6-customer-service-sla-template-for-option-c" class="sec l1">
-<h2>Appendix 6: Customer Service SLA Template (for Option C)</h2>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Service Level Agreement (SLA) for Installed Biometric Systems</th><th>Service Level Agreement (SLA) for Installed Biometric Systems</th><th>Service Level Agreement (SLA) for Installed Biometric Systems</th><th>Service Level Agreement (SLA) for Installed Biometric Systems</th></tr>
-<tr><td>Service Metric</td><td>Target</td><td>Notes</td><td>Corrective Maintenance (Fault Response)</td></tr>
-<tr><td>Corrective Maintenance (Fault Response)</td><td>Corrective Maintenance (Fault Response)</td><td>Priority 1 (System Down)</td><td>- Acknowledgement: 1 hour
-- On-site Response: 4 business hours</td></tr>
-<tr><td>e.g., Main entrance failure, total system outage.</td><td>Priority 2 (Major Fault)</td><td>- Acknowledgement: 4 hours
-- On-site Response: Next business day</td><td>e.g., Single reader failure on a non-critical door.</td></tr>
-<tr><td>Priority 3 (Minor Fault)</td><td>- Acknowledgement: 1 business day
-- Resolution: 5 business days</td><td>e.g., Software bug, reporting issue.</td><td>Preventative Maintenance</td></tr>
-<tr><td>Preventative Maintenance</td><td>Preventative Maintenance</td><td>Scheduled Visits</td><td>1 per annum</td></tr>
-<tr><td>Includes physical inspection, cleaning of readers, software updates, and log review.</td><td>Support Desk</td><td>Support Desk</td><td>Support Desk</td></tr>
-<tr><td>Availability</td><td>9am - 5pm, Monday-Friday (excluding Bank Holidays)</td><td>Via phone and email.</td><td>First Response Time</td></tr>
-<tr><td>&lt; 2 hours</td><td>For all support queries.</td></tr>
-<tr></tr>
-<tr></tr>
-</table></div>
-</section><section id="untitled" class="sec l2">
-<h3>Untitled</h3>
-
-</section><section id="appendix-7-sample-declarations-from-dubai-office" class="sec l1">
-<h2>Appendix 7: Sample Declarations from Dubai Office</h2>
-
-</section><section id="sample-declaration-of-origin" class="sec l2">
-<h3>Sample Declaration of Origin</h3>
-<p>We, Union Community Dubai office (A Branch office in Dubai-UAE registered as Virdi Middle East), of [Supplier Address, Dubai, UAE], hereby declare that the goods described below and contained in shipment [Shipment/Invoice Number] are of Korean origin.</p>
-<p>Product Description: UBIO/VIRDI Biometric Devices</p>
-<p>Applicable Models: [List of Model Numbers]</p>
-<p>HS Code: 8543.70.90</p>
-<p>Shipped From: Dubai, UAE</p>
-<p>Shipped To: [UK Start-up Name], [UK Address]</p>
-<p>Signed: _________________________</p>
-<p>Name: [Authorised Signatory]</p>
-<p>Date: [Date]</p>
-</section><section id="untitled" class="sec l2">
-<h3>Untitled</h3>
-
-</section><section id="sample-manufacturer-s-declaration-of-conformity-to-be-provid" class="sec l2">
-<h3>Sample Manufacturer&#x27;s Declaration of Conformity (to be provided by Dubai Office)</h3>
-<p>We, Union Community Co., Ltd, of [Manufacturer&#x27;s Full Address, Seoul, Korea], declare under our sole responsibility that the product:</p>
-<p>Product: Biometric Access Control &amp; Time Attendance Terminal
-Model(s): [e.g., UBIO-X Pro 2, VIRDI AC-5000]</p>
-<p>is in conformity with the provisions of the following UK Regulations (and their EU equivalents where applicable):</p>
-<p>The Radio Equipment Regulations 2017 (S.I. 2017/1206)</p>
-<p>The Electrical Equipment (Safety) Regulations 2016 (S.I. 2016/1101)</p>
-<p>The Electromagnetic Compatibility Regulations 2016 (S.I. 2016/1091)</p>
-<p>The Restriction of the Use of Certain Hazardous Substances in Electrical and Electronic Equipment Regulations 2012 (S.I. 2012/3032)</p>
-<p>The following designated standards have been applied:</p>
-<p>[e.g., EN 62368-1:2014+A11:2017 (Safety), EN 301 489-1 V2.2.3 (EMC), EN 300 328 V2.2.2 (Radio Spectrum), EN IEC 63000:2018 (RoHS)]</p>
-<p>Signed for and on behalf of Union Community Co., Ltd.</p>
-<p>Signed: _________________________</p>
-<p>Name: [Authorised Signatory, e.g., Head of Compliance]</p>
-<p>Date: [Date]</p>
-</section><section id="untitled" class="sec l2">
-<h3>Untitled</h3>
-
-</section><section id="appendix-8-sample-memorandum-of-understanding-mou-template" class="sec l1">
-<h2>Appendix 8: Sample Memorandum of Understanding (MoU) Template</h2>
-
-</section><section id="memorandum-of-understanding" class="sec l2">
-<h3>Memorandum of Understanding</h3>
-<p>Between: [UK Start-up Name], a company registered in England and Wales, (&quot;the Distributor&quot;)</p>
-<p>And: Union Community Dubai office (A Branch office in Dubai-UAE registered as Virdi Middle East), (&quot;the Supplier&quot;)</p>
-<ul class="clean"><li><span class="dash"></span><span class="li-txt">Parties: This MoU is entered into by the Distributor and the Supplier, collectively referred to as &quot;the Parties&quot;.</span></li><li><span class="dash"></span><span class="li-txt">Purpose: The purpose of this MoU is to establish a non-binding framework for collaboration regarding the importation, distribution, marketing, and support of UBIO/VIRDI products (&quot;the Products&quot;) in the United Kingdom.</span></li><li><span class="dash"></span><span class="li-txt">Scope of Collaboration: The Parties agree to explore a formal distribution agreement covering sales, marketing, technical support, and compliance for the Products within the UK market.</span></li><li><span class="dash"></span><span class="li-txt">Responsibilities of the Parties:</span></li></ul>
-<p>The Supplier shall be responsible for:</p>
-<p>Providing the Products with valid CE marking and associated technical documentation.</p>
-<p>Establishing a clear pricing structure for the Distributor.</p>
-<p>Providing RMA (Return Material Authorisation) support with agreed-upon turnaround times.</p>
-<p>Providing SDK (Software Development Kit) access, licenses, and second-line technical support.</p>
-<p>The Distributor shall be responsible for:</p>
-<p>Marketing and promoting the Products within the UK.</p>
-<p>Acting as the legal &quot;importer&quot; and ensuring all UK-specific regulatory compliance (EORI, WEEE, ICO).</p>
-<p>Providing first-line pre-sales and after-sales support to UK customers.</p>
-<p>(If applicable) Maintaining a team of installers trained to UK standards.</p>
-<ul class="clean"><li><span class="dash"></span><span class="li-txt">Term and Termination: This MoU shall be effective from the date of signing and remain in effect for a period of [e.g., six months] or until a definitive Distribution Agreement is signed. Either party may terminate this MoU with 30 days&#x27; written notice.</span></li><li><span class="dash"></span><span class="li-txt">Confidentiality: Both Parties agree to keep all proprietary information, including pricing and business strategies, confidential and not to disclose it to any third party without prior written consent.</span></li><li><span class="dash"></span><span class="li-txt">Governing Law: This MoU shall be governed by and construed in accordance with the laws of England and Wales. Any disputes arising shall be settled through amicable negotiation.</span></li></ul>
-<p>For the Distributor:</p>
-<p>Signature: _________________________</p>
-<p>Name: _________________________</p>
-<p>Date: _________________________</p>
-<p>For the Supplier:</p>
-<p>Signature: _________________________</p>
-<p>Name: _________________________</p>
-<p>Date: _________________________</p>
-</section><section id="reference" class="sec l1">
-<h2>Reference</h2>
-<p>Arnold &amp; Porter (2002) Parallel Trade – How to Protect Your Brand. Available at:</p>
-<p>Braumiller Law Group (n.d.) Parallel Import: A Global Phenomenon and a Grey Area. Available at:</p>
-<p>Group O (n.d.) The Pros and Cons of Value-Added Resellers. Available at:</p>
-<p>Venn Technology (n.d.) How Much Do Integrations Cost and Is It Worth It? Available at:</p>
-<p>Oracle NetSuite (n.d.) Break-Even Analysis: Definition, Formula and Examples. Available at:</p>
-<p>Information Commissioner’s Office (2024) ICO orders Serco Leisure to stop using facial recognition and fingerprint scanning for attendance monitoring. Available at:</p>
-<p>Department for Business &amp; Trade (2023) Government Announces Indefinite Recognition of CE Marking for Most Goods. Available at:</p>
-<p>UK Government (n.d.) UK Trade Tariff: Chapter 85 – Electrical Machinery and Equipment. Available at:</p>
-<p>Information Commissioner’s Office (n.d.) Guide to the UK GDPR – Special Category Data and DPIAs. Available at:</p>
-<p>UK Public General Acts (2015) Consumer Rights Act 2015 (c. 15). Available at:</p>
-<p>UK Statutory Instruments (2019) The Product Safety and Metrology etc. (Amendment etc.) (EU Exit) Regulations 2019 (SI 2019 No. 696). Available at:</p>
-<p>UK Statutory Instruments (2017) The Radio Equipment Regulations 2017 (SI 2017 No. 1206). Available at:</p>
-<p>UK Statutory Instruments (2012) The Restriction of the Use of Certain Hazardous Substances in Electrical and Electronic Equipment Regulations 2012 (SI 2012 No. 3032). Available at:</p>
-<p>UK Statutory Instruments (2013) The Waste Electrical and Electronic Equipment Regulations 2013 (SI 2013 No. 3113). Available at:</p>
-<p>UK Statutory Instruments (2016) The Electrical Equipment (Safety) Regulations 2016 (SI 2016 No. 1101). Available at:</p>
-<p>UK Statutory Instruments (2016) The Electromagnetic Compatibility Regulations 2016 (SI 2016 No. 1091). Available at:</p>
-<p>NSI &amp; SSAIB (n.d.) Accreditation Schemes for Security Systems Installers (UK). Available at: https://www.nsi.org.uk and</p>
-<p>Total ID Ltd (n.d.) Product Catalogue for Biometric Access Readers. Available at:</p>
-<p>Market Research Future (2024) UK Access Control Market Forecast to 2030 – CAGR 7.03%. Available at:</p>
-</section><section id="confidential-annexure-uk-potential-customer-partner-database" class="sec l1">
-<h2>Confidential Annexure: UK Potential Customer &amp; Partner Database</h2>
-<p>Notice: The following information is confidential and intended for internal strategic planning purposes only. It represents a snapshot of potential partners, integrators, and competitors in the UK market as of October 2025. This database is a critical asset for targeting initial sales and partnership efforts, particularly for a System Integrator (Option C) business model.</p>
-<div class="tbl-wrap"><table class="tbl">
-<tr><th>Company</th><th>City</th><th>Contact</th><th>Services Offered</th><th>Accreditation/Tags</th><th>Partnership Suitability</th><th>Notes</th></tr>
-<tr><td>&nbsp;</td><td>London</td><td>+44 20 8900 9991
-sales@syneluk.com</td><td>Access Control, Biometrics, Time &amp; Attendance</td><td>Synel</td><td>Installer/Integrator Partner</td><td>Access control with facial/fingerprint; Workforce/Time &amp; Attendance; UK HQ</td></tr>
-<tr><td>&nbsp;</td><td>London</td><td>+44 1375 893 710
-tracy@itcuksales.co.uk</td><td>Biometrics</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Installs card/fob + biometric readers; serves London</td></tr>
-<tr><td>&nbsp;</td><td>London</td><td>+44 208 187 1601
-service@in-security.co.uk</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Installs access control incl. biometric readers</td></tr>
-<tr><td>&nbsp;</td><td>London</td><td>+44 203 151 2030
-info@aksharyogisecurity.co.uk</td><td>Access Control, Biometrics, CCTV</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control incl. fingerprint/facial; CCTV; smart systems</td></tr>
-<tr><td>&nbsp;</td><td>London</td><td>+44 20 8676 4300</td><td>Biometrics</td><td>Genetec</td><td>Installer Partner</td><td>Installer; biometric/facial options; Genetec partner</td></tr>
-<tr><td>&nbsp;</td><td>London/Essex</td><td>+44 20 8559 6200</td><td>Access Control, Biometrics</td><td>NSI</td><td>Installer Partner</td><td>NSI Gold; access control incl. facial &amp; fingerprint</td></tr>
-<tr><td>&nbsp;</td><td>London</td><td>+44 20 8288 9661</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers; integration</td></tr>
-<tr><td>&nbsp;</td><td>London</td><td>+44 20 3553 2364
-info@candcsecuritysystems.co.uk</td><td>Biometrics</td><td>NSI</td><td>Installer Partner</td><td>Installer incl. biometric; NSI approved</td></tr>
-<tr><td>&nbsp;</td><td>Birmingham</td><td>+44 121 790 1600
-uk.office@zkteco.co.uk</td><td>Biometrics</td><td>Vendor HQ, ZKTeco</td><td>Ideal Distributor Partner</td><td>Biometric access, entrance control; UK office &amp; training (Vendor HQ)</td></tr>
-<tr><td>&nbsp;</td><td>Birmingham</td><td>+44 121 544 8470
-sales@unisoncctv.co.uk</td><td>Biometrics</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Designs &amp; installs multi-site biometric access (fingerprint/iris/facial)</td></tr>
-<tr><td>&nbsp;</td><td>Birmingham</td><td>+44 845 643 5751
-info@integrity-uk.com</td><td>Access Control, Biometrics, Maintenance</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control incl. biometric options; 24/7 support</td></tr>
-<tr><td>&nbsp;</td><td>Birmingham</td><td>+44 800 368 8123
-sales_uk@supremainc.com</td><td>Biometrics</td><td>Suprema, Vendor HQ/Regional Office</td><td>Ideal Distributor Partner</td><td>Biometric vendor UK/Ireland (Vendor Regional Office)</td></tr>
-<tr><td>&nbsp;</td><td>Manchester</td><td>+44 8442 084422
-sales@clarionuk.com</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Commercial access control incl. biometric tech</td></tr>
-<tr><td>&nbsp;</td><td>Manchester</td><td>+44 161 874 5050</td><td>Access Control, Biometrics</td><td>HID, ievo</td><td>Installer/Integrator Partner</td><td>Access control; integrates ievo/HID biometric readers</td></tr>
-<tr><td>&nbsp;</td><td>Manchester</td><td>+44 345 260 0093
-mail@argusfireandsecurity.co.uk</td><td>Access Control, Maintenance</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control installs &amp; support</td></tr>
-<tr><td>&nbsp;</td><td>Manchester</td><td>+44 151 495 5740</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installations</td></tr>
-<tr><td>&nbsp;</td><td>Bradford</td><td>+44 1274 229 030</td><td>Access Control, Biometrics</td><td>Paxton</td><td>Installer/Integrator Partner</td><td>Installs biometric access control; multi-branch</td></tr>
-<tr><td>&nbsp;</td><td>Bradford</td><td>+44 1274 761 870
-info@bossserve.co.uk</td><td>Biometrics</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Electronic security incl. biometric devices</td></tr>
-<tr><td>&nbsp;</td><td>Leeds</td><td>+44 113 256 7757
-info@365ts.uk</td><td>Access Control, Biometrics</td><td>SSAIB</td><td>Installer/Integrator Partner</td><td>Access control incl. fingerprint &amp; facial; SSAIB accredited</td></tr>
-<tr><td>&nbsp;</td><td>Leeds</td><td>+44 113 322 9500
-info@smartideasuk.com</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control &amp;; biometrics; Leeds head office</td></tr>
-<tr><td>&nbsp;</td><td>Leeds</td><td>+44 113 271 1770
-enquiries@elite3gs.com</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers</td></tr>
-<tr><td>&nbsp;</td><td>Leeds</td><td>+44 344 880 7100
-enquiry@gough-kelly.co.uk</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers</td></tr>
-<tr><td>&nbsp;</td><td>Leeds</td><td>+44 113 252 6663
-support@tba-solutions.co.uk</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers</td></tr>
-<tr><td>&nbsp;</td><td>Glasgow</td><td>+44 141 955 0552
-enquiries@simsecurity.co.uk</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control incl. biometrics</td></tr>
-<tr><td>&nbsp;</td><td>Glasgow</td><td>+44 141 882 9333
-sales@racam.co.uk</td><td>Access Control</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control &amp; security networks</td></tr>
-<tr><td>&nbsp;</td><td>Glasgow</td><td>+44 141 876 1058
-info@kdrsecurity.com</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control incl. biometrics</td></tr>
-<tr><td>&nbsp;</td><td>Glasgow</td><td>+44 141 266 0099
-support@microman.co.uk</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers</td></tr>
-<tr><td>&nbsp;</td><td>Glasgow</td><td>+44 141 882 9333</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers</td></tr>
-<tr><td>&nbsp;</td><td>Edinburgh</td><td>+44 131 538 3081
-info@dsmsecurity.com</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control &amp; biometrics</td></tr>
-<tr><td>&nbsp;</td><td>Edinburgh</td><td>+44 131 558 9205</td><td>Access Control</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control installer</td></tr>
-<tr><td>&nbsp;</td><td>Newcastle upon Tyne</td><td>+44 191 229 0595
-info@csdynamics.co.uk</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control including biometrics</td></tr>
-<tr><td>&nbsp;</td><td>Liverpool</td><td>+44 151 920 6912</td><td>Access Control</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control &amp; door entry</td></tr>
-<tr><td>&nbsp;</td><td>Liverpool</td><td>&nbsp;</td><td>Biometrics</td><td>&nbsp;</td><td>Installer Partner</td><td>Installs incl. biometric systems</td></tr>
-<tr><td>&nbsp;</td><td>Liverpool</td><td>&nbsp;</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control incl. biometric</td></tr>
-<tr><td>&nbsp;</td><td>Liverpool</td><td>+44 151 230 2424</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers</td></tr>
-<tr><td>&nbsp;</td><td>Bristol</td><td>+44 117 977 7553
-info@ifs.ltd</td><td>Access Control, Biometrics</td><td>NSI</td><td>Installer/Integrator Partner</td><td>Access control &amp; biometrics; NSI Gold</td></tr>
-<tr><td>&nbsp;</td><td>Bristol</td><td>+44 117 978 0775
-info@elecsec.co.uk</td><td>Access Control</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control integrator</td></tr>
-<tr><td>&nbsp;</td><td>Bristol/Cardiff/South West</td><td>+44 345 189 9808</td><td>Access Control</td><td>NSI</td><td>Installer Partner</td><td>NSI Gold; access control installers</td></tr>
-<tr><td>&nbsp;</td><td>Bristol</td><td>+44 117 259 1000
-sales@brunelsecurity.co.uk</td><td>Biometrics</td><td>&nbsp;</td><td>Installer Partner</td><td>Installer incl. biometric</td></tr>
-<tr><td>&nbsp;</td><td>Bristol</td><td>+44 117 251 0590
-contact@cjsfiresecurity.co.uk</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers</td></tr>
-<tr><td>&nbsp;</td><td>Cardiff</td><td>+44 29 20 753 251</td><td>Access Control, Biometrics</td><td>NSI</td><td>Installer/Integrator Partner</td><td>Access control &amp; biometrics; NSI Gold</td></tr>
-<tr><td>&nbsp;</td><td>Cardiff</td><td>+44 29 2047 2288</td><td>Access Control</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control systems</td></tr>
-<tr><td>&nbsp;</td><td>Sheffield</td><td>+44 844 357 7678</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer/Integrator Partner</td><td>Access control incl. biometric systems</td></tr>
-<tr><td>&nbsp;</td><td>Sheffield</td><td>+44 114 303 6061
-info@jacksonfire.co.uk</td><td>Access Control, Fire Systems</td><td>NSI</td><td>Installer/Integrator Partner</td><td>Access control &amp; fire/security; NSI Gold</td></tr>
-<tr><td>&nbsp;</td><td>Nottingham</td><td>+44 115 946 1510
-enquiries@aps-security.co.uk</td><td>Access Control, Biometrics</td><td>NSI, Paxton</td><td>Installer/Integrator Partner</td><td>Access control incl. biometrics; NSI Gold; Paxton</td></tr>
-<tr><td>&nbsp;</td><td>Nottingham</td><td>+44 115 979 2300
-sales@atalarms.com</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers</td></tr>
-<tr><td>&nbsp;</td><td>Nottingham</td><td>&nbsp;</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers</td></tr>
-<tr><td>&nbsp;</td><td>Nottingham</td><td>+44 115 795 0106</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers</td></tr>
-<tr><td>&nbsp;</td><td>Nottingham</td><td>&nbsp;</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control solutions</td></tr>
-<tr><td>&nbsp;</td><td>Leicester</td><td>+44 116 410 5005
-enquiries@aps-security.co.uk</td><td>Access Control, Biometrics</td><td>Paxton</td><td>Installer/Integrator Partner</td><td>Access control incl. biometric readers; Paxton</td></tr>
-<tr><td>&nbsp;</td><td>Coventry</td><td>+44 24 7666 8366
-info@clearsoundsecurity.co.uk</td><td>Access Control, Biometrics</td><td>NSI, SSAIB</td><td>Installer/Integrator Partner</td><td>Access control incl. biometric readers; NSI/SSAIB</td></tr>
-<tr><td>&nbsp;</td><td>Brighton</td><td>+44 1273 782323
-sales@brightoncctv.co.uk</td><td>Access Control, Biometrics</td><td>SSAIB</td><td>Installer/Integrator Partner</td><td>Commercial access control incl. biometrics; SSAIB</td></tr>
-<tr><td>&nbsp;</td><td>Oxford</td><td>+44 800 689 1835</td><td>Access Control, Biometrics</td><td>Paxton</td><td>Installer/Integrator Partner</td><td>Access control incl. biometric access; Paxton Gold Partner</td></tr>
-<tr><td>&nbsp;</td><td>Oxford</td><td>+44 1865 782444</td><td>Biometrics</td><td>&nbsp;</td><td>Installer Partner</td><td>Installs from keyless to biometric</td></tr>
-<tr><td>&nbsp;</td><td>Cambridge</td><td>+44 1223 262728
-admin@briarsecurity.co.uk</td><td>Access Control</td><td>Paxton, Vanderbilt</td><td>Installer/Integrator Partner</td><td>Access control incl. Vanderbilt/Paxton</td></tr>
-<tr><td>&nbsp;</td><td>Kent/Medway</td><td>+44 1634 940700</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers</td></tr>
-<tr><td>&nbsp;</td><td>UK-wide</td><td>0800 093 7818</td><td>Biometrics</td><td>&nbsp;</td><td>Installer Partner</td><td>Design, install &amp; maintain biometric access</td></tr>
-<tr><td>&nbsp;</td><td>UK-wide</td><td>+44 333 344 3717</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer Partner</td><td>Biometric access control installation &amp; repair</td></tr>
-<tr><td>&nbsp;</td><td>UK-wide</td><td>&nbsp;</td><td>Biometrics</td><td>&nbsp;</td><td>Installer Partner</td><td>Biometric access installers</td></tr>
-<tr><td>&nbsp;</td><td>UK-wide (Wales)</td><td>+44 2920 099 940</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers incl. biometric</td></tr>
-<tr><td>&nbsp;</td><td>UK-wide</td><td>+44 1738 504000</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installation incl. biometrics</td></tr>
-<tr><td>&nbsp;</td><td>UK-wide</td><td>+44 3455 192130</td><td>Access Control, Biometrics</td><td>&nbsp;</td><td>Installer Partner</td><td>Access control installers (biometric capable)</td></tr>
-<tr><td>&nbsp;</td><td>South West</td><td>&nbsp;</td><td>Access Control</td><td>&nbsp;</td><td>Installer Partner</td><td>Electronic access control installer</td></tr>
-</table></div>
-</section>
-    </article>
-  </main>
-  <footer>
+  <section id="services" class="segment">
     <div class="container">
-      <div>© 2025 EXNECT Business Solution — Strategic Guide prepared by Safdar I Rizvi. All rights reserved. Internal use only.</div>
-      <div style="margin-top:6px;"><a class="btn" href="#">Back to top</a></div>
+      <h3 class="section-title">Services & Pricing</h3>
+      <p class="sub">Choose a category, then pick Basic, Growth, or Premium — plus micro tiers for lean budgets.</p>
+
+      <div class="tabs" role="tablist" aria-label="Service categories">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="tab-web" id="tab-web-btn">Web & E‑commerce</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="tab-dm" id="tab-dm-btn">Digital Marketing</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="tab-erp" id="tab-erp-btn">ERP & IT Support</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="tab-biz" id="tab-biz-btn">Business Consultancy</button>
+      </div>
+
+      <!-- Web & E‑commerce -->
+      <div id="tab-web" role="tabpanel" aria-labelledby="tab-web-btn">
+        <details class="accordion" open>
+          <summary>Website Design & Development</summary>
+          <div class="acc-body">
+            <div class="grid cols-4">
+              <div class="card">
+                <span class="chip">Micro</span>
+                <h4>Micro‑Site</h4>
+                <div class="price">£799</div>
+                <ul class="features">
+                  <li>Up to 3 pages • Responsive</li>
+                  <li>Contact form • SSL</li>
+                  <li>2‑week delivery</li>
+                </ul>
+                <a class="btn" href="#contact">Start Micro</a>
+              </div>
+              <div class="card">
+                <span class="chip">Basic</span>
+                <h4>Website Basic</h4>
+                <div class="price">£995</div>
+                <ul class="features">
+                  <li>5 pages • Custom template</li>
+                  <li>On‑page SEO • SSL</li>
+                  <li>Contact form</li>
+                </ul>
+                <a class="btn" href="#contact">Choose Basic</a>
+              </div>
+              <div class="card">
+                <span class="chip">Growth</span>
+                <h4>Website Growth</h4>
+                <div class="price">£1,795</div>
+                <ul class="features">
+                  <li>Up to 10 pages • Bespoke design</li>
+                  <li>Blog • Analytics</li>
+                  <li>1‑month updates</li>
+                </ul>
+                <a class="btn" href="#contact">Choose Growth</a>
+              </div>
+              <div class="card">
+                <span class="chip">Premium</span>
+                <h4>Website Premium</h4>
+                <div class="price">£2,995</div>
+                <ul class="features">
+                  <li>Up to 20 pages • UX/UI
+                  </li>
+                  <li>CMS • Copywriting • SEO</li>
+                  <li>3‑month support</li>
+                </ul>
+                <a class="btn" href="#contact">Choose Premium</a>
+              </div>
+            </div>
+            <p class="muted" style="margin-top:10px">Add‑ons: extra page £75 • custom graphics/photos £250+ • maintenance £199/mo</p>
+          </div>
+        </details>
+
+        <details class="accordion" style="margin-top:14px">
+          <summary>E‑Commerce Solutions</summary>
+          <div class="acc-body">
+            <div class="grid cols-4">
+              <div class="card">
+                <span class="chip">Starter</span>
+                <h4>Starter Shop</h4>
+                <div class="price">£1,995</div>
+                <ul class="features">
+                  <li>≤20 products • Template</li>
+                  <li>Secure checkout</li>
+                  <li>1‑hour training</li>
+                </ul>
+                <a class="btn" href="#contact">Launch Starter</a>
+              </div>
+              <div class="card">
+                <span class="chip">Basic</span>
+                <h4>Shop Basic</h4>
+                <div class="price">£2,995</div>
+                <ul class="features">
+                  <li>20–100 products</li>
+                  <li>Email automation</li>
+                  <li>Mobile‑ready</li>
+                </ul>
+                <a class="btn" href="#contact">Choose Basic</a>
+              </div>
+              <div class="card">
+                <span class="chip">Growth</span>
+                <h4>Shop Growth</h4>
+                <div class="price">£4,995</div>
+                <ul class="features">
+                  <li>100–500 products</li>
+                  <li>Custom design • Multi‑currency</li>
+                  <li>Analytics • Stock tracking</li>
+                </ul>
+                <a class="btn" href="#contact">Choose Growth</a>
+              </div>
+              <div class="card">
+                <span class="chip">Premium</span>
+                <h4>Shop Premium</h4>
+                <div class="price">£6,995</div>
+                <ul class="features">
+                  <li>Unlimited products</li>
+                  <li>ERP/CRM integration</li>
+                  <li>Conversion tracking • 3‑month support</li>
+                </ul>
+                <a class="btn" href="#contact">Choose Premium</a>
+              </div>
+            </div>
+            <p class="muted" style="margin-top:10px">Add‑ons: product upload £5/SKU • marketplace (Amazon/eBay) £495 • hosting £249/mo</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Digital Marketing -->
+      <div id="tab-dm" role="tabpanel" aria-labelledby="tab-dm-btn" hidden>
+        <details class="accordion" open>
+          <summary>Search Engine Optimisation (SEO)</summary>
+          <div class="acc-body">
+            <div class="grid cols-4">
+              <div class="card"><span class="chip">Entry</span><h4>Local SEO Lite</h4><div class="price">£299/mo</div><ul class="features"><li>3–4 keywords</li><li>Google Business setup</li><li>Local ranking focus</li></ul><a class="btn" href="#contact">Start Lite</a></div>
+              <div class="card"><span class="chip">Basic</span><h4>SEO Basic</h4><div class="price">£399/mo</div><ul class="features"><li>5 keywords</li><li>On‑page SEO</li><li>Monthly report</li></ul><a class="btn" href="#contact">Choose Basic</a></div>
+              <div class="card"><span class="chip">Growth</span><h4>SEO Growth</h4><div class="price">£599/mo</div><ul class="features"><li>10–15 keywords</li><li>Backlinks • Blog optimisation</li><li>Competitor analysis</li></ul><a class="btn" href="#contact">Choose Growth</a></div>
+              <div class="card"><span class="chip">Premium</span><h4>SEO Premium</h4><div class="price">£995/mo</div><ul class="features"><li>25+ keywords</li><li>Technical SEO • Content strategy</li><li>Dedicated manager</li></ul><a class="btn" href="#contact">Choose Premium</a></div>
+            </div>
+            <div class="notice" style="margin-top:10px">Optional SEO Boost via Google Ads from £250/month. Management fee is a flat <strong>15%</strong> of approved ad spend (e.g., £500 spend → £75 fee). You keep full visibility and control.</div>
+            <p class="muted" style="margin-top:10px">Add‑ons: blog writing £100 each • citations £149 • landing page £295</p>
+          </div>
+        </details>
+
+        <details class="accordion" style="margin-top:14px">
+          <summary>Social Media Marketing (SMM)</summary>
+          <div class="acc-body">
+            <div class="grid cols-4">
+              <div class="card"><span class="chip">Solo</span><h4>Solo Platform</h4><div class="price">£299/mo</div><ul class="features"><li>1 platform</li><li>8 posts/month</li><li>Visuals & captions</li></ul><a class="btn" href="#contact">Pick Solo</a></div>
+              <div class="card"><span class="chip">Basic</span><h4>SMM Basic</h4><div class="price">£449/mo</div><ul class="features"><li>2 platforms</li><li>8–10 posts/month</li><li>Monthly insights</li></ul><a class="btn" href="#contact">Choose Basic</a></div>
+              <div class="card"><span class="chip">Growth</span><h4>SMM Growth</h4><div class="price">£695/mo</div><ul class="features"><li>3 platforms</li><li>12–15 posts/month</li><li>Creative & engagement</li></ul><a class="btn" href="#contact">Choose Growth</a></div>
+              <div class="card"><span class="chip">Premium</span><h4>SMM Premium</h4><div class="price">£995/mo</div><ul class="features"><li>4 platforms</li><li>20+ posts/month</li><li>Ad management (Meta + Google)</li></ul><a class="btn" href="#contact">Choose Premium</a></div>
+            </div>
+            <div class="notice" style="margin-top:10px">Ad spend is billed separately: Meta min £200/mo, Google min £250/mo. <strong>15%</strong> service charge applies to the ad spend total.</div>
+            <p class="muted" style="margin-top:10px">Add‑ons: influencer setup £295 • video editing from £75 • community manager £249/mo • copy pack £199/mo</p>
+          </div>
+        </details>
+
+        <details class="accordion" style="margin-top:14px">
+          <summary>Google Ads & Paid Campaigns</summary>
+          <div class="acc-body">
+            <div class="grid cols-4">
+              <div class="card"><span class="chip">Lite</span><h4>PPC Lite</h4><div class="price">£249 + ad spend</div><ul class="features"><li>1 campaign • 1 region</li><li>3 ad groups</li><li>Conversion tracking</li></ul><a class="btn" href="#contact">Start PPC Lite</a></div>
+              <div class="card"><span class="chip">Basic</span><h4>PPC Basic</h4><div class="price">£395 + ad spend</div><ul class="features"><li>Single campaign</li><li>Ad testing</li><li>Monthly report</li></ul><a class="btn" href="#contact">Choose Basic</a></div>
+              <div class="card"><span class="chip">Growth</span><h4>PPC Growth</h4><div class="price">£649 + ad spend</div><ul class="features"><li>Multi‑campaign</li><li>Retargeting</li><li>Keyword optimisation</li></ul><a class="btn" href="#contact">Choose Growth</a></div>
+              <div class="card"><span class="chip">Premium</span><h4>PPC Premium</h4><div class="price">£995 + ad spend</div><ul class="features"><li>Search • Display • YouTube</li><li>Funnel strategy</li><li>Weekly optimisation</li></ul><a class="btn" href="#contact">Choose Premium</a></div>
+            </div>
+            <div class="notice" style="margin-top:10px">Minimum ad budget £250/month. Management fee is <strong>15%</strong> of approved ad spend.</div>
+            <p class="muted" style="margin-top:10px">Add‑ons: landing page £295 • analytics dashboard £199 • CRO report £249</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- ERP & IT -->
+      <div id="tab-erp" role="tabpanel" aria-labelledby="tab-erp-btn" hidden>
+        <details class="accordion" open>
+          <summary>ERP & Business Software</summary>
+          <div class="acc-body">
+            <div class="grid cols-3">
+              <div class="card"><span class="chip">Basic</span><h4>ERP Basic</h4><div class="price">£2,995</div><ul class="features"><li>Cloud ERP • 1 module</li><li>Training</li><li>1‑month support</li></ul><a class="btn" href="#contact">Start Basic</a></div>
+              <div class="card"><span class="chip">Growth</span><h4>ERP Growth</h4><div class="price">£4,995</div><ul class="features"><li>3–4 modules</li><li>E‑commerce integration</li><li>Custom dashboards</li></ul><a class="btn" href="#contact">Choose Growth</a></div>
+              <div class="card"><span class="chip">Premium</span><h4>ERP Premium</h4><div class="price">£6,995+</div><ul class="features"><li>Full suite • Automation</li><li>API integration</li><li>3‑month support</li></ul><a class="btn" href="#contact">Choose Premium</a></div>
+            </div>
+            <p class="muted" style="margin-top:10px">Add‑ons: extra module £495 • mobile app £995 • annual maintenance £499/yr</p>
+          </div>
+        </details>
+
+        <details class="accordion" style="margin-top:14px">
+          <summary>IT Support & Maintenance</summary>
+          <div class="acc-body">
+            <div class="grid cols-4">
+              <div class="card"><span class="chip">Nano</span><h4>IT Nano</h4><div class="price">£149/mo</div><ul class="features"><li>Up to 3 users</li><li>Remote helpdesk (5 tickets)</li><li>Security updates</li></ul><a class="btn" href="#contact">Start Nano</a></div>
+              <div class="card"><span class="chip">Basic</span><h4>IT Basic</h4><div class="price">£199/mo</div><ul class="features"><li>Up to 5 users</li><li>Remote + 1 onsite/mo</li><li>Monitoring</li></ul><a class="btn" href="#contact">Choose Basic</a></div>
+              <div class="card"><span class="chip">Growth</span><h4>IT Growth</h4><div class="price">£349/mo</div><ul class="features"><li>10 users</li><li>24/7 support • Backup</li><li>System checks</li></ul><a class="btn" href="#contact">Choose Growth</a></div>
+              <div class="card"><span class="chip">Premium</span><h4>IT Premium</h4><div class="price">£595/mo</div><ul class="features"><li>20+ users</li><li>Unlimited support</li><li>SLA uptime</li></ul><a class="btn" href="#contact">Choose Premium</a></div>
+            </div>
+            <p class="muted" style="margin-top:10px">Add‑ons: domain & hosting £99/yr • security audit £249 • Cyber Essentials prep £395</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Consultancy -->
+      <div id="tab-biz" role="tabpanel" aria-labelledby="tab-biz-btn" hidden>
+        <details class="accordion" open>
+          <summary>Business Consultancy & Feasibility</summary>
+          <div class="acc-body">
+            <div class="grid cols-4">
+              <div class="card"><span class="chip">Report</span><h4>Consult Basic</h4><div class="price">£995/report</div><ul class="features"><li>1‑sector feasibility</li><li>Light research • SWOT</li><li>30‑min consult</li></ul><a class="btn" href="#contact">Start Basic</a></div>
+              <div class="card"><span class="chip">Report</span><h4>Consult Growth</h4><div class="price">£1,495/report</div><ul class="features"><li>Full feasibility</li><li>Competitors • Budget forecast</li><li>1‑hour session</li></ul><a class="btn" href="#contact">Choose Growth</a></div>
+              <div class="card"><span class="chip">Report</span><h4>Consult Premium</h4><div class="price">£2,495/report</div><ul class="features"><li>Strategy & market entry</li><li>3‑year forecast • Risk plan</li><li>Presentation deck</li></ul><a class="btn" href="#contact">Choose Premium</a></div>
+              <div class="card"><span class="chip">Retainer</span><h4>Advisory Retainer</h4><div class="price">£399/mo</div><ul class="features"><li>2 strategy calls/month</li><li>On‑demand advice</li><li>Document review</li></ul><a class="btn" href="#contact">Start Retainer</a></div>
+            </div>
+            <p class="muted" style="margin-top:10px">Add‑ons: pitch deck £295 • investor presentation £395 • policy writing £249/report</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="bundles" class="segment">
+    <div class="container">
+      <h3 class="section-title">Value‑Added Bundles</h3>
+      <p class="sub">Curated packs for fast starts and focused growth.</p>
+      <div class="grid cols-3">
+        <div class="card"><span class="chip">Bundle</span><h4>Start‑Up Launch Pack</h4><div class="price">£1,995</div><ul class="features"><li>Micro‑Site</li><li>Local SEO Lite</li><li>Solo SMM</li><li>Consult Basic</li></ul><a class="btn" href="#contact">Choose Bundle</a></div>
+        <div class="card"><span class="chip">Bundle</span><h4>Growth Accelerator Pack</h4><div class="price">£3,795</div><ul class="features"><li>Website Growth</li><li>SMM Growth</li><li>Consult Growth</li></ul><a class="btn" href="#contact">Choose Bundle</a></div>
+        <div class="card"><span class="chip">Bundle</span><h4>Digital Transformation Pack</h4><div class="price">£7,995</div><ul class="features"><li>ERP Growth</li><li>SEO Premium</li><li>SMM Premium</li><li>Consult Premium</li></ul><a class="btn" href="#contact">Choose Bundle</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="segment">
+    <div class="container">
+      <h3 class="section-title">Get a Quote</h3>
+      <p class="sub">Tell us what you need and we’ll respond with a fixed proposal within one business day.</p>
+      <div class="grid cols-3">
+        <form class="card" onsubmit="handleSubmit(event)">
+          <span class="chip">Contact</span>
+          <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px;">
+            <div>
+              <label class="tiny" for="name">Name</label>
+              <input id="name" name="name" required placeholder="Jane Doe" />
+            </div>
+            <div>
+              <label class="tiny" for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="jane@example.com" />
+            </div>
+            <div style="grid-column:1/-1">
+              <label class="tiny" for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="Website">Website</option>
+                <option value="E‑commerce">E‑commerce</option>
+                <option value="SEO">SEO</option>
+                <option value="SMM">Social Media Marketing</option>
+                <option value="PPC">Google Ads / PPC</option>
+                <option value="ERP">ERP</option>
+                <option value="IT Support">IT Support</option>
+                <option value="Consultancy">Business Consultancy</option>
+                <option value="Bundle">Bundle</option>
+              </select>
+            </div>
+            <div style="grid-column:1/-1">
+              <label class="tiny" for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your business and what you’re aiming to achieve…"></textarea>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;margin-top:10px">
+            <button class="btn" type="submit">Send Request</button>
+            <span class="muted tiny">or email us at <a href="mailto:info@exnect.co.uk">info@exnect.co.uk</a></span>
+          </div>
+        </form>
+
+        <div class="card" style="grid-column:span 2;">
+          <span class="chip">Transparency</span>
+          <h4 style="margin-top:0">Key Terms</h4>
+          <ul class="features">
+            <li>All prices in GBP. No hidden fees.</li>
+            <li>For advertising budgets (Google/Meta), ad spend is billed separately with a <strong>15%</strong> service charge.</li>
+            <li>Typical payment schedule: 50% on approval, balance on delivery (or monthly for retainers).</li>
+            <li>UK‑based project management, data protection aligned with UK GDPR.</li>
+          </ul>
+          <p class="muted tiny">Full terms available upon quotation. © <span id="year"></span> Exnect Business Solution (UK).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:8px">
+          <img class="logo" src="/logo.svg" alt="Exnect Business Solution (UK) logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'logo',ariaHidden:'true'}))">
+          <h1>Exnect Business Solution (UK)</h1>
+        </div>
+        <p class="tiny">Empowering UK small businesses with websites, digital marketing, ERP, IT support, and consultancy — at transparent, competitive prices.</p>
+        <p class="tiny"><a href="#" onclick="manageCookies();return false;">Manage cookies</a></p>
+      </div>
+      <div>
+        <div class="tiny">Email</div>
+        <a href="mailto:info@exnect.co.uk">info@exnect.co.uk</a>
+        <div class="tiny" style="margin-top:10px">Phone</div>
+        <a href="tel:+442031234567">+44 (0)20 3123 4567</a>
+      </div>
+      <div>
+        <div class="tiny">Locations</div>
+        <div>London • Manchester • Leeds</div>
+        <div class="tiny" style="margin-top:10px">Social</div>
+        <div>
+          <a href="https://www.facebook.com/" aria-label="Facebook" class="tiny">Facebook</a> ·
+          <a href="https://www.instagram.com/" aria-label="Instagram" class="tiny">Instagram</a> ·
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn" class="tiny">LinkedIn</a>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <!-- Cookie / Consent Banner -->
+  <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <p>We use cookies for basic site analytics to improve your experience. You can accept to enable analytics or continue without.</p>
+    <div class="actions">
+      <button id="cookie-accept" type="button">Accept analytics</button>
+      <button id="cookie-manage" type="button" onclick="hideCookieBanner()">Continue without</button>
+      <a href="/privacy.html" class="btn secondary" style="padding:.7rem 1rem">Privacy Policy</a>
+    </div>
+  </div>
+
+  <script>
+    // Wire up consent buttons
+    const btnAccept = document.getElementById('cookie-accept');
+    if(btnAccept){ btnAccept.addEventListener('click', ()=>{ localStorage.setItem('exnect_consent','granted'); hideCookieBanner(); loadGA(); }); }
+  </script>
+
+  <!-- Cookie / Consent Banner -->
+  <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <p>We use cookies for basic site analytics to improve your experience. You can accept to enable analytics or continue without.</p>
+    <div class="actions">
+      <button id="cookie-accept" type="button">Accept analytics</button>
+      <button id="cookie-manage" type="button" onclick="hideCookieBanner()">Continue without</button>
+      <a href="/privacy.html" class="btn secondary" style="padding:.7rem 1rem">Privacy Policy</a>
+    </div>
+  </div>
+
+  <script>
+    // Wire up consent buttons
+    const btnAccept = document.getElementById('cookie-accept');
+    if(btnAccept){ btnAccept.addEventListener('click', ()=>{ localStorage.setItem('exnect_consent','granted'); hideCookieBanner(); loadGA(); }); }
+  </script>
+
+  <style>
+    /* Form elements — light mode */
+    input,select,textarea{width:100%;padding:.8rem .9rem;border-radius:12px;border:1px solid #e6e1f4;background:#fff;color:#2b1a61;box-shadow:var(--shadow)}
+    input::placeholder,textarea::placeholder{color:#9b94b8}
+    input:focus,select:focus,textarea:focus{outline:2px solid var(--ring);border-color:transparent}
+  </style>
+
+  <script>
+    // Tabs
+    const tabs = [
+      {btnId:'tab-web-btn', panelId:'tab-web'},
+      {btnId:'tab-dm-btn', panelId:'tab-dm'},
+      {btnId:'tab-erp-btn', panelId:'tab-erp'},
+      {btnId:'tab-biz-btn', panelId:'tab-biz'}
+    ];
+    tabs.forEach(({btnId,panelId})=>{
+      const btn=document.getElementById(btnId);
+      const panel=document.getElementById(panelId);
+      btn?.addEventListener('click',()=>{
+        tabs.forEach(({btnId:bid,panelId:pid})=>{
+          document.getElementById(bid).setAttribute('aria-selected', bid===btnId?'true':'false');
+          const p=document.getElementById(pid); if(p){p.hidden = pid!==panelId}
+        })
+      })
+    })
+
+    // Contact form (mailto fallback)
+    function handleSubmit(e){
+      e.preventDefault();
+      const data=new FormData(e.target);
+      const subject=encodeURIComponent('Quote Request — '+data.get('service'));
+      const body=encodeURIComponent(
+        `Name: ${data.get('name')}\nEmail: ${data.get('email')}\nService: ${data.get('service')}\n\nMessage:\n${data.get('message')}`
+      );
+      window.location.href = `mailto:info@exnect.co.uk?subject=${subject}&body=${body}`;
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
