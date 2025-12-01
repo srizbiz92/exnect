@@ -6,7 +6,7 @@
 <title>EXNECT – Coming Soon</title>
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet" />
 
 <style>
     :root {
@@ -16,91 +16,164 @@
         --text-muted: #555555;
     }
 
-    body {
+    * {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
-        height: 100vh;
-        background: #ffffff;
-        color: var(--exnect-black);
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, var(--exnect-purple), var(--exnect-blue));
         display: flex;
         justify-content: center;
         align-items: center;
         font-family: "Poppins", sans-serif;
-        text-align: center;
+        padding: 16px;
+        color: var(--exnect-black);
     }
 
     .container {
-        max-width: 700px;
-        padding: 20px;
+        max-width: 860px;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 22px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+        padding: 28px 22px 36px;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            padding: 35px 30px 45px;
+        }
     }
 
     .logo {
-        width: 150px;
-        margin-bottom: 20px;
+        width: 190px;
+        max-width: 60vw;
+        margin-bottom: 10px;
+    }
+
+    .company-name {
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(2.2rem, 6vw, 3rem);
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        color: var(--exnect-blue);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    .services {
+        font-size: clamp(0.95rem, 2.6vw, 1.1rem);
+        color: var(--text-muted);
+        margin-bottom: 22px;
+        line-height: 1.6rem;
     }
 
     .coming-soon {
         font-family: "Montserrat", sans-serif;
-        font-size: 3rem;
-        font-weight: 700;
+        font-size: clamp(2.2rem, 6.8vw, 3.2rem);
+        font-weight: 800;
         color: var(--exnect-purple);
-        margin-bottom: 10px;
+        margin: 18px 0;
+        text-transform: uppercase;
     }
 
-    .slogan {
-        font-family: "Nunito Sans", sans-serif;
-        font-size: 1.1rem;
+    .catchy-line {
+        font-size: clamp(0.95rem, 2.5vw, 1rem);
+        font-weight: 500;
         color: var(--exnect-blue);
-        margin-bottom: 25px;
+        margin-bottom: 14px;
     }
 
-    .services {
-        margin-top: 15px;
-        font-size: 1rem;
-        color: var(--text-muted);
-        line-height: 1.6rem;
-        margin-bottom: 25px;
-    }
-
-    .note {
-        font-size: 1rem;
-        color: var(--text-muted);
-        margin-bottom: 30px;
+    .success-message {
+        display: none;
+        margin: 0 auto 14px;
+        max-width: 520px;
+        font-size: 0.9rem;
+        color: #155724;
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        padding: 8px 10px;
+        border-radius: 8px;
     }
 
     .email-box {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
-        flex-wrap: wrap;
+        margin-bottom: 10px;
     }
 
     input[type="email"] {
-        padding: 10px 15px;
+        padding: 11px 16px;
         border-radius: 30px;
-        border: 1px solid #ccc;
-        width: 260px;
+        border: 1px solid #bbb;
+        width: min(280px, 70vw);
         outline: none;
         font-size: 0.95rem;
+        flex: 1 1 220px;
     }
 
     button {
         background: var(--exnect-blue);
         color: white;
         border: none;
-        padding: 10px 22px;
+        padding: 11px 22px;
         font-size: 0.95rem;
-        border-radius: 25px;
+        border-radius: 30px;
         cursor: pointer;
         font-weight: 600;
+        white-space: nowrap;
     }
 
     button:hover {
         background: #083b72;
     }
 
+    .countdown-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        margin-top: 23px;
+        margin-bottom: 10px;
+    }
+
+    .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+    }
+
+    .count-box {
+        background: #f2f5ff;
+        border-radius: 12px;
+        padding: 10px;
+        min-width: 72px;
+    }
+
+    .count-number {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--exnect-blue);
+    }
+
+    .count-label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        margin-top: 3px;
+        letter-spacing: 0.11em;
+    }
+
     footer {
-        margin-top: 25px;
+        margin-top: 8px;
         font-size: 0.8rem;
         color: #777;
     }
@@ -110,40 +183,66 @@
 
 <div class="container">
 
-    <!-- LOGO (logo.png must be in SAME folder) -->
+    <!-- Bigger LOGO -->
     <img src="./Logo.png" alt="EXNECT Logo" class="logo">
 
-    <!-- COMING SOON -->
+    <!-- Company Name Big & Bold -->
+    <div class="company-name">EXNECT</div>
+
+    <!-- Services -->
+    <div class="services">
+        Web Design &amp; Development • Digital Marketing • Branding • Startup Support
+    </div>
+
+    <!-- Large Centered Coming Soon -->
     <div class="coming-soon">COMING SOON</div>
 
-    <!-- SLOGAN -->
-    <div class="slogan">Excellence in Connecting Possibilities</div>
-
-    <!-- SERVICES SECTION -->
-    <div class="services">
-        We are preparing to bring you modern <strong>Web Design</strong>,  
-        creative <strong>Digital Marketing</strong>,  
-        impactful <strong>Branding</strong>, and  
-        growth-focused <strong>Startup Support</strong> —  
-        everything you need to build a strong digital presence.
+    <!-- Catchy offer line -->
+    <div class="catchy-line">
+        Be the first to join — get exclusive launch rewards &amp; discounts!
     </div>
 
-    <!-- NOTE -->
-    <div class="note">
-        Leave your email and we’ll notify you as soon as we go live.
+    <!-- Success message (shown after redirect) -->
+    <div id="success-msg" class="success-message">
+        Thank you! Your email has been received. We’ll notify you with launch rewards and updates.
     </div>
 
-    <!-- EMAIL SIGNUP (FormSubmit) -->
+    <!-- Email Signup (FormSubmit) -->
     <form class="email-box"
           action="https://formsubmit.co/srizbiz92@gmail.com"
           method="POST">
-
+        <!-- subject -->
         <input type="hidden" name="_subject" value="Exnect - Countdown">
+        <!-- no captcha -->
         <input type="hidden" name="_captcha" value="false">
+        <!-- redirect back to home with flag -->
+        <input type="hidden" name="_next" value="https://srizbiz92.github.io/exnect/?submitted=true">
 
         <input type="email" name="email" placeholder="Enter your email" required />
         <button type="submit">Notify Me</button>
     </form>
+
+    <!-- Countdown Timer -->
+    <div class="countdown-title">Launching on 01 January 2026</div>
+
+    <div class="countdown" id="countdown">
+        <div class="count-box">
+            <div class="count-number" id="days">--</div>
+            <div class="count-label">Days</div>
+        </div>
+        <div class="count-box">
+            <div class="count-number" id="hours">--</div>
+            <div class="count-label">Hours</div>
+        </div>
+        <div class="count-box">
+            <div class="count-number" id="minutes">--</div>
+            <div class="count-label">Minutes</div>
+        </div>
+        <div class="count-box">
+            <div class="count-number" id="seconds">--</div>
+            <div class="count-label">Seconds</div>
+        </div>
+    </div>
 
     <footer>
         © <span id="year"></span> EXNECT. All rights reserved.
@@ -152,7 +251,46 @@
 </div>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+  // Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Countdown timer for 01 January 2026
+  const launchDate = new Date("2026-01-01T00:00:00").getTime();
+
+  function updateCountdown() {
+      const now = new Date().getTime();
+      const dist = launchDate - now;
+
+      const d = document.getElementById("days");
+      const h = document.getElementById("hours");
+      const m = document.getElementById("minutes");
+      const s = document.getElementById("seconds");
+
+      if (dist <= 0) {
+          d.textContent = 0;
+          h.textContent = 0;
+          m.textContent = 0;
+          s.textContent = 0;
+          return;
+      }
+
+      d.textContent = Math.floor(dist / (1000 * 60 * 60 * 24));
+      h.textContent = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      m.textContent = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+      s.textContent = Math.floor((dist % (1000 * 60)) / 1000);
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  // Show success message if redirected with ?submitted=true
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("submitted") === "true") {
+      const successEl = document.getElementById("success-msg");
+      if (successEl) {
+          successEl.style.display = "block";
+      }
+  }
 </script>
 
 </body>
