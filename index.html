@@ -1,789 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exnect Business Solution - Service Catalogue</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'custom-light': '#d9d2cc',
-                        'custom-off-white': '#f2f1ef',
-                        'custom-tan': '#d9b18e',
-                        'custom-medium': '#a67564',
-                        'custom-dark': '#723e31'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #f2f1ef 0%, #d9d2cc 100%);
-        }
-        .service-card {
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: #a67564;
-            box-shadow: 0 10px 25px rgba(114, 62, 49, 0.15);
-        }
-        .price-tag {
-            background: linear-gradient(45deg, #a67564, #723e31);
-        }
-        .section-divider {
-            background: linear-gradient(90deg, transparent, #a67564, transparent);
-            height: 2px;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EXNECT – Coming Soon</title>
 
-        /* Badges */
-        .badge-tag {
-            display: inline-block;
-            padding: 3px 8px;
-            font-size: 0.65rem;
-            font-weight: 700;
-            border-radius: 999px;
-            margin-left: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .badge-onetime { background-color: #3ba55d; color: #ffffff; }
-        .badge-monthly { background-color: #3478f6; color: #ffffff; }
-        .badge-mgmt { background-color: #7a3ff2; color: #ffffff; }
-        .badge-adspend { background-color: #ff8c42; color: #ffffff; }
-        .badge-retainer { background-color: #e03a3a; color: #ffffff; }
-        .badge-mixed { background-color: #b38bff; color: #ffffff; }
-    </style>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet" />
+
+<style>
+    :root {
+        --exnect-blue: #0D4F9E;
+        --exnect-purple: #A11A6B;
+        --exnect-black: #000000;
+        --text-muted: #555555;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: #ffffff;
+        color: var(--exnect-black);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 700px;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .coming-soon {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--exnect-purple);
+        margin-bottom: 10px;
+    }
+
+    .slogan {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 1.1rem;
+        color: var(--exnect-blue);
+        margin-bottom: 25px;
+    }
+
+    .services {
+        margin-top: 15px;
+        font-size: 1rem;
+        color: var(--text-muted);
+        line-height: 1.6rem;
+        margin-bottom: 25px;
+    }
+
+    .note {
+        font-size: 1rem;
+        color: var(--text-muted);
+        margin-bottom: 30px;
+    }
+
+    .email-box {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    input[type="email"] {
+        padding: 10px 15px;
+        border-radius: 30px;
+        border: 1px solid #ccc;
+        width: 260px;
+        outline: none;
+        font-size: 0.95rem;
+    }
+
+    button {
+        background: var(--exnect-blue);
+        color: white;
+        border: none;
+        padding: 10px 22px;
+        font-size: 0.95rem;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    button:hover {
+        background: #083b72;
+    }
+
+    footer {
+        margin-top: 25px;
+        font-size: 0.8rem;
+        color: #777;
+    }
+</style>
 </head>
-<body class="bg-custom-off-white text-custom-dark font-sans">
-    <!-- Header -->
-    <header class="bg-custom-dark text-custom-off-white py-6 shadow-lg">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-2">Exnect Business Solution</h1>
-                <p class="text-xl text-custom-tan">Digital & Business Growth Partner</p>
-                <div class="mt-4 text-lg">
-                    <span class="bg-custom-medium px-4 py-2 rounded-full">
-                        UK-Based • Transparent Pricing • No Hidden Fees
-                    </span>
-                </div>
-            </div>
-        </div>
-    </header>
+<body>
 
-    <!-- Hero Section -->
-    <section class="gradient-bg py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-custom-dark mb-6">
-                Empowering Small Businesses to Compete Big
-            </h2>
-            <p class="text-xl text-custom-medium mb-8 max-w-4xl mx-auto">
-                We help small businesses, shops, restaurants, and startups launch fast and grow smarter — 
-                with clear one-time project fees and simple monthly retainers.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 mb-8">
-                <div class="bg-custom-off-white px-6 py-3 rounded-lg shadow-md border border-custom-light">
-                    <i class="fas fa-globe text-custom-medium mr-2"></i>
-                    <span class="font-semibold">Websites & E-commerce (One-time)</span>
-                </div>
-                <div class="bg-custom-off-white px-6 py-3 rounded-lg shadow-md border border-custom-light">
-                    <i class="fas fa-search text-custom-medium mr-2"></i>
-                    <span class="font-semibold">SEO • SMM • Google Ads (Monthly)</span>
-                </div>
-                <div class="bg-custom-off-white px-6 py-3 rounded-lg shadow-md border border-custom-light">
-                    <i class="fas fa-cogs text-custom-medium mr-2"></i>
-                    <span class="font-semibold">ERP • IT Support</span>
-                </div>
-                <div class="bg-custom-off-white px-6 py-3 rounded-lg shadow-md border border-custom-light">
-                    <i class="fas fa-chart-line text-custom-medium mr-2"></i>
-                    <span class="font-semibold">Business Consultancy</span>
-                </div>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-custom-dark text-custom-off-white px-8 py-3 rounded-lg font-semibold hover:bg-custom-medium transition-colors">
-                    View Services
-                </button>
-                <button class="bg-custom-tan text-custom-dark px-8 py-3 rounded-lg font-semibold hover:bg-custom-medium hover:text-custom-off-white transition-colors">
-                    Get a Quote
-                </button>
-            </div>
-        </div>
-    </section>
+<div class="container">
 
-    <!-- Services Section -->
-    <section class="py-16 bg-custom-off-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-custom-dark mb-12">Our Services</h2>
-            
-            <!-- Website Design & Development (One-time) -->
-            <div class="mb-16">
-                <div class="text-center mb-8">
-                    <h3 class="text-2xl font-bold text-custom-dark mb-2">
-                        <i class="fas fa-laptop-code text-custom-medium mr-3"></i>
-                        Website Design & Development
-                    </h3>
-                    <p class="text-custom-medium">
-                        Professional online presence with scalable website solutions 
-                        <span class="font-semibold">(One-time project fees)</span>
-                    </p>
-                    <div class="section-divider w-24 mx-auto mt-4"></div>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£269 (₹26,900)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Micro-Site
-                            <span class="badge-tag badge-onetime">One-time</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Fixed one-time project fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• Up to 3 pages</li>
-                            <li>• Responsive design</li>
-                            <li>• Contact form</li>
-                            <li>• SSL setup</li>
-                            <li>• 2-week delivery</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£335 (₹33,500)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Basic
-                            <span class="badge-tag badge-onetime">One-time</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Fixed one-time project fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• 5-page responsive website</li>
-                            <li>• On-page SEO</li>
-                            <li>• Contact form</li>
-                            <li>• Professional design</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£597 (₹59,700)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Growth
-                            <span class="badge-tag badge-onetime">One-time</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Fixed one-time project fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• Up to 10 pages</li>
-                            <li>• Blog setup</li>
-                            <li>• Analytics integration</li>
-                            <li>• 1-month support</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£1,017 (₹101,700)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Premium
-                            <span class="badge-tag badge-onetime">One-time</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Fixed one-time project fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• Up to 20 pages</li>
-                            <li>• CMS integration</li>
-                            <li>• Copywriting included</li>
-                            <li>• SEO optimization</li>
-                            <li>• 3-month support</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-6 text-center">
-                    <p class="text-sm text-custom-medium">
-                        <strong>Add-ons:</strong> 
-                        Extra pages (£23 (₹2,300), one-time), 
-                        Graphics (£83+ (₹8,300+), one-time), 
-                        Maintenance (£65/month (₹6,500/month), ongoing).
-                    </p>
-                </div>
-            </div>
+    <!-- LOGO (logo.jpg must be in SAME folder) -->
+    <img src="./logo.jpg" alt="EXNECT Logo" class="logo">
 
-            <!-- E-Commerce Solutions (One-time) -->
-            <div class="mb-16">
-                <div class="text-center mb-8">
-                    <h3 class="text-2xl font-bold text-custom-dark mb-2">
-                        <i class="fas fa-shopping-cart text-custom-medium mr-3"></i>
-                        E-Commerce Solutions
-                    </h3>
-                    <p class="text-custom-medium">
-                        Affordable online stores for small retailers and restaurants 
-                        <span class="font-semibold">(One-time store setup fees)</span>
-                    </p>
-                    <div class="section-divider w-24 mx-auto mt-4"></div>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£657 (₹65,700)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Starter Shop
-                            <span class="badge-tag badge-onetime">One-time</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">One-time setup fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• ≤20 products</li>
-                            <li>• Prebuilt template</li>
-                            <li>• Secure checkout</li>
-                            <li>• Payment integration</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£1,017 (₹101,700)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Basic
-                            <span class="badge-tag badge-onetime">One-time</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">One-time setup fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• 20–100 products</li>
-                            <li>• Automation features</li>
-                            <li>• Email setup</li>
-                            <li>• Inventory management</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£1,677 (₹167,700)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Growth
-                            <span class="badge-tag badge-onetime">One-time</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">One-time setup fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• 100–500 products</li>
-                            <li>• Analytics dashboard</li>
-                            <li>• Stock tracking</li>
-                            <li>• Advanced features</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£2,337 (₹233,700)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Premium
-                            <span class="badge-tag badge-onetime">One-time</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">One-time setup fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• Unlimited products</li>
-                            <li>• ERP/CRM integration</li>
-                            <li>• Full customization</li>
-                            <li>• Priority support</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <!-- COMING SOON -->
+    <div class="coming-soon">COMING SOON</div>
 
-            <!-- SEO Services (Monthly) -->
-            <div class="mb-16">
-                <div class="text-center mb-8">
-                    <h3 class="text-2xl font-bold text-custom-dark mb-2">
-                        <i class="fas fa-search text-custom-medium mr-3"></i>
-                        Search Engine Optimisation (SEO)
-                    </h3>
-                    <p class="text-custom-medium">
-                        Improve local visibility and ranking through structured SEO plans 
-                        <span class="font-semibold">(Monthly retainers)</span>
-                    </p>
-                    <div class="section-divider w-24 mx-auto mt-4"></div>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£101/month (₹10,100/month)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Local SEO Lite
-                            <span class="badge-tag badge-monthly">Monthly</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Monthly SEO package</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• Google Business setup</li>
-                            <li>• Local ranking optimization</li>
-                            <li>• Basic citations</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£131/month (₹13,100/month)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Basic
-                            <span class="badge-tag badge-monthly">Monthly</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Monthly SEO package</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• 5 keywords optimization</li>
-                            <li>• On-page SEO</li>
-                            <li>• Monthly reporting</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£201/month (₹20,100/month)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Growth
-                            <span class="badge-tag badge-monthly">Monthly</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Monthly SEO package</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• 10–15 keywords</li>
-                            <li>• Backlink building</li>
-                            <li>• Competitor analysis</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£335/month (₹33,500/month)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Premium
-                            <span class="badge-tag badge-monthly">Monthly</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Monthly SEO package</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• 25+ keywords</li>
-                            <li>• Content strategy</li>
-                            <li>• Advanced analytics</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <!-- SLOGAN -->
+    <div class="slogan">Excellence in Connecting Possibilities</div>
 
-            <!-- Social Media Marketing (Monthly) -->
-            <div class="mb-16">
-                <div class="text-center mb-8">
-                    <h3 class="text-2xl font-bold text-custom-dark mb-2">
-                        <i class="fas fa-share-alt text-custom-medium mr-3"></i>
-                        Social Media Marketing (SMM)
-                    </h3>
-                    <p class="text-custom-medium">
-                        Engage your audience and promote your brand on leading platforms 
-                        <span class="font-semibold">(Monthly retainers)</span>
-                    </p>
-                    <div class="section-divider w-24 mx-auto mt-4"></div>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£101/month (₹10,100/month)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Solo Platform
-                            <span class="badge-tag badge-monthly">Monthly</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Monthly management fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• 1 platform management</li>
-                            <li>• 8 posts per month</li>
-                            <li>• Content creation</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£149/month (₹14,900/month)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Basic
-                            <span class="badge-tag badge-monthly">Monthly</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Monthly management fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• 2 platforms</li>
-                            <li>• 10 posts per month</li>
-                            <li>• Engagement monitoring</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£233/month (₹23,300/month)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Growth
-                            <span class="badge-tag badge-monthly">Monthly</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Monthly management fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• 3 platforms</li>
-                            <li>• Creative content</li>
-                            <li>• Analytics reporting</li>
-                        </ul>
-                    </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md">
-                        <div class="price-tag text-white text-center py-2 rounded-t-lg mb-4">
-                            <span class="text-2xl font-bold">£335/month (₹33,500/month)</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-custom-dark mb-1">
-                            Premium
-                            <span class="badge-tag badge-monthly">Monthly</span>
-                        </h4>
-                        <p class="text-xs text-custom-medium mb-3">Monthly management fee</p>
-                        <ul class="text-sm text-custom-medium space-y-2">
-                            <li>• 4 platforms</li>
-                            <li>• Ad management</li>
-                            <li>• Meta + Google Ads</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <!-- SERVICES SECTION -->
+    <div class="services">
+        We are preparing to bring you modern <strong>Web Design</strong>,  
+        creative <strong>Digital Marketing</strong>,  
+        impactful <strong>Branding</strong>, and  
+        growth-focused <strong>Startup Support</strong> —  
+        everything you need to build a strong digital presence.
+    </div>
 
-            <!-- Additional Services Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <!-- Google Ads -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-custom-light">
-                    <h4 class="text-xl font-bold text-custom-dark mb-4">
-                        <i class="fas fa-bullhorn text-custom-medium mr-2"></i>
-                        Google Ads & Campaigns
-                    </h4>
-                    <div class="space-y-3 text-sm">
-                        <div class="flex justify-between items-center">
-                            <span class="text-custom-medium">
-                                Lite
-                                <span class="badge-tag badge-mgmt">Mgmt Fee</span>
-                            </span>
-                            <span class="font-bold text-custom-dark">£83/month (₹8,300/month) + ad spend</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-custom-medium">
-                                Basic
-                                <span class="badge-tag badge-mgmt">Mgmt Fee</span>
-                            </span>
-                            <span class="font-bold text-custom-dark">£131/month (₹13,100/month) + ad spend</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-custom-medium">
-                                Growth
-                                <span class="badge-tag badge-mgmt">Mgmt Fee</span>
-                            </span>
-                            <span class="font-bold text-custom-dark">£219/month (₹21,900/month) + ad spend</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-custom-medium">
-                                Premium
-                                <span class="badge-tag badge-mgmt">Mgmt Fee</span>
-                            </span>
-                            <span class="font-bold text-custom-dark">£335/month (₹33,500/month) + ad spend</span>
-                        </div>
-                    </div>
-                    <p class="text-xs text-custom-medium mt-4">
-                        Minimum 
-                        <span class="font-semibold">
-                            £89/month (₹8,900/month)
-                            <span class="badge-tag badge-adspend">Ad Spend</span>
-                        </span>
-                        • Management fee is charged monthly, media budget billed separately.
-                    </p>
-                </div>
+    <!-- NOTE -->
+    <div class="note">
+        Leave your email and we’ll notify you as soon as we go live.
+    </div>
 
-                <!-- ERP & Business Software (One-time) -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-custom-light">
-                    <h4 class="text-xl font-bold text-custom-dark mb-4">
-                        <i class="fas fa-cogs text-custom-medium mr-2"></i>
-                        ERP & Business Software
-                    </h4>
-                    <div class="space-y-3 text-sm">
-                        <div class="flex justify-between items-center">
-                            <span class="text-custom-medium">
-                                Basic
-                                <span class="badge-tag badge-onetime">One-time</span>
-                            </span>
-                            <span class="font-bold text-custom-dark">£1,017 (₹101,700)</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-custom-medium">
-                                Growth
-                                <span class="badge-tag badge-onetime">One-time</span>
-                            </span>
-                            <span class="font-bold text-custom-dark">£1,677 (₹167,700)</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-custom-medium">
-                                Premium
-                                <span class="badge-tag badge-onetime">One-time</span>
-                            </span>
-                            <span class="font-bold text-custom-dark">£2,337+ (₹233,700+)</span>
-                        </div>
-                    </div>
-                    <p class="text-xs text-custom-medium mt-4">
-                        Scalable business systems for growth. Implementation is charged as a one-time project.
-                    </p>
-                </div>
+    <!-- EMAIL SIGNUP (FormSubmit) -->
+    <form class="email-box"
+          action="https://formsubmit.co/srizbiz92@gmail.com"
+          method="POST">
 
-                <!-- IT Support (Monthly) -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-custom-light">
-                    <h4 class="text-xl font-bold text-custom-dark mb-4">
-                        <i class="fas fa-headset text-custom-medium mr-2"></i>
-                        IT Support & Maintenance
-                    </h4>
-                    <div class="space-y-3 text-sm">
-                        <div class="flex justify-between items-center">
-                            <span class="text-custom-medium">
-                                Nano (≤3 users)
-                                <span class="badge-tag badge-monthly">Monthly</span>
-                            </span>
-                            <span class="font-bold text-custom-dark">£53/month (₹5,300/month)</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-custom-medium">
-                                Basic (≤5 users)
-                                <span class="badge-tag badge-monthly">Monthly</span>
-                            </span>
-                            <span class="font-bold text-custom-dark">£65/month (₹6,500/month)</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-custom-medium">
-                                Growth (10 users)
-                                <span class="badge-tag badge-monthly">Monthly</span>
-                            </span>
-                            <span class="font-bold text-custom-dark">£117/month (₹11,700/month)</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-custom-medium">
-                                Premium (20+ users)
-                                <span class="badge-tag badge-monthly">Monthly</span>
-                            </span>
-                            <span class="font-bold text-custom-dark">£201/month (₹20,100/month)</span>
-                        </div>
-                    </div>
-                    <p class="text-xs text-custom-medium mt-4">
-                        All IT support plans are billed monthly.
-                    </p>
-                </div>
-            </div>
+        <input type="hidden" name="_subject" value="Exnect - Countdown">
+        <input type="hidden" name="_captcha" value="false">
 
-            <!-- Business Consultancy -->
-            <div class="bg-custom-light p-8 rounded-lg mb-16">
-                <div class="text-center mb-6">
-                    <h3 class="text-2xl font-bold text-custom-dark mb-2">
-                        <i class="fas fa-chart-line text-custom-medium mr-3"></i>
-                        Business Consultancy & Feasibility Services
-                    </h3>
-                    <p class="text-custom-medium">
-                        Strategic and financial planning for startups and growing ventures 
-                        <span class="font-semibold">(One-time projects & monthly advisory)</span>
-                    </p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h4 class="text-lg font-bold text-custom-dark mb-1">
-                            Basic - £335 (₹33,500)
-                            <span class="badge-tag badge-onetime">One-time</span>
-                        </h4>
-                        <p class="text-sm text-custom-medium">
-                            Feasibility study & SWOT analysis.
-                        </p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h4 class="text-lg font-bold text-custom-dark mb-1">
-                            Growth - £503 (₹50,300)
-                            <span class="badge-tag badge-onetime">One-time</span>
-                        </h4>
-                        <p class="text-sm text-custom-medium">
-                            Feasibility, competitor mapping, budget forecast.
-                        </p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h4 class="text-lg font-bold text-custom-dark mb-1">
-                            Premium - £837 (₹83,700)
-                            <span class="badge-tag badge-onetime">One-time</span>
-                        </h4>
-                        <p class="text-sm text-custom-medium">
-                            Full strategy & 3-year forecast.
-                        </p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h4 class="text-lg font-bold text-custom-dark mb-1">
-                            Advisory Retainer
-                            <span class="badge-tag badge-retainer">Retainer</span>
-                        </h4>
-                        <p class="text-sm text-custom-medium">
-                            £135/month (₹13,500/month) – includes 2 calls + ongoing advisory.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Notify Me</button>
+    </form>
 
-            <!-- Value-Added Bundles (Mixed) -->
-            <div class="bg-custom-dark text-custom-off-white p-8 rounded-lg mb-16">
-                <h3 class="text-2xl font-bold text-center mb-8">
-                    <i class="fas fa-gift text-custom-tan mr-3"></i>
-                    Value-Added Bundles
-                </h3>
-                <p class="text-center text-sm text-custom-off-white mb-6">
-                    Bundle prices cover one-time setup components; SEO/SMM elements are billed monthly as per selected plans.
-                </p>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-custom-medium p-6 rounded-lg text-center">
-                        <h4 class="text-xl font-bold mb-3">
-                            Start-Up Launch Pack
-                            <span class="badge-tag badge-mixed">Mixed</span>
-                        </h4>
-                        <div class="text-3xl font-bold text-custom-tan mb-3">£657 (₹65,700)</div>
-                        <p class="text-sm">
-                            Micro-Site (one-time) + Local SEO (monthly) + SMM Solo (monthly) + Consultancy Basic (one-time)
-                        </p>
-                    </div>
-                    <div class="bg-custom-medium p-6 rounded-lg text-center">
-                        <h4 class="text-xl font-bold mb-3">
-                            Growth Accelerator Pack
-                            <span class="badge-tag badge-mixed">Mixed</span>
-                        </h4>
-                        <div class="text-3xl font-bold text-custom-tan mb-3">£1,257 (₹125,700)</div>
-                        <p class="text-sm">
-                            Website Growth (one-time) + SMM Growth (monthly) + Consultancy Growth (one-time)
-                        </p>
-                    </div>
-                    <div class="bg-custom-medium p-6 rounded-lg text-center">
-                        <h4 class="text-xl font-bold mb-3">
-                            Digital Transformation Pack
-                            <span class="badge-tag badge-mixed">Mixed</span>
-                        </h4>
-                        <div class="text-3xl font-bold text-custom-tan mb-3">£2,697 (₹269,700)</div>
-                        <p class="text-sm">
-                            ERP Growth (one-time) + SEO Premium (monthly) + SMM Premium (monthly) + Consultancy Premium (one-time)
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Benefits -->
-    <section class="bg-custom-light py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-custom-dark mb-12">Why Choose Exnect?</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="bg-custom-dark text-custom-off-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-pound-sign text-2xl"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-custom-dark mb-2">Transparent Pricing</h4>
-                    <p class="text-custom-medium">Clear separation of one-time project fees and monthly retainers.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-custom-dark text-custom-off-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-rocket text-2xl"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-custom-dark mb-2">Scalable Plans</h4>
-                    <p class="text-custom-medium">Start with a one-time build, then grow with monthly marketing.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-custom-dark text-custom-off-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-map-marker-alt text-2xl"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-custom-dark mb-2">UK-Based</h4>
-                    <p class="text-custom-medium">Project accountability with local support and expertise.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-custom-dark text-custom-off-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-2xl"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-custom-dark mb-2">GDPR Compliant</h4>
-                    <p class="text-custom-medium">Full visibility on ad spend, data use and compliance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="bg-custom-dark text-custom-off-white py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Ready to Grow Your Business?</h2>
-            <p class="text-xl text-custom-tan mb-8 max-w-2xl mx-auto">
-                Get started with clear one-time project fees and simple monthly retainers. 
-                Let's help your business compete big in the digital world.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-custom-tan text-custom-dark px-8 py-4 rounded-lg font-semibold text-lg hover:bg-custom-medium hover:text-custom-off-white transition-colors">
-                    <i class="fas fa-calculator mr-2"></i>
-                    Get a Quote
-                </button>
-                <button class="border-2 border-custom-tan text-custom-tan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-custom-tan hover:text-custom-dark transition-colors">
-                    <i class="fas fa-phone mr-2"></i>
-                    Schedule Consultation
-                </button>
-            </div>
-            <div class="mt-8 text-custom-light">
-                <p class="mb-2">
-                    <i class="fas fa-envelope mr-2"></i>
-                    info@exnectbusiness.co.uk
-                </p>
-                <p>
-                    <i class="fas fa-phone mr-2"></i>
-                    +44 (0) 20 1234 5678
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-custom-medium text-custom-off-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <div class="mb-4">
-                <h3 class="text-xl font-bold">Exnect Business Solution (UK)</h3>
-                <p class="text-custom-light">Digital & Business Growth Partner</p>
-            </div>
-            <div class="text-sm text-custom-light">
-                <p>&copy; 2025 Exnect Business Solution. All rights reserved.</p>
-                <p class="mt-2">Empowering Small Businesses to Compete Big</p>
-            </div>
-        </div>
+    <footer>
+        © <span id="year"></span> EXNECT. All rights reserved.
     </footer>
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+</div>
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all service cards
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
 </body>
 </html>
