@@ -1,297 +1,1280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>EXNECT – Coming Soon</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet" />
-
-<style>
+  <meta charset="UTF-8" />
+  <title>Exnect – Color Scheme Preview (15 Palettes)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
     :root {
-        --exnect-blue: #0D4F9E;
-        --exnect-purple: #A11A6B;
-        --exnect-black: #000000;
-        --text-muted: #555555;
+      --primary: #0052CC;
+      --primary-gradient: #0052CC;
+      --accent: #66B2FF;
+      --secondary: #E6E9EF;
+      --highlight: #FF6F61;
+      --text: #2B2B2B;
+      --text-on-primary: #ffffff;
     }
 
     * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-        min-height: 100vh;
-        background: linear-gradient(135deg, var(--exnect-purple), var(--exnect-blue));
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: "Poppins", sans-serif;
-        padding: 16px;
-        color: var(--exnect-black);
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--secondary);
+      color: var(--text);
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
-    .container {
-        max-width: 860px;
-        width: 100%;
-        background: #ffffff;
-        border-radius: 22px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.18);
-        padding: 28px 22px 36px;
-        text-align: center;
+    .page {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 24px 16px 56px;
     }
 
-    @media (min-width: 768px) {
-        .container {
-            padding: 35px 30px 45px;
-        }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      padding-bottom: 16px;
     }
 
-    .logo {
-        width: 190px;
-        max-width: 60vw;
-        margin-bottom: 10px;
+    .brand {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--primary);
     }
 
-    .company-name {
-        font-family: "Montserrat", sans-serif;
-        font-size: clamp(2.2rem, 6vw, 3rem);
-        font-weight: 800;
-        letter-spacing: 0.03em;
-        color: var(--exnect-blue);
-        margin-bottom: 10px;
-        text-transform: uppercase;
+    .brand span {
+      font-weight: 400;
+      font-size: 0.9rem;
+      display: block;
+      opacity: 0.8;
     }
 
-    .services {
-        font-size: clamp(0.95rem, 2.6vw, 1.1rem);
-        color: var(--text-muted);
-        margin-bottom: 22px;
-        line-height: 1.6rem;
+    .scheme-select {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
     }
 
-    .coming-soon {
-        font-family: "Montserrat", sans-serif;
-        font-size: clamp(2.2rem, 6.8vw, 3.2rem);
-        font-weight: 800;
-        color: var(--exnect-purple);
-        margin: 18px 0;
-        text-transform: uppercase;
+    select {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      font-size: 0.95rem;
+      background: #fff;
+      max-width: 260px;
     }
 
-    .catchy-line {
-        font-size: clamp(0.95rem, 2.5vw, 1rem);
-        font-weight: 500;
-        color: var(--exnect-blue);
-        margin-bottom: 14px;
+    .preview-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.1fr);
+      gap: 20px;
+      margin-bottom: 28px;
     }
 
-    .success-message {
-        display: none;
-        margin: 0 auto 14px;
-        max-width: 520px;
-        font-size: 0.9rem;
-        color: #155724;
-        background: #d4edda;
-        border: 1px solid #c3e6cb;
-        padding: 8px 10px;
-        border-radius: 8px;
+    @media (max-width: 800px) {
+      .preview-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
-    .email-box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 10px;
+    .hero {
+      background: var(--primary-gradient, var(--primary));
+      color: var(--text-on-primary);
+      border-radius: 14px;
+      padding: 24px 20px 26px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    input[type="email"] {
-        padding: 11px 16px;
-        border-radius: 30px;
-        border: 1px solid #bbb;
-        width: min(280px, 70vw);
-        outline: none;
-        font-size: 0.95rem;
-        flex: 1 1 220px;
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 1.9rem;
     }
 
-    button {
-        background: var(--exnect-blue);
-        color: white;
-        border: none;
-        padding: 11px 22px;
-        font-size: 0.95rem;
-        border-radius: 30px;
-        cursor: pointer;
-        font-weight: 600;
-        white-space: nowrap;
+    .hero p {
+      margin: 0 0 18px;
+      opacity: 0.9;
+      max-width: 460px;
+      font-size: 0.98rem;
     }
 
-    button:hover {
-        background: #083b72;
+    .hero-sub {
+      font-size: 0.82rem;
+      opacity: 0.85;
+      margin-bottom: 10px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
     }
 
-    .countdown-title {
-        font-size: 0.95rem;
-        font-weight: 600;
-        color: var(--text-muted);
-        margin-top: 23px;
-        margin-bottom: 10px;
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .countdown {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 16px;
-        flex-wrap: wrap;
+    .btn-primary {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      background: var(--highlight);
+      color: #000;
+      font-size: 0.92rem;
     }
 
-    .count-box {
-        background: #f2f5ff;
-        border-radius: 12px;
-        padding: 10px;
-        min-width: 72px;
+    .btn-secondary {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-on-primary);
+      font-size: 0.92rem;
     }
 
-    .count-number {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--exnect-blue);
+    .hero-tag {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    .count-label {
-        font-size: 0.75rem;
-        color: var(--text-muted);
-        text-transform: uppercase;
-        margin-top: 3px;
-        letter-spacing: 0.11em;
+    .hero-pill {
+      position: absolute;
+      inset: auto -60px -60px auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 120px;
+      background: radial-gradient(circle at 30% 10%, var(--accent), transparent),
+        radial-gradient(circle at 80% 80%, var(--highlight), transparent);
+      opacity: 0.3;
+      pointer-events: none;
     }
 
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 14px 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      font-size: 0.88rem;
+      border-left: 4px solid var(--accent);
+    }
+
+    .card h3 {
+      margin: 0 0 4px;
+      font-size: 0.95rem;
+      color: var(--primary);
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    .card small {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.78rem;
+      opacity: 0.7;
+    }
+
+    /* Swatches */
+    .swatches {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .swatch {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      background: #fff;
+    }
+
+    .swatch-color {
+      height: 40px;
+    }
+
+    .swatch-info {
+      padding: 8px 10px;
+      font-size: 0.8rem;
+    }
+
+    .swatch-info strong {
+      display: block;
+    }
+
+    .scheme-description {
+      margin-top: 8px;
+      font-size: 0.88rem;
+      opacity: 0.85;
+    }
+
+    /* Sections */
+    .section {
+      margin-top: 36px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 1.28rem;
+      margin: 0;
+      color: var(--primary);
+    }
+
+    .section-subtitle {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      max-width: 420px;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 14px 14px 16px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      font-size: 0.88rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      border-top: 3px solid var(--highlight);
+    }
+
+    .service-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      background: rgba(0, 0, 0, 0.04);
+      color: var(--primary);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .service-title {
+      margin: 0;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--primary);
+    }
+
+    .service-text {
+      margin: 0;
+      opacity: 0.85;
+      font-size: 0.84rem;
+    }
+
+    .service-meta {
+      margin-top: 4px;
+      font-size: 0.78rem;
+      opacity: 0.75;
+    }
+
+    /* Why choose us */
+    .why-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .list-item {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.86rem;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      border-left: 3px solid var(--primary);
+    }
+
+    .list-item strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--primary);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .stat-box {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 10px 12px;
+      text-align: left;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .stat-number {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      opacity: 0.8;
+    }
+
+    .pill-note {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      opacity: 0.82;
+    }
+
+    /* Process */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    @media (max-width: 980px) {
+      .process-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .step-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 12px 14px 14px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      font-size: 0.86rem;
+      border-right: 3px solid var(--accent);
+    }
+
+    .step-index {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: var(--accent);
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .step-title {
+      margin: 0 0 4px;
+      font-size: 0.92rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .step-text {
+      margin: 0;
+      opacity: 0.85;
+    }
+
+    /* Color usage examples */
+    .color-usage-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .color-usage-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .color-usage-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .color-box {
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.86rem;
+    }
+
+    .box-primary {
+      background: var(--primary);
+      color: var(--text-on-primary);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .box-accent {
+      background: var(--accent);
+      color: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .box-surface {
+      background: #ffffff;
+      color: var(--text);
+      border: 2px solid var(--primary);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .box-highlight {
+      background: #ffffff;
+      color: var(--text);
+      border-radius: 18px;
+      border: 2px dashed var(--highlight);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .color-box h3 {
+      margin: 0 0 4px;
+      font-size: 0.95rem;
+    }
+
+    .box-primary h3,
+    .box-accent h3 {
+      color: inherit;
+    }
+
+    .box-surface h3 {
+      color: var(--primary);
+    }
+
+    .box-highlight h3 {
+      color: var(--highlight);
+    }
+
+    .color-chip {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      margin-top: 4px;
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 900px) {
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .quote-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px 16px 18px;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      font-size: 0.9rem;
+      border-left: 4px solid var(--accent);
+    }
+
+    .quote-mark {
+      font-size: 1.6rem;
+      line-height: 1;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+
+    .quote-text {
+      margin: 0 0 8px;
+      opacity: 0.9;
+    }
+
+    .quote-author {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .quote-role {
+      font-size: 0.78rem;
+      opacity: 0.75;
+    }
+
+    .mini-testimonials {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      font-size: 0.84rem;
+    }
+
+    .mini-quote {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 10px 12px;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      border-right: 3px solid var(--highlight);
+    }
+
+    .mini-quote strong {
+      display: block;
+      font-size: 0.8rem;
+      margin-top: 4px;
+      color: var(--primary);
+    }
+
+    /* Footer */
     footer {
-        margin-top: 8px;
-        font-size: 0.8rem;
-        color: #777;
+      margin-top: 40px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+      opacity: 0.85;
     }
-</style>
+
+    .footer-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links span {
+      cursor: default;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      display: inline-block;
+      margin-right: 6px;
+    }
+  </style>
 </head>
 <body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        Exnect
+        <span>Digital & Business Growth Partner</span>
+      </div>
+      <div class="scheme-select">
+        <label for="scheme">Color scheme:</label>
+        <select id="scheme">
+          <option value="1">1. Royal Blue Confidence</option>
+          <option value="2">2. Purple Innovation</option>
+          <option value="3">3. Blue-Purple Fusion</option>
+          <option value="4">4. Elegant Tech Gradient</option>
+          <option value="5">5. Luxury Digital Look</option>
+          <option value="6">6. Midnight Precision</option>
+          <option value="7">7. Midnight & Silver Tech</option>
+          <option value="8">8. Deep Ocean Contrast</option>
+          <option value="9">9. Midnight Elegance</option>
+          <option value="10">10. Modern Midnight Gradient</option>
+          <option value="11">11. Natural Balance</option>
+          <option value="12">12. Modern Organic</option>
+          <option value="13">13. Calm Innovation</option>
+          <option value="14">14. Elegant Earth-Tech Fusion</option>
+          <option value="15">15. Minimalist Serenity</option>
+        </select>
+      </div>
+    </header>
 
-<div class="container">
+    <!-- Hero + side cards -->
+    <div class="preview-grid">
+      <section class="hero">
+        <div class="hero-tag">Live scheme preview</div>
+        <div class="hero-sub">Excellence in connecting possibilities</div>
+        <h1>Launch fast. Grow smarter.</h1>
+        <p>
+          Exnect partners with small businesses, shops, restaurants, and service
+          brands to turn digital channels into predictable revenue and long-term
+          customer relationships.
+        </p>
+        <div class="btn-row">
+          <button class="btn-primary">Book a discovery call</button>
+          <button class="btn-secondary">View packages</button>
+        </div>
+        <div class="hero-pill"></div>
+      </section>
 
-    <!-- Bigger LOGO -->
-    <img src="./Logo.png" alt="EXNECT Logo" class="logo">
-
-    <!-- Company Name Big & Bold -->
-    <div class="company-name">EXNECT</div>
-
-    <!-- Services -->
-    <div class="services">
-        Web Design &amp; Development • Digital Marketing • Branding • Startup Support
+      <section class="cards">
+        <article class="card">
+          <h3>Digital Growth Strategy</h3>
+          <p>
+            Align your website, social, and ads with a single growth roadmap
+            that fits your budget and timeline.
+          </p>
+          <small>Ideal for startups and growing SMEs</small>
+        </article>
+        <article class="card">
+          <h3>Done-for-You Campaigns</h3>
+          <p>
+            We plan, design, launch, and optimise campaigns while you focus on
+            running the business.
+          </p>
+          <small>SEO • Paid Ads • Email • Content</small>
+        </article>
+        <article class="card">
+          <h3>Transparent Reporting</h3>
+          <p>
+            Clear dashboards that show what’s working, what’s not, and where to
+            invest next.
+          </p>
+          <small>No jargon, no vanity metrics</small>
+        </article>
+      </section>
     </div>
 
-    <!-- Large Centered Coming Soon -->
-    <div class="coming-soon">COMING SOON</div>
+    <!-- Swatches -->
+    <section class="swatches" id="swatches"></section>
+    <p class="scheme-description" id="schemeDescription"></p>
 
-    <!-- Catchy offer line -->
-    <div class="catchy-line">
-        Be the first to join — get exclusive launch rewards &amp; discounts!
-    </div>
-
-    <!-- Success message (shown after redirect) -->
-    <div id="success-msg" class="success-message">
-        Thank you! Your email has been received. We’ll notify you with launch rewards and updates.
-    </div>
-
-    <!-- Email Signup (FormSubmit) -->
-    <form class="email-box"
-          action="https://formsubmit.co/srizbiz92@gmail.com"
-          method="POST">
-        <!-- subject -->
-        <input type="hidden" name="_subject" value="Exnect - Countdown">
-        <!-- no captcha -->
-        <input type="hidden" name="_captcha" value="false">
-        <!-- redirect back to home with flag -->
-        <input type="hidden" name="_next" value="https://srizbiz92.github.io/exnect/?submitted=true">
-
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button type="submit">Notify Me</button>
-    </form>
-
-    <!-- Countdown Timer -->
-    <div class="countdown-title">Launching on 01 January 2026</div>
-
-    <div class="countdown" id="countdown">
-        <div class="count-box">
-            <div class="count-number" id="days">--</div>
-            <div class="count-label">Days</div>
+    <!-- Color usage examples -->
+    <section class="section" id="color-usage">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Color usage</div>
+          <h2 class="section-title">Boxes, shades & borders in action</h2>
         </div>
-        <div class="count-box">
-            <div class="count-number" id="hours">--</div>
-            <div class="count-label">Hours</div>
-        </div>
-        <div class="count-box">
-            <div class="count-number" id="minutes">--</div>
-            <div class="count-label">Minutes</div>
-        </div>
-        <div class="count-box">
-            <div class="count-number" id="seconds">--</div>
-            <div class="count-label">Seconds</div>
-        </div>
-    </div>
+        <p class="section-subtitle">
+          These examples show how headings and paragraphs look when placed on
+          primary, accent, neutral and highlight-driven surfaces.
+        </p>
+      </div>
 
+      <div class="color-usage-grid">
+        <div class="color-box box-primary">
+          <h3>Primary content box</h3>
+          <p>
+            Use primary backgrounds sparingly for hero strips, key stats or
+            high-impact CTAs where strong contrast is important.
+          </p>
+          <span class="color-chip">Background: primary • Text: on-primary</span>
+        </div>
+
+        <div class="color-box box-accent">
+          <h3>Accent emphasis box</h3>
+          <p>
+            Great for short notices, feature highlights or micro-CTAs that need
+            to stand out without dominating the page.
+          </p>
+          <span class="color-chip">Background: accent • Text: white</span>
+        </div>
+
+        <div class="color-box box-surface">
+          <h3>Neutral surface with border</h3>
+          <p>
+            Use this pattern for cards, FAQs and information panels. The border
+            carries brand color while the content stays calm.
+          </p>
+          <span class="color-chip">Background: white • Border: primary</span>
+        </div>
+
+        <div class="color-box box-highlight">
+          <h3>Highlight banner</h3>
+          <p>
+            Ideal for limited-time offers, badges, or subtle alerts. The dashed
+            border uses the highlight color without filling the box.
+          </p>
+          <span class="color-chip">Border: highlight • Text: default</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services section -->
+    <section class="section" id="services">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Services</div>
+          <h2 class="section-title">What we help you with</h2>
+        </div>
+        <p class="section-subtitle">
+          A focused mix of digital marketing and business support services,
+          designed for small teams that want agency-level output without
+          enterprise complexity.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-badge">Digital</span>
+          <h3 class="service-title">Website & Landing Pages</h3>
+          <p class="service-text">
+            Conversion-focused pages that load fast, look clean, and guide
+            visitors to take action — from booking calls to placing orders.
+          </p>
+          <div class="service-meta">UX, copy, analytics & basic SEO baked in.</div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-badge">Marketing</span>
+          <h3 class="service-title">Social & Content Marketing</h3>
+          <p class="service-text">
+            Consistent organic content that keeps your brand visible and builds
+            trust with local and online audiences.
+          </p>
+          <div class="service-meta">Calendars, post design, captions & repurposing.</div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-badge">Performance</span>
+          <h3 class="service-title">Paid Ads & Funnels</h3>
+          <p class="service-text">
+            Targeted campaigns on Google, Meta and other key channels with
+            simple, measurable funnels.
+          </p>
+          <div class="service-meta">Ideal for launches, offers & lead gen.</div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-badge">Business</span>
+          <h3 class="service-title">SME Growth Support</h3>
+          <p class="service-text">
+            Light-touch consulting on pricing, offers, and simple processes so
+            marketing and operations work together.
+          </p>
+          <div class="service-meta">Perfect for founders wearing many hats.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose us -->
+    <section class="section" id="why">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Why Exnect</div>
+          <h2 class="section-title">Built around small business reality</h2>
+        </div>
+        <p class="section-subtitle">
+          No inflated retainers, no confusing tech stacks. Just clear plans,
+          sensible tools, and implementation that respects your time and cash
+          flow.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div>
+          <ul class="list">
+            <li class="list-item">
+              <strong>Clarity before creativity</strong>
+              We start with goals, budgets, capacity, and existing assets before
+              designing anything new — so every campaign has a purpose.
+            </li>
+            <li class="list-item">
+              <strong>One team, joined-up delivery</strong>
+              Strategy, design, copy, and reporting are handled together, which
+              means fewer hand-offs and more consistent results.
+            </li>
+            <li class="list-item">
+              <strong>Transparent pricing & timelines</strong>
+              You see what’s included, what it costs, and when it goes live.
+              No hidden extras or surprise “phase 2” invoices.
+            </li>
+            <li class="list-item">
+              <strong>Designed for owners, not marketers</strong>
+              Dashboards and updates stay in plain language, so you can make
+              decisions quickly without needing a marketing dictionary.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="stats">
+            <div class="stat-box">
+              <div class="stat-number">3–6×</div>
+              <div class="stat-label">
+                Typical increase in leads once campaigns stabilise.
+              </div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">4–8</div>
+              <div class="stat-label">
+                Weeks from engagement to live campaigns for most projects.
+              </div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">90%</div>
+              <div class="stat-label">
+                Clients on rolling monthly arrangements after the first project.
+              </div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">
+                Dashboard access for campaign performance and key metrics.
+              </div>
+            </div>
+          </div>
+          <p class="pill-note">
+            <span class="dot"></span>Figures are indicative only and used here
+            as design placeholders for your color scheme preview.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="process">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Process</div>
+          <h2 class="section-title">How a typical project runs</h2>
+        </div>
+        <p class="section-subtitle">
+          A simple four-step framework that works for websites, campaigns,
+          repositioning, and ongoing growth retainers.
+        </p>
+      </div>
+
+      <div class="process-steps">
+        <div class="step-card">
+          <div class="step-index">1</div>
+          <h3 class="step-title">Discovery & audit</h3>
+          <p class="step-text">
+            We review your current marketing, offers, and numbers — then define
+            what “good” looks like for the next 90 days.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-index">2</div>
+          <h3 class="step-title">Plan & priorities</h3>
+          <p class="step-text">
+            Together we agree which channels to focus on, what to launch first,
+            and the level of support you need.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-index">3</div>
+          <h3 class="step-title">Build & launch</h3>
+          <p class="step-text">
+            We design, write, and configure everything needed to go live —
+            keeping you updated with short, focused check-ins.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-index">4</div>
+          <h3 class="step-title">Review & optimise</h3>
+          <p class="step-text">
+            After launch we track performance, refine campaigns, and suggest the
+            next most valuable improvement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Feedback</div>
+          <h2 class="section-title">What clients say</h2>
+        </div>
+        <p class="section-subtitle">
+          These are example layouts to help you visualise how testimonials will
+          sit against each color palette.
+        </p>
+      </div>
+
+      <div class="testimonials">
+        <div class="quote-card">
+          <div class="quote-mark">“</div>
+          <p class="quote-text">
+            We knew we needed to do more online but had no idea where to start.
+            Exnect broke everything into clear steps and handled the heavy
+            lifting. Within a few weeks we saw a steady stream of qualified
+            enquiries.
+          </p>
+          <div class="quote-author">Owner, local service business</div>
+          <div class="quote-role">Website revamp & always-on campaigns</div>
+        </div>
+
+        <div class="mini-testimonials">
+          <div class="mini-quote">
+            The reporting calls are simple and to the point. We know which
+            channels are paying off and where to experiment next.
+            <strong>Director, B2B consultancy</strong>
+          </div>
+          <div class="mini-quote">
+            Launching a new offer felt risky. Having messaging, design and ads
+            handled by one team made it far less stressful.
+            <strong>Founder, online training brand</strong>
+          </div>
+          <div class="mini-quote">
+            The team understood small-business constraints and suggested tools
+            we could realistically manage in-house.
+            <strong>Manager, hospitality group</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        © <span id="year"></span> EXNECT. All rights reserved.
+      <div>© <span id="year"></span> Exnect. All rights reserved.</div>
+      <div class="footer-links">
+        <span>Services</span>
+        <span>Packages</span>
+        <span>Case studies</span>
+        <span>Contact</span>
+      </div>
     </footer>
+  </div>
 
-</div>
-
-<script>
-  // Footer year
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Countdown timer for 01 January 2026
-  const launchDate = new Date("2026-01-01T00:00:00").getTime();
-
-  function updateCountdown() {
-      const now = new Date().getTime();
-      const dist = launchDate - now;
-
-      const d = document.getElementById("days");
-      const h = document.getElementById("hours");
-      const m = document.getElementById("minutes");
-      const s = document.getElementById("seconds");
-
-      if (dist <= 0) {
-          d.textContent = 0;
-          h.textContent = 0;
-          m.textContent = 0;
-          s.textContent = 0;
-          return;
+  <script>
+    const schemes = {
+      1: {
+        name: "Royal Blue Confidence",
+        description:
+          "Royal Blue as primary for strength and professionalism, Sky Blue accent for clarity, Cool Gray as neutral, Bright Coral highlight for energetic CTAs, Charcoal text.",
+        colors: {
+          primary: { name: "Primary: Royal Blue", hex: "#0052CC" },
+          accent: { name: "Accent: Sky Blue", hex: "#66B2FF" },
+          secondary: { name: "Secondary: Cool Gray", hex: "#E6E9EF" },
+          highlight: { name: "Highlight: Bright Coral", hex: "#FF6F61" },
+          text: { name: "Text: Charcoal", hex: "#2B2B2B" }
+        },
+        textOnPrimary: "#FFFFFF",
+        primaryGradient: null
+      },
+      2: {
+        name: "Purple Innovation",
+        description:
+          "Deep Purple primary for creativity, Electric Violet accent for modern tech feel, Soft Lilac secondary to lighten things, Aqua Blue highlight for a digital pop, Graphite text.",
+        colors: {
+          primary: { name: "Primary: Deep Purple", hex: "#5B2C6F" },
+          accent: { name: "Accent: Electric Violet", hex: "#8E44AD" },
+          secondary: { name: "Secondary: Soft Lilac", hex: "#E8DAEF" },
+          highlight: { name: "Highlight: Aqua Blue", hex: "#00C2CB" },
+          text: { name: "Text: Graphite", hex: "#2E2E2E" }
+        },
+        textOnPrimary: "#FFFFFF",
+        primaryGradient: null
+      },
+      3: {
+        name: "Blue-Purple Fusion",
+        description:
+          "Indigo primary balanced between blue and purple, Royal Blue accent, Lavender Gray secondary for softness, Bright Magenta highlight for creative energy, Dark Slate text.",
+        colors: {
+          primary: { name: "Primary: Indigo", hex: "#3F51B5" },
+          accent: { name: "Accent: Royal Blue", hex: "#4169E1" },
+          secondary: { name: "Secondary: Lavender Gray", hex: "#C5CAE9" },
+          highlight: { name: "Highlight: Bright Magenta", hex: "#FF4081" },
+          text: { name: "Text: Dark Slate", hex: "#1C1C1C" }
+        },
+        textOnPrimary: "#FFFFFF",
+        primaryGradient: null
+      },
+      4: {
+        name: "Elegant Tech Gradient",
+        description:
+          "Gradient primary from Royal Blue to Purple for a dynamic hero, Silver accent for sleek details, Midnight Navy secondary for depth, Neon Cyan highlight, White text.",
+        colors: {
+          primary: { name: "Primary: Royal Blue", hex: "#0052CC" },
+          accent: { name: "Accent: Silver", hex: "#D9D9D9" },
+          secondary: { name: "Secondary: Midnight Navy", hex: "#0A1F44" },
+          highlight: { name: "Highlight: Neon Cyan", hex: "#00FFFF" },
+          text: { name: "Text: White", hex: "#FFFFFF" }
+        },
+        textOnPrimary: "#FFFFFF",
+        primaryGradient: "linear-gradient(135deg, #0052CC, #6A0DAD)"
+      },
+      5: {
+        name: "Luxury Digital Look",
+        description:
+          "Royal Purple primary for a premium feel, Sapphire Blue accent for tech reliability, Pale Gray secondary for clean layouts, Gold highlight for prestige, Charcoal Black text.",
+        colors: {
+          primary: { name: "Primary: Royal Purple", hex: "#6F42C1" },
+          accent: { name: "Accent: Sapphire Blue", hex: "#0D6EFD" },
+          secondary: { name: "Secondary: Pale Gray", hex: "#F8F9FA" },
+          highlight: { name: "Highlight: Gold", hex: "#FFD700" },
+          text: { name: "Text: Charcoal Black", hex: "#212529" }
+        },
+        textOnPrimary: "#FFFFFF",
+        primaryGradient: null
+      },
+      6: {
+        name: "Midnight Precision",
+        description:
+          "Midnight Blue primary for deep professionalism, Electric Blue accent for crisp contrast, Cool Gray secondary, Vibrant Orange highlight, White text.",
+        colors: {
+          primary: { name: "Primary: Midnight Blue", hex: "#1B263B" },
+          accent: { name: "Accent: Electric Blue", hex: "#007BFF" },
+          secondary: { name: "Secondary: Cool Gray", hex: "#E0E0E0" },
+          highlight: { name: "Highlight: Vibrant Orange", hex: "#FF6B35" },
+          text: { name: "Text: White", hex: "#FFFFFF" }
+        },
+        textOnPrimary: "#FFFFFF",
+        primaryGradient: null
+      },
+      7: {
+        name: "Midnight & Silver Tech",
+        description:
+          "Midnight Blue primary, Silver accent for metallic modern feel, Slate Gray secondary for depth, Aqua Blue highlight, Light Gray text.",
+        colors: {
+          primary: { name: "Primary: Midnight Blue", hex: "#0A1F44" },
+          accent: { name: "Accent: Silver", hex: "#C0C0C0" },
+          secondary: { name: "Secondary: Slate Gray", hex: "#708090" },
+          highlight: { name: "Highlight: Aqua Blue", hex: "#00BFFF" },
+          text: { name: "Text: Light Gray", hex: "#F5F5F5" }
+        },
+        textOnPrimary: "#F5F5F5",
+        primaryGradient: null
+      },
+      8: {
+        name: "Deep Ocean Contrast",
+        description:
+          "Midnight Blue primary, Teal accent for fresh tech feel, Mist Gray secondary, Coral Red highlight for visual excitement, Off-White text.",
+        colors: {
+          primary: { name: "Primary: Midnight Blue", hex: "#191970" },
+          accent: { name: "Accent: Teal", hex: "#00B3B3" },
+          secondary: { name: "Secondary: Mist Gray", hex: "#D9E2EC" },
+          highlight: { name: "Highlight: Coral Red", hex: "#FF5A5F" },
+          text: { name: "Text: Off-White", hex: "#FAFAFA" }
+        },
+        textOnPrimary: "#FAFAFA",
+        primaryGradient: null
+      },
+      9: {
+        name: "Midnight Elegance",
+        description:
+          "Midnight Blue primary for luxury, Royal Purple accent for distinction, Pale Silver secondary, Gold highlight, Ivory text.",
+        colors: {
+          primary: { name: "Primary: Midnight Blue", hex: "#1A1A40" },
+          accent: { name: "Accent: Royal Purple", hex: "#6A0DAD" },
+          secondary: { name: "Secondary: Pale Silver", hex: "#E5E5E5" },
+          highlight: { name: "Highlight: Gold", hex: "#FFD700" },
+          text: { name: "Text: Ivory", hex: "#F8F8F8" }
+        },
+        textOnPrimary: "#F8F8F8",
+        primaryGradient: null
+      },
+      10: {
+        name: "Modern Midnight Gradient",
+        description:
+          "Gradient primary from Midnight Blue to Deep Indigo, Cyan Blue accent, Cool Gray secondary, Bright Lime highlight, White text.",
+        colors: {
+          primary: { name: "Primary: Midnight Blue", hex: "#0F172A" },
+          accent: { name: "Accent: Cyan Blue", hex: "#06B6D4" },
+          secondary: { name: "Secondary: Cool Gray", hex: "#CBD5E1" },
+          highlight: { name: "Highlight: Bright Lime", hex: "#A3E635" },
+          text: { name: "Text: White", hex: "#FFFFFF" }
+        },
+        textOnPrimary: "#FFFFFF",
+        primaryGradient: "linear-gradient(135deg, #0F172A, #1E3A8A)"
+      },
+      11: {
+        name: "Natural Balance",
+        description:
+          "Sand Dollar primary for warm elegance, Celadon accent for fresh balance, Warm White secondary, Deep Teal highlight, Charcoal Gray text.",
+        colors: {
+          primary: { name: "Primary: Sand Dollar", hex: "#D6C6B9" },
+          accent: { name: "Accent: Celadon", hex: "#ACE1AF" },
+          secondary: { name: "Secondary: Warm White", hex: "#F8F5F2" },
+          highlight: { name: "Highlight: Deep Teal", hex: "#2C6975" },
+          text: { name: "Text: Charcoal Gray", hex: "#2E2E2E" }
+        },
+        textOnPrimary: "#2E2E2E",
+        primaryGradient: null
+      },
+      12: {
+        name: "Modern Organic",
+        description:
+          "Sand Dollar primary for a soft professional tone, Celadon Green accent, Mist Gray secondary, Midnight Blue highlight, Graphite text.",
+        colors: {
+          primary: { name: "Primary: Sand Dollar", hex: "#D8CAB8" },
+          accent: { name: "Accent: Celadon Green", hex: "#A8C3A0" },
+          secondary: { name: "Secondary: Mist Gray", hex: "#E8E8E8" },
+          highlight: { name: "Highlight: Midnight Blue", hex: "#1B263B" },
+          text: { name: "Text: Graphite", hex: "#333333" }
+        },
+        textOnPrimary: "#333333",
+        primaryGradient: null
+      },
+      13: {
+        name: "Calm Innovation",
+        description:
+          "Celadon primary for soothing modernity, Sand Dollar accent for warmth, Pale Gray secondary, Royal Blue highlight for digital trust, Slate text.",
+        colors: {
+          primary: { name: "Primary: Celadon", hex: "#B8E0C2" },
+          accent: { name: "Accent: Sand Dollar", hex: "#D5C4A1" },
+          secondary: { name: "Secondary: Pale Gray", hex: "#F2F2F2" },
+          highlight: { name: "Highlight: Royal Blue", hex: "#4169E1" },
+          text: { name: "Text: Slate", hex: "#2C3E50" }
+        },
+        textOnPrimary: "#2C3E50",
+        primaryGradient: null
+      },
+      14: {
+        name: "Elegant Earth-Tech Fusion",
+        description:
+          "Sand Dollar primary for refined warmth, Celadon accent for balance, Soft Taupe secondary, Steel Blue highlight for tech edge, Dark Brown text.",
+        colors: {
+          primary: { name: "Primary: Sand Dollar", hex: "#D4BFAA" },
+          accent: { name: "Accent: Celadon", hex: "#A9D6B2" },
+          secondary: { name: "Secondary: Soft Taupe", hex: "#EDE6DE" },
+          highlight: { name: "Highlight: Steel Blue", hex: "#4682B4" },
+          text: { name: "Text: Dark Brown", hex: "#3B3B3B" }
+        },
+        textOnPrimary: "#3B3B3B",
+        primaryGradient: null
+      },
+      15: {
+        name: "Minimalist Serenity",
+        description:
+          "Celadon primary for calm cleanliness, Sand Dollar accent for softness, White Smoke secondary, Copper highlight for elegant contrast, Charcoal text.",
+        colors: {
+          primary: { name: "Primary: Celadon", hex: "#ACE1AF" },
+          accent: { name: "Accent: Sand Dollar", hex: "#D8CAB8" },
+          secondary: { name: "Secondary: White Smoke", hex: "#F5F5F5" },
+          highlight: { name: "Highlight: Copper", hex: "#B87333" },
+          text: { name: "Text: Charcoal", hex: "#2B2B2B" }
+        },
+        textOnPrimary: "#2B2B2B",
+        primaryGradient: null
       }
+    };
 
-      d.textContent = Math.floor(dist / (1000 * 60 * 60 * 24));
-      h.textContent = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      m.textContent = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
-      s.textContent = Math.floor((dist % (1000 * 60)) / 1000);
-  }
+    const schemeSelect = document.getElementById("scheme");
+    const swatchesContainer = document.getElementById("swatches");
+    const schemeDescription = document.getElementById("schemeDescription");
 
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
+    function applyScheme(id) {
+      const s = schemes[id];
+      if (!s) return;
 
-  // Show success message if redirected with ?submitted=true
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("submitted") === "true") {
-      const successEl = document.getElementById("success-msg");
-      if (successEl) {
-          successEl.style.display = "block";
-      }
-  }
-</script>
+      document.documentElement.style.setProperty("--primary", s.colors.primary.hex);
+      document.documentElement.style.setProperty("--accent", s.colors.accent.hex);
+      document.documentElement.style.setProperty("--secondary", s.colors.secondary.hex);
+      document.documentElement.style.setProperty("--highlight", s.colors.highlight.hex);
+      document.documentElement.style.setProperty("--text", s.colors.text.hex);
+      document.documentElement.style.setProperty("--text-on-primary", s.textOnPrimary);
 
+      const gradientValue = s.primaryGradient || s.colors.primary.hex;
+      document.documentElement.style.setProperty("--primary-gradient", gradientValue);
+
+      swatchesContainer.innerHTML = "";
+      Object.values(s.colors).forEach((c) => {
+        const div = document.createElement("div");
+        div.className = "swatch";
+        div.innerHTML = `
+          <div class="swatch-color" style="background:${c.hex};"></div>
+          <div class="swatch-info">
+            <strong>${c.name}</strong>
+            <span>${c.hex}</span>
+          </div>
+        `;
+        swatchesContainer.appendChild(div);
+      });
+
+      schemeDescription.textContent = s.name + " – " + s.description;
+    }
+
+    schemeSelect.addEventListener("change", (e) => {
+      applyScheme(e.target.value);
+    });
+
+    // Initial setup
+    applyScheme("1");
+    document.getElementById("year").textContent =
+      new Date().getFullYear().toString();
+  </script>
 </body>
 </html>
