@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Exnect – Color Scheme Preview (18 Palettes)</title>
+  <title>Exnect – Color Scheme Preview (7 Palettes)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
-      --primary: #5B2C6F;
-      --primary-gradient: #5B2C6F;
-      --accent: #8E44AD;
+      /* Default = Tech Royal */
+      --primary: #4169E1;
+      --primary-gradient: #4169E1;
+      --accent: #5B2C6F;
       --secondary: #E8DAEF;
       --highlight: #FFD700;
       --text: #2E2E2E;
@@ -39,8 +40,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
-      gap: 12px;
+      align-items: flex-start;
+      gap: 16px;
       margin-bottom: 24px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       padding-bottom: 16px;
@@ -61,18 +62,55 @@
 
     .scheme-select {
       display: flex;
-      align-items: center;
-      gap: 8px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
       font-size: 0.9rem;
+      min-width: 220px;
+      flex: 1;
     }
 
-    select {
-      padding: 6px 10px;
-      border-radius: 6px;
+    .scheme-select label {
+      font-weight: 600;
+      font-size: 0.86rem;
+      opacity: 0.85;
+      margin-bottom: 4px;
+    }
+
+    /* Horizontal scheme buttons */
+    .scheme-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .scheme-btn {
+      border-radius: 999px;
       border: 1px solid rgba(0, 0, 0, 0.15);
-      font-size: 0.95rem;
-      background: #fff;
-      max-width: 280px;
+      padding: 6px 12px;
+      font-size: 0.82rem;
+      background: #ffffff;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .scheme-btn span {
+      font-weight: 600;
+      margin-right: 4px;
+    }
+
+    .scheme-btn.active {
+      background: var(--primary);
+      color: var(--text-on-primary);
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+    }
+
+    .scheme-btn:not(.active):hover {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04);
     }
 
     .preview-grid {
@@ -207,7 +245,6 @@
       opacity: 0.7;
     }
 
-    /* Swatches */
     .swatches {
       margin-top: 10px;
       display: grid;
@@ -243,7 +280,6 @@
       opacity: 0.85;
     }
 
-    /* Sections */
     .section {
       margin-top: 36px;
     }
@@ -279,7 +315,6 @@
       max-width: 420px;
     }
 
-    /* Services */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -344,7 +379,6 @@
       opacity: 0.75;
     }
 
-    /* Why choose us */
     .why-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
@@ -416,7 +450,6 @@
       opacity: 0.82;
     }
 
-    /* Process */
     .process-steps {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -471,7 +504,6 @@
       opacity: 0.85;
     }
 
-    /* Color usage examples */
     .color-usage-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -553,7 +585,6 @@
       background: rgba(255, 255, 255, 0.16);
     }
 
-    /* Testimonials */
     .testimonials {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
@@ -623,7 +654,6 @@
       color: var(--primary);
     }
 
-    /* Footer */
     footer {
       margin-top: 40px;
       padding-top: 18px;
@@ -665,31 +695,33 @@
         <span>Digital & Business Growth Partner</span>
       </div>
       <div class="scheme-select">
-        <label for="scheme">Color scheme:</label>
-        <select id="scheme">
-          <option value="1">1. Modern Elegant Premium</option>
-          <option value="2">2. Elegant Contrast</option>
-          <option value="3">3. Modern Cool Harmony</option>
-          <option value="4">4. Royal Blue Confidence</option>
-          <option value="5">5. Purple Innovation</option>
-          <option value="6">6. Blue-Purple Fusion</option>
-          <option value="7">7. Elegant Tech Gradient</option>
-          <option value="8">8. Luxury Digital Look</option>
-          <option value="9">9. Midnight Precision</option>
-          <option value="10">10. Midnight & Silver Tech</option>
-          <option value="11">11. Deep Ocean Contrast</option>
-          <option value="12">12. Midnight Elegance</option>
-          <option value="13">13. Modern Midnight Gradient</option>
-          <option value="14">14. Natural Balance</option>
-          <option value="15">15. Modern Organic</option>
-          <option value="16">16. Calm Innovation</option>
-          <option value="17">17. Elegant Earth-Tech Fusion</option>
-          <option value="18">18. Minimalist Serenity</option>
-        </select>
+        <label>Choose a color scheme:</label>
+        <div class="scheme-buttons" id="schemeButtons">
+          <button class="scheme-btn active" data-scheme="1">
+            <span>1</span> Tech Royal
+          </button>
+          <button class="scheme-btn" data-scheme="2">
+            <span>2</span> Digital Clarity
+          </button>
+          <button class="scheme-btn" data-scheme="3">
+            <span>3</span> Modern Minimal
+          </button>
+          <button class="scheme-btn" data-scheme="4">
+            <span>4</span> Elegant Tech Fusion
+          </button>
+          <button class="scheme-btn" data-scheme="5">
+            <span>5</span> Futuristic Neutral
+          </button>
+          <button class="scheme-btn" data-scheme="6">
+            <span>6</span> The Digital Care
+          </button>
+          <button class="scheme-btn" data-scheme="7">
+            <span>7</span> Reverse the Digital Care
+          </button>
+        </div>
       </div>
     </header>
 
-    <!-- Hero + side cards -->
     <div class="preview-grid">
       <section class="hero">
         <div class="hero-tag">Live scheme preview</div>
@@ -735,11 +767,9 @@
       </section>
     </div>
 
-    <!-- Swatches -->
     <section class="swatches" id="swatches"></section>
     <p class="scheme-description" id="schemeDescription"></p>
 
-    <!-- Color usage examples -->
     <section class="section" id="color-usage">
       <div class="section-header">
         <div>
@@ -791,7 +821,6 @@
       </div>
     </section>
 
-    <!-- Services section -->
     <section class="section" id="services">
       <div class="section-header">
         <div>
@@ -848,7 +877,6 @@
       </div>
     </section>
 
-    <!-- Why choose us -->
     <section class="section" id="why">
       <div class="section-header">
         <div>
@@ -923,7 +951,6 @@
       </div>
     </section>
 
-    <!-- Process -->
     <section class="section" id="process">
       <div class="section-header">
         <div>
@@ -972,7 +999,6 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="section" id="testimonials">
       <div class="section-header">
         <div>
@@ -1018,7 +1044,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <div>© <span id="year"></span> Exnect. All rights reserved.</div>
       <div class="footer-links">
@@ -1033,44 +1058,44 @@
   <script>
     const schemes = {
       1: {
-        name: "Modern Elegant Premium",
+        name: "Tech Royal",
         description:
-          "Deep Purple primary, Electric Violet accent, Soft Lilac secondary, Gold highlight for a premium feel, Graphite text.",
+          "Royal Blue primary (dependable and bold), Deep Purple accent, Soft Lilac secondary, Gold highlight for excellence, Charcoal text.",
         colors: {
-          primary: { name: "Primary: Deep Purple", hex: "#5B2C6F" },
-          accent: { name: "Accent: Electric Violet", hex: "#8E44AD" },
+          primary: { name: "Primary: Royal Blue", hex: "#4169E1" },
+          accent: { name: "Accent: Deep Purple", hex: "#5B2C6F" },
           secondary: { name: "Secondary: Soft Lilac", hex: "#E8DAEF" },
-          highlight: { name: "Highlight: Gold", hex: "#c7a5d8" },
-          text: { name: "Text: Graphite", hex: "#2E2E2E" }
+          highlight: { name: "Highlight: Gold", hex: "#FFD700" },
+          text: { name: "Text: Charcoal", hex: "#2E2E2E" }
         },
         textOnPrimary: "#FFFFFF",
         textSurface: "#2E2E2E",
         primaryGradient: null
       },
       2: {
-        name: "Elegant Contrast",
+        name: "Digital Clarity",
         description:
-          "Deep Purple primary, Electric Violet accent, Soft Lilac secondary, Coral highlight adds warmth and vibrancy, Graphite text.",
+          "Midnight Blue primary (strong and professional), Cyan Blue accent, Silver Gray secondary, Lime Green highlight for innovation, White text.",
         colors: {
-          primary: { name: "Primary: Deep Purple", hex: "#5B2C6F" },
-          accent: { name: "Accent: Electric Violet", hex: "#8E44AD" },
-          secondary: { name: "Secondary: Soft Lilac", hex: "#E8DAEF" },
-          highlight: { name: "Highlight: Coral", hex: "#E8DAEF" },
-          text: { name: "Text: Graphite", hex: "#2E2E2E" }
+          primary: { name: "Primary: Midnight Blue", hex: "#0A1F44" },
+          accent: { name: "Accent: Cyan Blue", hex: "#00BFFF" },
+          secondary: { name: "Secondary: Silver Gray", hex: "#D9D9D9" },
+          highlight: { name: "Highlight: Coral", hex: "#FF6B6B" },
+          text: { name: "Text: White", hex: "#FFFFFF" }
         },
         textOnPrimary: "#FFFFFF",
-        textSurface: "#2E2E2E",
+        textSurface: "#222222",
         primaryGradient: null
       },
       3: {
-        name: "Modern Cool Harmony",
+        name: "Modern Minimal",
         description:
-          "Deep Purple primary, Electric Violet accent, Soft Lilac secondary, Silver highlight for a sleek tech contrast, Graphite text.",
+          "Navy primary (stable and trustworthy), Sky Blue accent, Light Gray secondary, Coral highlight for energy, Graphite text.",
         colors: {
-          primary: { name: "Primary: Deep Purple", hex: "#5B2C6F" },
-          accent: { name: "Accent: Electric Violet", hex: "#8E44AD" },
-          secondary: { name: "Secondary: Soft Lilac", hex: "#E8DAEF" },
-          highlight: { name: "Highlight: Silver", hex: "#C0C0C0" },
+          primary: { name: "Primary: Navy", hex: "#1E3A8A" },
+          accent: { name: "Accent: Sky Blue", hex: "#60A5FA" },
+          secondary: { name: "Secondary: Light Gray", hex: "#E5E7EB" },
+          highlight: { name: "Highlight: Coral", hex: "#FF6B6B" },
           text: { name: "Text: Graphite", hex: "#2E2E2E" }
         },
         textOnPrimary: "#FFFFFF",
@@ -1078,235 +1103,70 @@
         primaryGradient: null
       },
       4: {
-        name: "Royal Blue Confidence",
+        name: "Elegant Tech Fusion",
         description:
-          "Royal Blue primary, Sky Blue accent, Cool Gray secondary, Bright Coral highlight for energetic CTAs, Charcoal text.",
+          "Deep Purple primary (creative and premium), Royal Blue accent, Pale Silver secondary, Teal highlight, Charcoal Black text.",
         colors: {
-          primary: { name: "Primary: Royal Blue", hex: "#0052CC" },
-          accent: { name: "Accent: Sky Blue", hex: "#66B2FF" },
-          secondary: { name: "Secondary: Cool Gray", hex: "#E6E9EF" },
-          highlight: { name: "Highlight: Bright Coral", hex: "#FF6F61" },
-          text: { name: "Text: Charcoal", hex: "#2B2B2B" }
+          primary: { name: "Primary: Deep Purple", hex: "#6A0DAD" },
+          accent: { name: "Accent: Royal Blue", hex: "#4169E1" },
+          secondary: { name: "Secondary: Pale Silver", hex: "#E5E5E5" },
+          highlight: { name: "Highlight: Teal", hex: "#00A8A8" },
+          text: { name: "Text: Charcoal Black", hex: "#212121" }
         },
         textOnPrimary: "#FFFFFF",
-        textSurface: "#2B2B2B",
+        textSurface: "#212121",
         primaryGradient: null
       },
       5: {
-        name: "Purple Innovation",
+        name: "Futuristic Neutral",
         description:
-          "Deep Purple primary for creativity, Electric Violet accent, Soft Lilac secondary, Aqua highlight for a digital pop, Graphite text.",
+          "Steel Blue primary (calm and professional), Electric Violet accent, Cool Gray secondary, Neon Cyan highlight, Dark Slate text.",
         colors: {
-          primary: { name: "Primary: Deep Purple", hex: "#5B2C6F" },
+          primary: { name: "Primary: Steel Blue", hex: "#4682B4" },
           accent: { name: "Accent: Electric Violet", hex: "#8E44AD" },
-          secondary: { name: "Secondary: Soft Lilac", hex: "#E8DAEF" },
-          highlight: { name: "Highlight: Aqua Blue", hex: "#00C2CB" },
-          text: { name: "Text: Graphite", hex: "#2E2E2E" }
+          secondary: { name: "Secondary: Cool Gray", hex: "#E0E0E0" },
+          highlight: { name: "Highlight: Neon Cyan", hex: "#00FFFF" },
+          text: { name: "Text: Dark Slate", hex: "#2C2C2C" }
         },
         textOnPrimary: "#FFFFFF",
-        textSurface: "#2E2E2E",
+        textSurface: "#2C2C2C",
         primaryGradient: null
       },
       6: {
-        name: "Blue-Purple Fusion",
+        name: "The Digital Care",
         description:
-          "Indigo primary, Royal Blue accent, Lavender Gray secondary, Bright Magenta highlight for creative energy, Dark Slate text.",
+          "Navy primary (#1E3A8A), Teal accent (#00A8A8), White secondary (#FFFFFF), Magenta highlight (#FF4081), Charcoal/Dark Gray text (#333333).",
         colors: {
-          primary: { name: "Primary: Indigo", hex: "#3F51B5" },
-          accent: { name: "Accent: Royal Blue", hex: "#4169E1" },
-          secondary: { name: "Secondary: Lavender Gray", hex: "#C5CAE9" },
-          highlight: { name: "Highlight: Bright Magenta", hex: "#FF4081" },
-          text: { name: "Text: Dark Slate", hex: "#1C1C1C" }
+          primary: { name: "Primary: Navy", hex: "#1E3A8A" },
+          accent: { name: "Accent: Teal", hex: "#00A8A8" },
+          secondary: { name: "Secondary: White", hex: "#FFFFFF" },
+          highlight: { name: "Highlight: Magenta", hex: "#FF4081" },
+          text: { name: "Text: Charcoal/Dark Gray", hex: "#333333" }
         },
         textOnPrimary: "#FFFFFF",
-        textSurface: "#1C1C1C",
-        primaryGradient: null
-      },
-      7: {
-        name: "Elegant Tech Gradient",
-        description:
-          "Gradient from Royal Blue to Purple, Silver accent, Midnight Navy secondary, Neon Cyan highlight, White text.",
-        colors: {
-          primary: { name: "Primary: Royal Blue", hex: "#0052CC" },
-          accent: { name: "Accent: Silver", hex: "#D9D9D9" },
-          secondary: { name: "Secondary: Midnight Navy", hex: "#0A1F44" },
-          highlight: { name: "Highlight: Neon Cyan", hex: "#00FFFF" },
-          text: { name: "Text: White", hex: "#FFFFFF" }
-        },
-        textOnPrimary: "#FFFFFF",
-        textSurface: "#222222",
-        primaryGradient: "linear-gradient(135deg, #0052CC, #6A0DAD)"
-      },
-      8: {
-        name: "Luxury Digital Look",
-        description:
-          "Royal Purple primary, Sapphire Blue accent, Pale Gray secondary, Gold highlight, Charcoal Black text.",
-        colors: {
-          primary: { name: "Primary: Royal Purple", hex: "#6F42C1" },
-          accent: { name: "Accent: Sapphire Blue", hex: "#0D6EFD" },
-          secondary: { name: "Secondary: Pale Gray", hex: "#F8F9FA" },
-          highlight: { name: "Highlight: Gold", hex: "#FFD700" },
-          text: { name: "Text: Charcoal Black", hex: "#212529" }
-        },
-        textOnPrimary: "#FFFFFF",
-        textSurface: "#212529",
-        primaryGradient: null
-      },
-      9: {
-        name: "Midnight Precision",
-        description:
-          "Midnight Blue primary, Electric Blue accent, Cool Gray secondary, Vibrant Orange highlight, White text.",
-        colors: {
-          primary: { name: "Primary: Midnight Blue", hex: "#1B263B" },
-          accent: { name: "Accent: Electric Blue", hex: "#007BFF" },
-          secondary: { name: "Secondary: Cool Gray", hex: "#E0E0E0" },
-          highlight: { name: "Highlight: Vibrant Orange", hex: "#FF6B35" },
-          text: { name: "Text: White", hex: "#FFFFFF" }
-        },
-        textOnPrimary: "#FFFFFF",
-        textSurface: "#222222",
-        primaryGradient: null
-      },
-      10: {
-        name: "Midnight & Silver Tech",
-        description:
-          "Midnight Blue primary, Silver accent, Slate Gray secondary, Aqua Blue highlight, Light Gray text.",
-        colors: {
-          primary: { name: "Primary: Midnight Blue", hex: "#0A1F44" },
-          accent: { name: "Accent: Silver", hex: "#C0C0C0" },
-          secondary: { name: "Secondary: Slate Gray", hex: "#708090" },
-          highlight: { name: "Highlight: Aqua Blue", hex: "#00BFFF" },
-          text: { name: "Text: Light Gray", hex: "#F5F5F5" }
-        },
-        textOnPrimary: "#F5F5F5",
-        textSurface: "#222222",
-        primaryGradient: null
-      },
-      11: {
-        name: "Deep Ocean Contrast",
-        description:
-          "Midnight Blue primary, Teal accent, Mist Gray secondary, Coral Red highlight, Off-White text.",
-        colors: {
-          primary: { name: "Primary: Midnight Blue", hex: "#191970" },
-          accent: { name: "Accent: Teal", hex: "#00B3B3" },
-          secondary: { name: "Secondary: Mist Gray", hex: "#D9E2EC" },
-          highlight: { name: "Highlight: Coral Red", hex: "#FF5A5F" },
-          text: { name: "Text: Off-White", hex: "#FAFAFA" }
-        },
-        textOnPrimary: "#FAFAFA",
-        textSurface: "#222222",
-        primaryGradient: null
-      },
-      12: {
-        name: "Midnight Elegance",
-        description:
-          "Midnight Blue primary, Royal Purple accent, Pale Silver secondary, Gold highlight, Ivory text.",
-        colors: {
-          primary: { name: "Primary: Midnight Blue", hex: "#1A1A40" },
-          accent: { name: "Accent: Royal Purple", hex: "#6A0DAD" },
-          secondary: { name: "Secondary: Pale Silver", hex: "#E5E5E5" },
-          highlight: { name: "Highlight: Gold", hex: "#FFD700" },
-          text: { name: "Text: Ivory", hex: "#F8F8F8" }
-        },
-        textOnPrimary: "#F8F8F8",
-        textSurface: "#222222",
-        primaryGradient: null
-      },
-      13: {
-        name: "Modern Midnight Gradient",
-        description:
-          "Gradient from Midnight Blue to Deep Indigo, Cyan accent, Cool Gray secondary, Bright Lime highlight, White text.",
-        colors: {
-          primary: { name: "Primary: Midnight Blue", hex: "#0F172A" },
-          accent: { name: "Accent: Cyan Blue", hex: "#06B6D4" },
-          secondary: { name: "Secondary: Cool Gray", hex: "#CBD5E1" },
-          highlight: { name: "Highlight: Bright Lime", hex: "#A3E635" },
-          text: { name: "Text: White", hex: "#FFFFFF" }
-        },
-        textOnPrimary: "#FFFFFF",
-        textSurface: "#222222",
-        primaryGradient: "linear-gradient(135deg, #0F172A, #1E3A8A)"
-      },
-      14: {
-        name: "Natural Balance",
-        description:
-          "Sand Dollar primary, Celadon accent, Warm White secondary, Deep Teal highlight, Charcoal Gray text.",
-        colors: {
-          primary: { name: "Primary: Sand Dollar", hex: "#D6C6B9" },
-          accent: { name: "Accent: Celadon", hex: "#ACE1AF" },
-          secondary: { name: "Secondary: Warm White", hex: "#F8F5F2" },
-          highlight: { name: "Highlight: Deep Teal", hex: "#2C6975" },
-          text: { name: "Text: Charcoal Gray", hex: "#2E2E2E" }
-        },
-        textOnPrimary: "#2E2E2E",
-        textSurface: "#2E2E2E",
-        primaryGradient: null
-      },
-      15: {
-        name: "Modern Organic",
-        description:
-          "Sand Dollar primary, Celadon Green accent, Mist Gray secondary, Midnight Blue highlight, Graphite text.",
-        colors: {
-          primary: { name: "Primary: Sand Dollar", hex: "#D8CAB8" },
-          accent: { name: "Accent: Celadon Green", hex: "#A8C3A0" },
-          secondary: { name: "Secondary: Mist Gray", hex: "#E8E8E8" },
-          highlight: { name: "Highlight: Midnight Blue", hex: "#1B263B" },
-          text: { name: "Text: Graphite", hex: "#333333" }
-        },
-        textOnPrimary: "#333333",
         textSurface: "#333333",
         primaryGradient: null
       },
-      16: {
-        name: "Calm Innovation",
+      7: {
+        name: "Reverse the Digital Care",
         description:
-          "Celadon primary, Sand Dollar accent, Pale Gray secondary, Royal Blue highlight, Slate text.",
+          "Electric Purple primary (#8E44AD), Deep Blue accent (#0A1F44), White secondary (#FFFFFF), Teal highlight (#00A8A8), Charcoal/Dark Gray text (#333333).",
         colors: {
-          primary: { name: "Primary: Celadon", hex: "#B8E0C2" },
-          accent: { name: "Accent: Sand Dollar", hex: "#D5C4A1" },
-          secondary: { name: "Secondary: Pale Gray", hex: "#F2F2F2" },
-          highlight: { name: "Highlight: Royal Blue", hex: "#4169E1" },
-          text: { name: "Text: Slate", hex: "#2C3E50" }
+          primary: { name: "Primary: Electric Purple", hex: "#8E44AD" },
+          accent: { name: "Accent: Deep Blue", hex: "#0A1F44" },
+          secondary: { name: "Secondary: White", hex: "#FFFFFF" },
+          highlight: { name: "Highlight: Teal", hex: "#00A8A8" },
+          text: { name: "Text: Charcoal/Dark Gray", hex: "#333333" }
         },
-        textOnPrimary: "#2C3E50",
-        textSurface: "#2C3E50",
-        primaryGradient: null
-      },
-      17: {
-        name: "Elegant Earth-Tech Fusion",
-        description:
-          "Sand Dollar primary, Celadon accent, Soft Taupe secondary, Steel Blue highlight, Dark Brown text.",
-        colors: {
-          primary: { name: "Primary: Sand Dollar", hex: "#D4BFAA" },
-          accent: { name: "Accent: Celadon", hex: "#A9D6B2" },
-          secondary: { name: "Secondary: Soft Taupe", hex: "#EDE6DE" },
-          highlight: { name: "Highlight: Steel Blue", hex: "#4682B4" },
-          text: { name: "Text: Dark Brown", hex: "#3B3B3B" }
-        },
-        textOnPrimary: "#3B3B3B",
-        textSurface: "#3B3B3B",
-        primaryGradient: null
-      },
-      18: {
-        name: "Minimalist Serenity",
-        description:
-          "Celadon primary, Sand Dollar accent, White Smoke secondary, Copper highlight, Charcoal text.",
-        colors: {
-          primary: { name: "Primary: Celadon", hex: "#ACE1AF" },
-          accent: { name: "Accent: Sand Dollar", hex: "#D8CAB8" },
-          secondary: { name: "Secondary: White Smoke", hex: "#F5F5F5" },
-          highlight: { name: "Highlight: Copper", hex: "#B87333" },
-          text: { name: "Text: Charcoal", hex: "#2B2B2B" }
-        },
-        textOnPrimary: "#2B2B2B",
-        textSurface: "#2B2B2B",
+        textOnPrimary: "#FFFFFF",
+        textSurface: "#333333",
         primaryGradient: null
       }
     };
 
-    const schemeSelect = document.getElementById("scheme");
     const swatchesContainer = document.getElementById("swatches");
     const schemeDescription = document.getElementById("schemeDescription");
+    const schemeButtons = document.querySelectorAll(".scheme-btn");
 
     function applyScheme(id) {
       const s = schemes[id];
@@ -1343,11 +1203,16 @@
       schemeDescription.textContent = s.name + " – " + s.description;
     }
 
-    schemeSelect.addEventListener("change", (e) => {
-      applyScheme(e.target.value);
+    schemeButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-scheme");
+        schemeButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        applyScheme(id);
+      });
     });
 
-    // Initial setup
+    // Initial setup (Tech Royal selected)
     applyScheme("1");
     document.getElementById("year").textContent =
       new Date().getFullYear().toString();
